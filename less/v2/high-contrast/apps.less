@@ -1,0 +1,88 @@
+.sentius-flag-high-contrast .sentius2,
+.sentius2.sentius-flag-high-contrast {
+  &.sheet {
+    --color-text-dark-primary: #000000;
+    --sentius-color-gold: #e3ce9e;
+    --sentius-color-scrollbar: var(--sentius-color-maroon);
+  }
+
+  .card { border-color: var(--sentius-color-dark); }
+
+  .pill-lg {
+    border-color: var(--sentius-color-dark);
+    &.empty { opacity: .5; }
+  }
+
+  .meter .label :is(.value, .max) {
+    text-shadow: 0 0 2px var(--sentius-color-dark);
+    filter: drop-shadow(0 0 2px var(--sentius-color-dark));
+  }
+}
+
+/* ---------------------------------- */
+/*  Custom Elements                   */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast item-list-controls search {
+  border: var(--sentius-border-dark);
+  .filter-list{
+    & > li:hover button { font-weight: bold; }
+  }
+}
+
+.sentius-flag-high-contrast .effects-element {
+  .conditions-list .condition {
+    --border-style: var(--sentius-border-dark);
+    span { color: var(--color-text-dark-5); }
+    &.active span { color: var(--color-text-dark-1); }
+  }
+}
+
+/* ---------------------------------- */
+/*  Light Mode                        */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast:is(.sentius-theme-light, .theme-light) .sentius2,
+.sentius2.sentius-flag-high-contrast.sentius-theme-light {
+  &.sheet {
+    --filigree-background-color: #ffffff;
+    --filigree-border-color: var(--sentius-color-dark);
+    --sentius-background-card: #ffffff;
+    --sentius-background-parchment: #ffffff;
+    --sentius-border-dark: 1px solid #000;
+    --proficiency-cycle-enabled-color: color-mix(in oklab, var(--sentius-color-blue), black 20%);
+    --proficiency-cycle-disabled-color: var(--sentius-color-dark);
+  }
+}
+
+.sentius-flag-high-contrast.sentius-theme-light item-list-controls search {
+  .filter-list .filter-item.active::after { color: var(--color-text-dark-3); }
+  .dropdown:focus-within .filter { color: var(--sentius-color-dark); }
+}
+
+/* ---------------------------------- */
+/*  Dark Mode                         */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast:is(.sentius-theme-dark, .theme-dark) .sentius2,
+.sentius2.sentius-flag-high-contrast.sentius-theme-dark {
+  &.sheet {
+    --color-text-dark-primary: #fff;
+    --color-text-dark-secondary: var(--color-text-light-3);
+    --sentius-background-card: #000000;
+    --sentius-background-parchment: #000000;
+    --sentius-border-dark: 1px solid #999;
+    --sentius-color-blue-white: #fff;
+    --sentius-color-card: #fff;
+    --filigree-background-color: #000000;
+    --filigree-border-color: #999;
+    --proficiency-cycle-enabled-color: unset;
+    --proficiency-cycle-disabled-color: unset;
+  }
+
+  .card { border: var(--sentius-border-dark); }
+}
+
+.sentius-flag-high-contrast:is(.sentius-theme-dark, .theme-dark) item-list-controls search {
+  .filter-control:not(.active) { color: var(--color-text-light-6); }
+}

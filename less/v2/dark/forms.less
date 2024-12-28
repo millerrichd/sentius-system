@@ -1,0 +1,45 @@
+.theme-dark .sentius2:not(.chat-card, .create-document),
+.sentius2.sentius-theme-dark {
+  --color-fieldset-border: var(--sentius-color-blue-gray-3);
+
+  fieldset {
+    --color-fieldset-border: var(--sentius-color-blue-gray-3);
+    > legend { color: var(--sentius-color-gold); }
+  }
+
+  .form-group {
+    &.card {
+      background: var(--sentius-background-10);
+      border-color: var(--color-fieldset-border);
+    }
+
+    &.label-top > label > p.hint::before { color: var(--sentius-color-gold); }
+  }
+
+  select, input:not([type="range"]) {
+    --input-background-color: var(--sentius-background-parchment);
+    border: var(--sentius-border-gold);
+  }
+
+  fieldset.card {
+    select, input:not([type="range"]) { --input-background-color: var(--sentius-background-25); }
+  }
+
+  :is(input, select):not([type="range"]):disabled {
+    background: var(--sentius-color-dark-gray);
+  }
+
+  sentius-checkbox {
+    &[disabled]:not([checked]) {
+      --checkbox-border-color: var(--sentius-color-blue-gray-3);
+      --checkbox-empty-color: var(--sentius-color-blue-gray-3);
+    }
+  }
+
+  button:not(.pip) {
+    border-color: var(--sentius-color-blue-gray-1);
+    &:hover { border-color: var(--sentius-color-blue-gray-1); }
+  }
+
+  .control-button { color: var(--sentius-color-gold); }
+}

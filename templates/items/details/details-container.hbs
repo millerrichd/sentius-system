@@ -1,0 +1,44 @@
+<fieldset>
+    <legend>{{ localize "SENTIUS.ItemContainerDetails" }}</legend>
+
+    {{!-- Container Properties --}}
+    {{ formField fields.properties options=properties.options label="SENTIUS.ItemContainerProperties" localize=true
+                 input=inputs.createMultiCheckboxInput stacked=true classes="checkbox-grid checkbox-grid-3" }}
+
+    {{!-- Capacity --}}
+    <div class="form-group split-group">
+        <label>{{ localize "SENTIUS.ItemContainerCapacity" }}</label>
+        <div class="form-fields">
+
+            {{!-- Amount --}}
+            {{ formField fields.capacity.fields.value value=source.capacity.value label="SENTIUS.Amount" localize=true
+                         classes="label-top" placeholder="—" }}
+
+            {{!-- Type --}}
+            {{ formField fields.capacity.fields.type value=source.capacity.type label="SENTIUS.Type" localize=true
+                         classes="label-top" choices=config.itemCapacityTypes }}
+
+        </div>
+    </div>
+
+    {{!-- Attunement --}}
+    {{#if properties.object.mgc}}
+    <div class="form-group">
+        <label>{{ localize "SENTIUS.Attunement" }}</label>
+        <div class="form-fields">
+
+            {{!-- Attuned --}}
+            {{#if source.attunement}}
+            {{ formInput fields.attuned value=source.attuned input=inputs.createCheckboxInput
+                         ariaLabel=(localize "SENTIUS.Attuned") dataset=(sentius-object tooltip="SENTIUS.Attuned") }}
+            {{/if}}
+
+            {{!-- Attunement --}}
+            {{ formInput fields.attunement value=source.attunement choices=config.attunementTypes
+                         blank="SENTIUS.AttunementNone" localize=true }}
+
+        </div>
+    </div>
+    {{/if}}
+
+</fieldset>

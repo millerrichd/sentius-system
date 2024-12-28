@@ -1,0 +1,22 @@
+.theme-dark .sentius2.compendium-browser {
+  --color-text-primary: var(--sentius-color-blue-white);
+
+  .window-content {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+
+    .mode-toggle slide-toggle { --slide-toggle-track-color-unchecked: var(--sentius-color-iron-gray); }
+
+    .filter-header label > span { color: var(--color-text-dark-5); }
+
+    .filter-range {
+      label { color: var(--color-text-dark-5); }
+      input {
+        border: var(--sentius-border-gold);
+        background: var(--sentius-background-parchment);
+
+        &::placeholder { color: var(--color-text-light-6); }
+      }
+    }
+  }
+}

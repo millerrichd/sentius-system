@@ -1,0 +1,4129 @@
+{
+"DOCUMENT.SENTIUS": {
+  "Activity": "Activity",
+  "Warning": {
+    "SelectType": "{name} type must be selected for creation."
+  }
+},
+
+"TYPES.Actor.character": "Player Character",
+"TYPES.Actor.characterPl": "Player Characters",
+"TYPES.Actor.npc": "Non-Player Character",
+"TYPES.Actor.npcPl": "Non-Player Characters",
+"TYPES.Actor.vehicle": "Vehicle",
+"TYPES.Actor.vehiclePl": "Vehicles",
+"TYPES.Actor.group": "Group",
+"TYPES.Actor.groupPl": "Groups",
+
+"TYPES.ActiveEffect.enchantment": "Enchantment",
+"TYPES.ActiveEffect.enchantmentPl": "Enchantments",
+
+"TYPES.Item.background": "Background",
+"TYPES.Item.backgroundPl": "Backgrounds",
+"TYPES.Item.container": "Container",
+"TYPES.Item.containerPl": "Containers",
+"TYPES.Item.class": "Class",
+"TYPES.Item.classPl": "Classes",
+"TYPES.Item.consumable": "Consumable",
+"TYPES.Item.consumablePl": "Consumables",
+"TYPES.Item.equipment": "Equipment",
+"TYPES.Item.equipmentPl": "Equipment",
+"TYPES.Item.facility": "Facility",
+"TYPES.Item.facilityPl": "Facilities",
+"TYPES.Item.feat": "Feature",
+"TYPES.Item.featurePl": "Features",
+"TYPES.Item.loot": "Loot",
+"TYPES.Item.lootPl": "Loot",
+"TYPES.Item.race": "Species",
+"TYPES.Item.racePl": "Species",
+"TYPES.Item.raceLegacy": "Race",
+"TYPES.Item.raceLegacyPl": "Races",
+"TYPES.Item.spell": "Spell",
+"TYPES.Item.spellPl": "Spells",
+"TYPES.Item.subclass": "Subclass",
+"TYPES.Item.subclassPl": "Subclasses",
+"TYPES.Item.tool": "Tool",
+"TYPES.Item.toolPl": "Tools",
+"TYPES.Item.weapon": "Weapon",
+"TYPES.Item.weaponPl": "Weapons",
+
+"SENTIUS.title": "Sentius RPG",
+"SENTIUS.AbbreviationCR": "CR",
+"SENTIUS.AbbreviationConc": "Conc.",
+"SENTIUS.AbbreviationDC": "DC",
+"SENTIUS.AbbreviationKg": "kg",
+"SENTIUS.AbbreviationLR": "LR",
+"SENTIUS.AbbreviationLevel": "Lvl.",
+"SENTIUS.AbbreviationLbs": "lbs.",
+"SENTIUS.AbbreviationSR": "SR",
+
+"SENTIUS.ABILITY": {
+  "Configure": {
+    "Title": "Configure {ability}"
+  },
+  "SECTIONS": {
+    "Bonuses": {
+      "Label": "{ability} Bonuses",
+      "Hint": "These bonuses apply to checks & saves made with {ability}."
+    },
+    "Global": {
+      "Label": "Global Bonuses",
+      "Hint": "These bonuses apply to checks & saves made with any ability."
+    },
+    "Score": "{ability} Score"
+  }
+},
+
+"SENTIUS.Ability": "Ability",
+"SENTIUS.Abilities": "Abilities",
+"SENTIUS.AbilityStr": "Strength",
+"SENTIUS.AbilityStrAbbr": "str",
+"SENTIUS.AbilityCon": "Constitution",
+"SENTIUS.AbilityConAbbr": "con",
+"SENTIUS.AbilityDex": "Dexterity",
+"SENTIUS.AbilityDexAbbr": "dex",
+"SENTIUS.AbilityInt": "Intelligence",
+"SENTIUS.AbilityIntAbbr": "int",
+"SENTIUS.AbilityWis": "Wisdom",
+"SENTIUS.AbilityWisAbbr": "wis",
+"SENTIUS.AbilityCha": "Charisma",
+"SENTIUS.AbilityChaAbbr": "cha",
+"SENTIUS.AbilityHon": "Honor",
+"SENTIUS.AbilityHonAbbr": "hon",
+"SENTIUS.AbilitySan": "Sanity",
+"SENTIUS.AbilitySanAbbr": "san",
+"SENTIUS.AbilityScore": "Ability Score",
+"SENTIUS.AbilityScoreShort": "Score",
+"SENTIUS.AbilityScorePl": "Ability Scores",
+"SENTIUS.AbilityScoreL": "{ability} Score",
+"SENTIUS.AbilityScoreMax": "Maximum Ability Score",
+"SENTIUS.AbilityScoreMaxShort": "Maximum",
+"SENTIUS.AbilityModifier": "Ability Modifier",
+"SENTIUS.AbilityModifierShort": "Mod",
+"SENTIUS.AbilityPromptText": "What type of {ability} check?",
+"SENTIUS.AbilityPromptTitle": "{ability} Ability Check",
+"SENTIUS.AbilityUseChargesLabel": "{value} Charges",
+"SENTIUS.AbilityUseConsumableLabel": "{max} per {per}",
+"SENTIUS.AbilityUseCast": "Cast Spell",
+"SENTIUS.AbilityUseUse": "Use Ability",
+"SENTIUS.AbilityUseConfig": "Usage Configuration",
+"SENTIUS.AbilityBonuses": "Ability Bonuses",
+"SENTIUS.AbilityConfigure": "Configure {ability}",
+"SENTIUS.AbilityConfigureTitle": "Configure {ability} Saving Throws and Checks",
+"SENTIUS.AbilitySaveConfigure": "{ability} Saving Throws",
+"SENTIUS.AbilityCheckConfigure": "{ability} Ability Checks",
+"SENTIUS.AbilityCheckConfigurationHint": "Configure check bonuses.",
+"SENTIUS.AbilityConfigurationHint": "Configure ability saving throw proficiency, saving throw bonuses, and check bonuses.",
+"SENTIUS.AbilityCheckBonus": "Check Bonus",
+"SENTIUS.AbilityCheckGlobalBonusHint": "This bonus applies to all ability checks made by this actor.",
+"SENTIUS.Action": "Action",
+"SENTIUS.ActionAbbr": "A",
+"SENTIUS.ActionPl": "Actions",
+"SENTIUS.ActionAbil": "Ability Check",
+"SENTIUS.ActionEnch": "Enchant",
+"SENTIUS.ActionHeal": "Heal",
+"SENTIUS.ActionMSAK": "Melee Spell Attack",
+"SENTIUS.ActionMWAK": "Melee Weapon Attack",
+"SENTIUS.ActionOther": "Other",
+"SENTIUS.ActionRSAK": "Ranged Spell Attack",
+"SENTIUS.ActionRWAK": "Ranged Weapon Attack",
+"SENTIUS.ActionSave": "Saving Throw",
+"SENTIUS.ActionSumm": "Summon",
+"SENTIUS.ActionUtil": "Utility",
+"SENTIUS.ActionWarningNoItem": "The requested item {item} no longer exists on Actor {name}",
+"SENTIUS.ActionWarningNoToken": "You must have one or more controlled Tokens in order to use this option.",
+
+"SENTIUS.ACTIVATION": {
+  "FIELDS": {
+    "activation": {
+      "label": "Activation",
+      "condition": {
+        "label": "Activation Condition",
+        "hint": "Condition required to activate this activity."
+      },
+      "override": {
+        "label": "Override Activation",
+        "hint": "Use these activation values instead of the item's when using this activity."
+      },
+      "type": {
+        "label": "Activation Cost",
+        "hint": "Activation type (e.g. action, legendary action, minutes)."
+      },
+      "value": {
+        "label": "Activation Value",
+        "hint": "Scalar value associated with the activation."
+      }
+    }
+  },
+  "Category": {
+    "Standard": "Standard",
+    "Time": "Time",
+    "Monster": "Monster",
+    "Vehicle": "Vehicle"
+  },
+  "Type": {
+    "Legendary": {
+      "Counted": {
+        "one": "{number} legendary action",
+        "other": "{number} legendary actions"
+      }
+    }
+  },
+  "Warning": {
+    "NoActions": "No {type} are available, but activating this requires at least {required}.",
+    "NotEnoughActions": "Not enough {type} to activate, {required} required but only {available} available."
+  }
+},
+
+"SENTIUS.ACTIVITY": {
+  "Action": {
+    "Create": "Create Activity",
+    "Delete": "Delete Activity"
+  },
+  "Title": {
+    "one": "Activity",
+    "other": "Activities"
+  },
+  "FIELDS": {
+    "description": {
+      "label": "Description",
+      "chatFlavor": {
+        "label": "Chat Flavor",
+        "hint": "Additional text displayed in the activation chat message."
+      }
+    },
+    "effects": {
+      "label": "Applied Effects"
+    },
+    "img": {
+      "label": "Icon"
+    },
+    "name": {
+      "label": "Name"
+    }
+  },
+  "SECTIONS": {
+    "Activation": "Activation",
+    "Behavior": "Behavior",
+    "Effect": "Effect",
+    "Identity": "Identity",
+    "Time": "Time"
+  },
+  "Warning": {
+    "UsageNotAllowed": "Using this activity isn't currently possible."
+  }
+},
+
+"SENTIUS.ActorWarningInvalidItem": "{itemType} items cannot be added to a {actorType}.",
+"SENTIUS.ActorWarningSingleton": "Only a single {itemType} can be added to a {actorType}.",
+"SENTIUS.ActiveEffectOverrideWarning": "This value is being modified by an Active Effect and cannot be edited. Disable the effect to edit it.",
+"SENTIUS.Add": "Add",
+"SENTIUS.AdditionalControls": "Additional Controls",
+"SENTIUS.AdditionalSettings": "Additional Settings",
+"SENTIUS.AddEmbeddedItemPromptHint": "Do you want to add these items to your character sheet?",
+"SENTIUS.Advanced": "Advanced",
+
+"SENTIUS.ADVANCEMENT": {
+  "AbilityScoreImprovement": {
+    "Title": "Ability Score Improvement",
+    "Hint": "Allow the player to increase one or more ability scores or take an optional feat.",
+    "CapDisplay": {
+      "one": "Max {points} point per score",
+      "other": "Max {points} points per score"
+    },
+    "Feat": {
+      "Hint": "Drop a feat here to choose one instead of an ability score improvement."
+    },
+    "FIELDS": {
+      "cap": {
+        "label": "Point Cap",
+        "hint": "Maximum number of points a player can assign to a single score."
+      },
+      "locked": {
+        "label": "Locked",
+        "hint": "Ability cannot be improved."
+      },
+      "fixed": {
+        "label": "Fixed Improvement",
+        "hint": "Abilities that are improved by a fixed amount and cannot be manually improved during the process."
+      },
+      "points": {
+        "label": "Points",
+        "hint": "Number of points that can be assigned to any unlocked ability score.",
+        "decrease": "Decrease Points",
+        "increase": "Increase Points"
+      }
+    },
+    "LockedHint": "Scores cannot be modified with a feat selected.",
+    "PointsRemaining": {
+      "one": "{points} Point Remaining",
+      "other": "{points} Points Remaining"
+    },
+    "Warning": {
+      "Level": "Must be at least level {level} to take this feat.",
+      "Type": "Only features with the \"feat\" type can be selected."
+    }
+  },
+  "SPELLCONFIG": {
+    "FIELDS": {
+      "uses": {
+        "requireSlot": {
+          "label": "Require Slot",
+          "hint": "Require a spell slot to be spent when using the limited uses. If not checked then the uses will be additional free uses that don't consume a slot."
+        }
+      }
+    },
+    "FreeCasting": "Free Casting"
+  },
+  "Subclass": {
+    "Title": "Subclass",
+    "Hint": "Specify what level this class receives its subclass.",
+    "FlowHint": "Select a subclass in the Features tab after level up has completed."
+  }
+},
+
+"SENTIUS.AdvancementChoices": "choices",
+"SENTIUS.AdvancementClassRestriction": "Class Restriction",
+"SENTIUS.AdvancementClassRestrictionNone": "All Classes",
+"SENTIUS.AdvancementClassRestrictionPrimary": "Original Class Only",
+"SENTIUS.AdvancementClassRestrictionSecondary": "Multiclass Only",
+"SENTIUS.AdvancementConfigurationActionDisable": "Disable Configuration",
+"SENTIUS.AdvancementConfigurationActionEnable": "Enable Configuration",
+"SENTIUS.AdvancementConfigurationModeDisabled": "Configuration Disabled",
+"SENTIUS.AdvancementConfigurationModeEnabled": "Configuration Enabled",
+"SENTIUS.AdvancementConfigureTitle": "Configure {item} Advancement",
+"SENTIUS.AdvancementConfigureAllowDrops": "Allow Drops",
+"SENTIUS.AdvancementConfigureAllowDropsHint": "Should players be able to drop their own choices into this advancement?",
+"SENTIUS.AdvancementConfigureDropAreaHint": "Drop Items here to add them to the pool from which a player can choose.",
+"SENTIUS.AdvancementConfiguredComplete": "Fully Configured",
+"SENTIUS.AdvancementConfiguredIncomplete": "Not Configured",
+"SENTIUS.AdvancementControlCreate": "Create Advancement",
+"SENTIUS.AdvancementControlDelete": "Delete Advancement",
+"SENTIUS.AdvancementControlDuplicate": "Duplicate Advancement",
+"SENTIUS.AdvancementControlEdit": "Edit Advancement",
+"SENTIUS.AdvancementCustomIcon": "Custom Icon",
+"SENTIUS.AdvancementCustomTitle": "Custom Title",
+"SENTIUS.AdvancementDeleteConfirmationLabel": "Remove advancement changes",
+"SENTIUS.AdvancementDeleteConfirmationMessage": "Deleting this item will also delete all advancement choices made for it. These changes will be removed from your character as long as the checkbox below is checked.",
+"SENTIUS.AdvancementDeleteConfirmationTitle": "Confirm Deletion",
+"SENTIUS.AdvancementFlowDropAreaHint": "Drop an Item here to choose it.",
+"SENTIUS.AdvancementHint": "Hint",
+"SENTIUS.AdvancementHitPointsTitle": "Hit Points",
+"SENTIUS.AdvancementHitPointsHint": "Track the player's hit points for each level in the class.",
+"SENTIUS.AdvancementHitPointsAverage": "Take Average",
+"SENTIUS.AdvancementHitPointsEmptyError": "Hit points must be rolled or the average value must be taken.",
+"SENTIUS.AdvancementHitPointsInvalidError": "Hit points must be a valid whole number.",
+"SENTIUS.AdvancementHitPointsMaxAtFirstLevel": "Max at 1st Level: <strong>{max}</strong>",
+"SENTIUS.AdvancementHitPointsRollMessage": "Roll {class} Hit Points",
+"SENTIUS.AdvancementHitPointsRollButton": "Roll {die}",
+"SENTIUS.AdvancementItemChoiceTitle": "Choose Items",
+"SENTIUS.AdvancementItemChoiceHint": "Present the player with a choice of items (such as equipment, features, or spells) that they can choose for their character at one or more levels.",
+"SENTIUS.AdvancementItemChoiceChoices": "Choices",
+"SENTIUS.AdvancementItemChoiceChoose": "choose {count}",
+"SENTIUS.AdvancementItemChoiceChosen": "Chosen: {current} of {max}",
+"SENTIUS.AdvancementItemChoiceFeatureLevelWarning": "Must be at least level {level} to take this feature.",
+"SENTIUS.AdvancementItemChoiceLevelsHint": "Specify how many choices are allowed at each level.",
+"SENTIUS.AdvancementItemChoiceNoOriginalError": "Previously selected choice no longer available for replacement.",
+"SENTIUS.AdvancementItemChoicePreviouslyChosenWarning": "This item has already been chosen at a previous level.",
+"SENTIUS.AdvancementItemChoiceReplacement": "Allow Replacement",
+"SENTIUS.AdvancementItemChoiceReplacementNone": "No Replacement",
+"SENTIUS.AdvancementItemChoiceReplacementTitle": "replace",
+"SENTIUS.AdvancementItemChoiceSpellLevelAvailable": "Any Available Level",
+"SENTIUS.AdvancementItemChoiceSpellLevelAvailableWarning": "Only {level} or lower spells can be chosen for this advancement.",
+"SENTIUS.AdvancementItemChoiceSpellLevelSpecificWarning": "Only {level} spells can be chosen for this advancement.",
+"SENTIUS.AdvancementItemChoiceSpellLevelHint": "Only allow choices from spells of this level.",
+"SENTIUS.AdvancementItemChoiceType": "Item Type",
+"SENTIUS.AdvancementItemChoiceTypeHint": "Restrict what Item types can be chosen.",
+"SENTIUS.AdvancementItemChoiceTypeAny": "Anything",
+"SENTIUS.AdvancementItemChoiceTypeWarning": "Only {type} items can be selected for this choice.",
+"SENTIUS.AdvancementItemGrantTitle": "Grant Items",
+"SENTIUS.AdvancementItemGrantHint": "Grant the character items (such as equipment, features, or spells) when they reach a certain level.",
+"SENTIUS.AdvancementItemGrantDropHint": "Drop Items here to add them to the list granted by this advancement.",
+"SENTIUS.AdvancementItemGrantContainerWarning": "Container contents will not be added with containers.",
+"SENTIUS.AdvancementItemGrantDuplicateWarning": "That item already exists on this advancement.",
+"SENTIUS.AdvancementItemGrantRecursiveWarning": "You cannot grant an item in its own advancement.",
+"SENTIUS.AdvancementItemGrantOptional": "Optional",
+"SENTIUS.AdvancementItemGrantOptionalHint": "If the whole advancement is marked optional, players may opt out of any of the following items, otherwise all non-optional items are granted.",
+"SENTIUS.AdvancementItemTypeInvalidWarning": "{type} items cannot be added with this advancement type.",
+"SENTIUS.AdvancementLevelHeader": "Level {level}",
+"SENTIUS.AdvancementLevelAnyHeader": "Any Level",
+"SENTIUS.AdvancementLevelNoneHeader": "No Level",
+"SENTIUS.AdvancementLevelDownConfirmationMessage": "Leveling this class down will also undo all advancement choices made for it. These changes will be removed from your character as long as the checkbox below is checked.",
+"SENTIUS.AdvancementLevelDownConfirmationTitle": "Confirm Leveling Down",
+"SENTIUS.AdvancementManagerCloseTitle": "Stop Advancement",
+"SENTIUS.AdvancementManagerCloseMessage": "<p>If the advancement process is cancelled, choices made so far will be discarded and no changes will be made to the actor.</p>",
+"SENTIUS.AdvancementManagerCloseButtonContinue": "Continue",
+"SENTIUS.AdvancementManagerCloseButtonStop": "Stop Advancement",
+"SENTIUS.AdvancementManagerComplete": "Complete",
+"SENTIUS.AdvancementManagerLevelIncreasedTitle": "Level Up Character",
+"SENTIUS.AdvancementManagerLevelNewClassTitle": "Add Class",
+"SENTIUS.AdvancementManagerModifyChoicesTitle": "Modify Choices",
+"SENTIUS.AdvancementManagerNextStep": "Next",
+"SENTIUS.AdvancementManagerPreviousStep": "Previous",
+"SENTIUS.AdvancementManagerRestart": "Restart",
+"SENTIUS.AdvancementManagerRestartConfirm": "Are you sure you wish to undo all choices so far?",
+"SENTIUS.AdvancementManagerRestartConfirmTitle": "Restart Advancement Choices",
+"SENTIUS.AdvancementManagerSteps": "Step {current} of {total}",
+"SENTIUS.AdvancementManagerTitle": "Advancement",
+"SENTIUS.AdvancementMigrationConfirm": "Apply Migrations",
+"SENTIUS.AdvancementMigrationHint": "Select which of the following advancements will be added to {name}.",
+"SENTIUS.AdvancementMigrationTitle": "Migrate Advancement",
+"SENTIUS.AdvancementModifyChoices": "Modify Choices",
+"SENTIUS.AdvancementSaveButton": "Save Advancement",
+"SENTIUS.AdvancementScaleValueTitle": "Scale Value",
+"SENTIUS.AdvancementScaleValueHint": "A single value that changes as a class increases in level that is made available in roll formulas (such as a Monk's martial arts die).",
+"SENTIUS.AdvancementScaleValueIdentifierHint": "This scale value for the current level will be available in a formula using:<br><copyable-text>@scale.{class}.{identifier}</copyable-text>",
+"SENTIUS.AdvancementScaleValueIdentifierDiceHint": "This scale value for the current level will be available in a formula using:<br><copyable-text>@scale.{class}.{identifier}</copyable-text> - whole formula (<code>4d6</code>)<br><copyable-text>@scale.{class}.{identifier}.die</copyable-text> - whole die (<code>d6</code>)<br><copyable-text>@scale.{class}.{identifier}.number</copyable-text> - number of dice (<code>4</code>)<br><copyable-text>@scale.{class}.{identifier}.faces</copyable-text> - number of faces (<code>6</code>)",
+"SENTIUS.AdvancementScaleValueTypeCR": "Challenge Rating",
+"SENTIUS.AdvancementScaleValueTypeDice": "Dice",
+"SENTIUS.AdvancementScaleValueTypeDistance": "Distance",
+"SENTIUS.AdvancementScaleValueTypeHintCR": "Use this for representing creature challenge ratings for features like Wild Shape.",
+"SENTIUS.AdvancementScaleValueTypeHintDice": "Use this for dice values like bardic inspiration, sneak attack, or superiority dice.",
+"SENTIUS.AdvancementScaleValueTypeHintDistance": "Use this for numerical values that represent a distance, such as unarmored movement speed, or aura of protection radius.",
+"SENTIUS.AdvancementScaleValueTypeHintNumber": "Use this for purely numerical values like rage damage bonus or number of uses per day.",
+"SENTIUS.AdvancementScaleValueTypeHintString": "Use this if you are unsure of the type of the scale values, or if the type does not matter.",
+"SENTIUS.AdvancementScaleValueTypeLabel": "Scale Type",
+"SENTIUS.AdvancementScaleValueTypeNumber": "Numeric",
+"SENTIUS.AdvancementScaleValueTypeString": "Anything",
+"SENTIUS.AdvancementSelectionCreateButton": "Create Advancement",
+"SENTIUS.AdvancementSelectionTitle": "Select Advancement Type",
+"SENTIUS.AdvancementSizeTitle": "Size",
+"SENTIUS.AdvancementSizeHint": "Set a character's size.",
+"SENTIUS.AdvancementSizeFlowHintSingle": "Your size is {size}.",
+"SENTIUS.AdvancementSizeflowHintMultiple": "Choose your size from either {sizes}.",
+"SENTIUS.AdvancementTitle": "Advancement",
+"SENTIUS.AdvancementTraitTitle": "Traits",
+"SENTIUS.AdvancementTraitHint": "Grant a character certain traits or give them an option to select traits (such as proficiencies, skills, languages).",
+"SENTIUS.AdvancementTraitActionAddChoice": "Add Choice",
+"SENTIUS.AdvancementTraitActionRemoveChoice": "Remove Choice",
+"SENTIUS.AdvancementTraitAllowReplacements": "Allow Replacements",
+"SENTIUS.AdvancementTraitAllowReplacementsHint": "If a trait is already set on the actor, allow the player to choose from any other trait as a replacement.",
+"SENTIUS.AdvancementTraitChoices": "Choices",
+"SENTIUS.AdvancementTraitChoicesHint": "The following traits will be presented as a choice to the player.",
+"SENTIUS.AdvancementTraitChoicesRemaining": "Select {count} more {type}",
+"SENTIUS.AdvancementTraitCount": "Count",
+"SENTIUS.AdvancementTraitGrants": "Guaranteed",
+"SENTIUS.AdvancementTraitGrantsHint": "The following traits will be granted to the character as long as they don't already possess that trait.",
+"SENTIUS.AdvancementTraitMode": "Mode",
+"SENTIUS.AdvancementTraitModeDefaultLabel": "Default",
+"SENTIUS.AdvancementTraitModeDefaultHint": "Gain a trait or proficiency.",
+"SENTIUS.AdvancementTraitModeExpertiseLabel": "Expertise",
+"SENTIUS.AdvancementTraitModeExpertiseHint": "Gain expertise in a trait in which you already have proficiency.",
+"SENTIUS.AdvancementTraitModeForceLabel": "Forced Expertise",
+"SENTIUS.AdvancementTraitModeForceHint": "Gain expertise in a trait regardless of your previous proficiency level.",
+"SENTIUS.AdvancementTraitModeMasteryLabel": "Mastery",
+"SENTIUS.AdvancementTraitModeMasteryHint": "Gain mastery with a weapon in which you already have proficiency.",
+"SENTIUS.AdvancementTraitModeUpgradeLabel": "Upgrade",
+"SENTIUS.AdvancementTraitModeUpgradeHint": "Gain proficiency in a trait unless you already have it, otherwise gain expertise.",
+"SENTIUS.AdvancementTraitType": "Trait Type",
+"SENTIUS.Advantage": "Advantage",
+"SENTIUS.AdvantageMode": "Advantage Mode",
+"SENTIUS.Age": "Age",
+"SENTIUS.Alignment": "Alignment",
+"SENTIUS.AlignmentCE": "Chaotic Evil",
+"SENTIUS.AlignmentCG": "Chaotic Good",
+"SENTIUS.AlignmentCN": "Chaotic Neutral",
+"SENTIUS.AlignmentLE": "Lawful Evil",
+"SENTIUS.AlignmentLG": "Lawful Good",
+"SENTIUS.AlignmentLN": "Lawful Neutral",
+"SENTIUS.AlignmentNE": "Neutral Evil",
+"SENTIUS.AlignmentNG": "Neutral Good",
+"SENTIUS.AlignmentTN": "True Neutral",
+"SENTIUS.Amount": "Amount",
+"SENTIUS.Appearance": "Appearance",
+"SENTIUS.Apply": "Apply",
+"SENTIUS.Attunement": "Attunement",
+"SENTIUS.AttunementMax": "Maximum Attuned Items",
+"SENTIUS.AttunementNone": "Attunement Not Required",
+"SENTIUS.AttunementOptional": "Optional Attunement",
+"SENTIUS.AttunementRequired": "Attunement Required",
+"SENTIUS.AttunementAttuned": "Attuned",
+"SENTIUS.AttunementOverride": "Override attunement",
+"SENTIUS.Attuned": "Attuned",
+"SENTIUS.AreaOfEffect": {
+  "Label": "Area of Effect",
+  "Size": {
+    "Label": "Size",
+    "Height": "Height",
+    "Length": "Length",
+    "Radius": "Radius",
+    "Thickness": "Thickness",
+    "Width": "Width"
+  }
+},
+"SENTIUS.Armor": "Armor",
+"SENTIUS.ArmorClass": "Armor Class",
+"SENTIUS.ArmorClassEquipment": "Equipped Armor",
+"SENTIUS.ArmorClassFlat": "Flat",
+"SENTIUS.ArmorClassUnarmored": "Unarmored",
+"SENTIUS.ArmorClassNatural": "Natural Armor",
+"SENTIUS.ArmorClassMage": "Mage Armor",
+"SENTIUS.ArmorClassMotionless": "Armor Class while Motionless",
+"SENTIUS.ArmorClassDraconic": "Draconic Resilience",
+"SENTIUS.ArmorClassUnarmoredMonk": "Unarmored Defense (Monk)",
+"SENTIUS.ArmorClassUnarmoredBarbarian": "Unarmored Defense (Barbarian)",
+"SENTIUS.ArmorClassUnarmoredBard": "Unarmored Defense (Bard)",
+"SENTIUS.ArmorClassCustom": "Custom Formula",
+"SENTIUS.ArmorConfig": "Configure Armor",
+"SENTIUS.ArmorConfigHint": "Fill in the above box to override automatically calculated armor class.",
+"SENTIUS.ArmorClassCalculation": "Calculation",
+"SENTIUS.ArmorClassFormula": "Formula",
+"SENTIUS.ArmorHeavyProficiency": "Heavy",
+"SENTIUS.ArmorLightProficiency": "Light",
+"SENTIUS.ArmorMediumProficiency": "Medium",
+"SENTIUS.ArmorValue": "Armor Value",
+"SENTIUS.AC": "AC",
+
+"SENTIUS.ATTACK": {
+  "Title": {
+    "one": "Attack",
+    "other": "Attacks"
+  },
+  "FIELDS": {
+    "attack": {
+      "label": "Attack Details",
+      "ability": {
+        "label": "Attack Ability",
+        "hint": "Ability used for make the attack and determine damage. Available using @mod in formulas."
+      },
+      "bonus": {
+        "label": "To Hit Bonus",
+        "hint": "Bonus added to the to hit roll for the attack."
+      },
+      "critical": {
+        "threshold": {
+          "label": "Critical Threshold",
+          "hint": "Minimum value on the D20 needed to roll a critical hit."
+        }
+      },
+      "flat": {
+        "label": "Flat To Hit",
+        "hint": "Ignore the ability modifier, proficiency, and any other bonuses from the actor and only use the bonus defined by the activity when calculating to hit."
+      },
+      "type": {
+        "label": "Attack Type",
+        "value": {
+          "label": "Attack Type",
+          "hint": "Is this a melee or ranged attack?"
+        },
+        "classification": {
+          "label": "Attack Classification",
+          "hint": "Is this an unarmed, weapon, or spell attack?"
+        }
+      }
+    },
+    "damage": {
+      "label": "Attack Damage",
+      "critical": {
+        "bonus": {
+          "label": "Extra Critical Damage",
+          "hint": "Extra damage applied when a critical is rolled. Added to the base damage or first damage part."
+        }
+      },
+      "includeBase": {
+        "label": "Include Base Damage",
+        "hint": "Include the item's base damage with any additional damage parts."
+      },
+      "parts": {
+        "label": "Damage Parts",
+        "hint": "Individual damage parts to include with the roll."
+      }
+    }
+  },
+  "Attack": {
+    "mwak": "Melee Attack",
+    "rwak": "Ranged Attack"
+  },
+  "Classification": {
+    "Spell": "Spell",
+    "Unarmed": "Unarmed",
+    "Weapon": "Weapon"
+  },
+  "Formatted": {
+    "2014": "{type} {classification} Attack",
+    "2024": "{type} Attack Roll"
+  },
+  "Mode": {
+    "Label": "Attack Mode",
+    "Offhand": "Offhand",
+    "OneHanded": "One-Handed",
+    "Thrown": "Thrown",
+    "ThrownOffhand": "Offhand Throw",
+    "TwoHanded": "Two-Handed"
+  },
+  "Type": {
+    "Melee": "Melee",
+    "Ranged": "Ranged"
+  },
+  "Warning": {
+    "NoQuantity": "Attempting to attack with a weapon with a quantity of zero."
+  },
+  "Weapon": {
+    "Melee": "Melee Weapon",
+    "Ranged": "Ranged Weapon"
+  }
+},
+
+"SENTIUS.Attack": "Attack",
+"SENTIUS.AttackPl": "Attacks",
+"SENTIUS.AttackRoll": "Attack Roll",
+"SENTIUS.Attributes": "Attributes",
+"SENTIUS.AttrConcentration": {
+  "Limit": "Limit"
+},
+"SENTIUS.Automatic": "Automatic",
+"SENTIUS.AutomaticValue": "Automatic ({value})",
+"SENTIUS.Award": {
+  "Title": "Distribute Award",
+  "Action": "Award",
+  "Distribution": {
+    "Split": "Split",
+    "Each": "Each"
+  },
+  "Message": "{name} has been awarded {award}.",
+  "NoDestinations": "No Destinations Available",
+  "NoPrimaryParty": "No primary party set, displaying characters assigned to players instead.",
+  "NotGMError": "The /award command is only available to GMs.",
+  "UnrecognizedWarning": "Unable to parse {commands}. The /award command should be used with XP & currencies values such as '/award 10gp 50xp'."
+},
+"SENTIUS.Background": "Background",
+"SENTIUS.BackgroundAdd": "Add Background",
+"SENTIUS.BackgroundName": "Background Name",
+
+"SENTIUS.Bastion": {
+  "Action": {
+    "BastionTurn": "Advance Bastion Turn"
+  },
+  "Attack": {
+    "Automatic": "Resolve Automatically",
+    "Formula": "Attack Formula",
+    "NoActorWarning": "No character selected as target of the attack. Either select a token, or open their character sheet.",
+    "Resolve": "Resolve Attack",
+    "Result": {
+      "Damaged": "{link} damaged in the attack.",
+      "Deaths": {
+        "one": "<strong>{deaths}</strong> defender was slain in an attack on their bastion!",
+        "other": "<strong>{deaths}</strong> defenders were slain in an attack on their bastion!"
+      },
+      "NoDeaths": "Fended off an attack on their bastion with no casualties!",
+      "Undefended": "Undefended bastion attacked!"
+    },
+    "Title": "Bastion Attack"
+  },
+  "Button": {
+    "Label": "Show Bastion Turn Button",
+    "Hint": "Display a button for advancing bastion turns in the main game interface."
+  },
+  "Configuration": {
+    "Name": "Bastions",
+    "Label": "Configure Bastions",
+    "Hint": "Various configuration options for the Bastion system as presented in the DMG 2024."
+  },
+  "Confirm": "Advance one bastion turn?",
+  "Duration": {
+    "Label": "Bastion Turn Duration (days)"
+  },
+  "Enabled": {
+    "Label": "Enable Bastion Functionality",
+    "Hint": "When enabled, player characters will have access to a new Bastion tab on their character sheets when reaching level 5, and will be able to build facilities and issue orders to them."
+  },
+  "Gold": {
+    "Claim": "Claim Income",
+    "Claimed": "claimed",
+    "Unclaimed": "unclaimed"
+  },
+  "Label": "Bastion",
+  "Summary": {
+    "Gold": "{value} ({claimed})",
+    "NoOrders": "No orders issued to special facilities this turn.",
+    "Order": "{link} completed the <strong>{order}</strong> order."
+  }
+},
+
+"SENTIUS.Biography": "Biography",
+"SENTIUS.BiographyPublic": "Public Biography",
+"SENTIUS.BiopgrahyPublicEdit": "Edit Public Biography",
+"SENTIUS.Bonds": "Bonds",
+"SENTIUS.Bonus": "Bonus",
+"SENTIUS.BonusAbility": "Global Ability Bonuses",
+"SENTIUS.BonusAbilityCheck": "Global Ability Check Bonus",
+"SENTIUS.BonusAbilitySave": "Global Saving Throw Bonus",
+"SENTIUS.BonusAbilitySaveTitle": "Global Saving Throws",
+"SENTIUS.BonusAbilitySkill": "Global Skill Check Bonus",
+"SENTIUS.BonusAction": "Bonus Action",
+"SENTIUS.BonusActionAbbr": "BA",
+"SENTIUS.BonusAttack": "Attack Bonus",
+"SENTIUS.BonusDamage": "Damage Bonus",
+"SENTIUS.BonusMSAttack": "Melee Spell Attack Bonus",
+"SENTIUS.BonusMSDamage": "Melee Spell Damage Bonus",
+"SENTIUS.BonusMWAttack": "Melee Weapon Attack Bonus",
+"SENTIUS.BonusMWDamage": "Melee Weapon Damage Bonus",
+"SENTIUS.BonusRSAttack": "Ranged Spell Attack Bonus",
+"SENTIUS.BonusRSDamage": "Ranged Spell Damage Bonus",
+"SENTIUS.BonusRWAttack": "Ranged Weapon Attack Bonus",
+"SENTIUS.BonusRWDamage": "Ranged Weapon Damage Bonus",
+"SENTIUS.BonusSaveForm": "Update Bonuses",
+"SENTIUS.BonusSpell": "Global Spell Bonuses",
+"SENTIUS.BonusSpellDC": "Global Spell DC Bonus",
+"SENTIUS.BonusTitle": "Configure Actor Bonuses",
+"SENTIUS.Bonuses": "Global Bonuses",
+"SENTIUS.BonusesHint": "Define global bonuses as formulas which are added to certain rolls. For example: 1d4 + 2",
+"SENTIUS.BonusesInstructions": "Configure character bonuses which are added to the appropriate dice roll",
+
+"SENTIUS.CAST": {
+  "Title": "Cast",
+  "FIELDS": {
+    "spell": {
+      "label": "Casting Details",
+      "ability": {
+        "label": "Casting Ability",
+        "hint": "Ability to override the creature's normal spellcasting ability."
+      },
+      "challenge": {
+        "attack": {
+          "label": "Attack Bonus",
+          "hint": "Flat to hit bonus in place of the spell's normal attack bonus."
+        },
+        "save": {
+          "label": "Save DC",
+          "hint": "Flat DC to use in place of the spell's normal save DC."
+        },
+        "override": {
+          "label": "Override Values",
+          "hint": "Override the spell's normal attack bonus & DC when casting."
+        }
+      },
+      "level": {
+        "label": "Casting Level",
+        "hint": "Base level to cast the spell, if different than the spell's level."
+      },
+      "properties": {
+        "label": "Ignored Properties",
+        "hint": "Spell components & tags to ignore while casting."
+      },
+      "spellbook": {
+        "label": "Display in Spellbook",
+        "hint": "Display spell in the Spells tab of the character sheet."
+      },
+      "uuid": {
+        "label": "Spell to Cast"
+      }
+    }
+  },
+  "SECTIONS": {
+    "Spell": "Spell",
+    "Spellbook": "Additional Spells"
+  },
+  "Action": {
+    "RemoveSpell": "Remove Spell"
+  },
+  "Enchantment": {
+    "Name": "Spell Changes"
+  }
+},
+
+"SENTIUS.Casting": "Casting",
+"SENTIUS.Conditions": "Conditions",
+"SENTIUS.Controls": {
+  "Hint": "Enable various hints throughout the UI for certain mouse and keyboard controls.",
+  "LeftClick": "Left Click",
+  "LockHint": "Middle-click to lock",
+  "MiddleClick": "Middle Click",
+  "Name": "Enable Control Hints",
+  "Activity": {
+    "FastForwardHint": "<kbd>Shift</kbd> + <left-click> the item to skip this dialog"
+  }
+},
+"SENTIUS.ChallengeRating": "Challenge Rating",
+"SENTIUS.Charged": "Charged",
+"SENTIUS.Charges": "Charges",
+"SENTIUS.ChatContextDamage": "Apply Damage",
+"SENTIUS.ChatContextHealing": "Apply Healing",
+"SENTIUS.ChatContextTempHP": "Apply Temporary HP",
+"SENTIUS.ChatContextDoubleDamage": "Apply Double Damage",
+"SENTIUS.ChatContextHalfDamage": "Apply Half Damage",
+"SENTIUS.ChatContextSelectHit": "Select Hit Targets",
+"SENTIUS.ChatContextSelectMiss": "Select Missed Targets",
+"SENTIUS.ChatFlavor": "Chat Message Flavor",
+
+"SENTIUS.CHECK": {
+  "Title": "Check",
+  "FIELDS": {
+    "check": {
+      "label": "Check Details",
+      "ability": {
+        "label": "Check Ability",
+        "hint": "Ability to use when making the check."
+      },
+      "associated": {
+        "label": "Associated Skills or Tools",
+        "hint": "Present ability checks using proficiency and bonuses with these skills or tools."
+      },
+      "dc": {
+        "label": "Difficulty Class",
+        "calculation": {
+          "label": "DC Calculation",
+          "hint": "Method or ability used to calculate the difficulty class."
+        },
+        "formula": {
+          "label": "DC Formula",
+          "hint": "Custom formula or flat value for defining the check DC."
+        }
+      }
+    }
+  },
+  "ThisTool": "This Tool"
+},
+
+"SENTIUS.CheckBonus": "Check Bonus",
+
+"SENTIUS.CLASS": {
+  "Multiclass": {
+    "Title": "Multiclassing"
+  },
+  "FIELDS": {
+    "hd": {
+      "label": "Hit Point Die",
+      "additional": {
+        "label": "Additional Hit Dice",
+        "hint": "Formula for hit dice that are available for this class beyond the normal amount."
+      },
+      "spent": {
+        "label": "Spent Hit Dice"
+      }
+    },
+    "levels": {
+      "label": "Class Levels"
+    },
+    "primaryAbility": {
+      "all": {
+        "label": "Require All",
+        "hint": "Require all primary abilities to meet the minimum in order to multi-class."
+      },
+      "value": {
+        "label": "Primary Ability",
+        "hint": "Abilities used most by this class. Used to determine multi-classing restrictions."
+      }
+    }
+  }
+},
+
+"SENTIUS.ClassAdd": "Add Class",
+"SENTIUS.ClassIdentifier": "Class Identifier",
+"SENTIUS.ClassIdentifierHint": "This class's data will be accessible using <strong>@classes.{identifier}</strong> in roll formulas.",
+"SENTIUS.ClassLevels": "Class Levels",
+"SENTIUS.ClassMakeOriginal": "Original Class",
+"SENTIUS.ClassMakeOriginalHint": "First class taken by character used to determine certain class traits when multiclassing.",
+"SENTIUS.ClassName": "Class Name",
+"SENTIUS.ClassOriginal": "Original Class",
+"SENTIUS.ClassSaves": "Saving Throws",
+"SENTIUS.Confirm": "Confirm",
+"SENTIUS.CompendiumBrowser": {
+  "Title": "Compendium Browser",
+  "Action": {
+    "Open": "Open Compendium Browser"
+  },
+  "Column": {
+    "Icon": "Icon",
+    "Name": "Name",
+    "Results": "Results",
+    "Source": "Source"
+  },
+  "Filters": {
+    "Label": "Filters",
+    "HasDarkvision": "Has Darkvision",
+    "HasSpellcasting": "Has Spellcasting",
+    "SearchResults": "Search results"
+  },
+  "Selection": {
+    "Label": "Selected: {summary}",
+    "Select": "Select",
+    "Summary": {
+      "Max": "<span class=\"value\">{value}</span> of up to {max}",
+      "Min": "<span class=\"value\">{value}</span> of at least {min}",
+      "Range": "<span class=\"value\">{value}</span> of {min} to {max}",
+      "Single": "<span class=\"value\">{value}</span> of {max}"
+    },
+    "Warning": {
+      "Document": {
+        "one": "document",
+        "other": "documents"
+      },
+      "Max": "Must select at most {max} {document}, {value} selected.",
+      "Min": "Must select at least {min} {document}, {value} selected.",
+      "Range": "Must select between {min} and {max} documents, {value} selected.",
+      "Single": "Must select {max} {document}, {value} selected."
+    }
+  },
+  "Sources": {
+    "Name": "Compendium Browser Sources",
+    "Label": "Configure Sources",
+    "FilterPackages": "Filter Packages",
+    "Hint": "Configure which compendium packs have their content available in the compendium browser."
+  },
+  "Tabs": {
+    "Feat.other": "Feats",
+    "Item.other": "Items",
+    "Monster.other": "Monsters"
+  },
+  "Types": {
+    "Label": "Types"
+  },
+  "Locked": "Locked"
+},
+"SENTIUS.ComponentMaterial": "Material",
+"SENTIUS.ComponentMaterialAbbr": "M",
+"SENTIUS.ComponentSomatic": "Somatic",
+"SENTIUS.ComponentSomaticAbbr": "S",
+"SENTIUS.ComponentVerbal": "Verbal",
+"SENTIUS.ComponentVerbalAbbr": "V",
+"SENTIUS.Components": "Components",
+"SENTIUS.Container": "Container",
+"SENTIUS.ContainerDeleteMessage": "This container will be permanently deleted and cannot be recovered and the {count} items contained within will be moved out.",
+"SENTIUS.ContainerDeleteContents": "Also delete all items within the container.",
+"SENTIUS.ContainerMaxDepth": "Containers cannot be nested more than {depth} levels deep.",
+"SENTIUS.ContainerRecursiveError": "Containers cannot contain themselves.",
+"SENTIUS.Contents": "Contents",
+"SENTIUS.ContextMenuActionEdit": "Edit",
+"SENTIUS.ContextMenuActionDuplicate": "Duplicate",
+"SENTIUS.ContextMenuActionDelete": "Delete",
+"SENTIUS.ContextMenuActionEquip": "Equip",
+"SENTIUS.ContextMenuActionUnequip": "Unequip",
+"SENTIUS.ContextMenuActionPrepare": "Prepare",
+"SENTIUS.ContextMenuActionExpendCharge": "Uncharge",
+"SENTIUS.ContextMenuActionCharge": "Charge",
+"SENTIUS.ContextMenuActionUnprepare": "Unprepare",
+"SENTIUS.ContextMenuActionAttune": "Attune",
+"SENTIUS.ContextMenuActionUnattune": "Unattune",
+"SENTIUS.ContextMenuActionEnable": "Enable",
+"SENTIUS.ContextMenuActionDisable": "Disable",
+"SENTIUS.ContextMenuActionView": "View",
+"SENTIUS.Contiguous": "Contiguous",
+"SENTIUS.ConBlinded": "Blinded",
+"SENTIUS.ConCharmed": "Charmed",
+"SENTIUS.ConDeafened": "Deafened",
+"SENTIUS.ConDiseased": "Diseased",
+"SENTIUS.ConExhaustion": "Exhaustion",
+"SENTIUS.ConFrightened": "Frightened",
+"SENTIUS.ConGrappled": "Grappled",
+"SENTIUS.ConImm": "Condition Immunities",
+"SENTIUS.ConIncapacitated": "Incapacitated",
+"SENTIUS.ConInvisible": "Invisible",
+"SENTIUS.ConParalyzed": "Paralyzed",
+"SENTIUS.ConPetrified": "Petrified",
+"SENTIUS.ConPoisoned": "Poisoned",
+"SENTIUS.ConProne": "Prone",
+"SENTIUS.ConRestrained": "Restrained",
+"SENTIUS.ConStunned": "Stunned",
+"SENTIUS.ConUnconscious": "Unconscious",
+"SENTIUS.Concentration": "Concentration",
+"SENTIUS.ConcentrationAbbr": "C",
+"SENTIUS.ConcentrationBreak": "Break Concentration",
+"SENTIUS.ConcentrationBreakWarning": "Breaking concentration on an effect that is active on other creatures requires an active GM to be present.",
+"SENTIUS.ConcentrationBonus": "Concentration Bonus",
+"SENTIUS.ConcentrationDuration": "Concentration, up to {duration}",
+"SENTIUS.ConcentratingOn": "You are maintaining concentration on the effects of the '{name}' {type}.",
+"SENTIUS.ConcentratingEndChoice": "You are concentrating on effects from more than one source. Pick which effect to end.",
+"SENTIUS.ConcentratingMissingItem": "The effect that is concentrated on and to be replaced does not exist.",
+"SENTIUS.ConcentratingLimited": "You are not able to begin concentrating on an additional effect.",
+"SENTIUS.ConcentrationLimit": "Concentration Limit",
+"SENTIUS.ConcentratingEnd": "End Concentration",
+"SENTIUS.ConcentratingItemless": "Concentration With No Source",
+"SENTIUS.ConcentratingWarnLimit": "You cannot maintain concentration on more effects!",
+"SENTIUS.ConcentratingWarnLimitOptional": "You may end concentration on one of your maintained effects to use this item.",
+"SENTIUS.ConcentratingWarnLimitZero": "You are not able to maintain concentration on any effects!",
+"SENTIUS.ConcentrationConfigurationHint": "Configure concentration modifiers and bonuses which apply to this creature.",
+"SENTIUS.ConsumeTitle": "Resource Consumption",
+"SENTIUS.ConsumeAmount": "Consumption Amount",
+"SENTIUS.ConsumeHint": {
+  "Attribute": "Attribute to consume (e.g. currency.gp)",
+  "Item": "UUID of target in compendium"
+},
+"SENTIUS.ConsumeTarget": "Consumption Target",
+"SENTIUS.ConsumeType": "Consumption Category",
+"SENTIUS.ConsumeAmmunition": "Ammunition",
+"SENTIUS.ConsumeAttribute": "Attribute",
+"SENTIUS.ConsumeHitDice": "Hit Dice",
+"SENTIUS.ConsumeHitDiceLargest": "Largest Available",
+"SENTIUS.ConsumeHitDiceLargestLong": "Largest Hit Dice Available",
+"SENTIUS.ConsumeHitDiceSmallest": "Smallest Available",
+"SENTIUS.ConsumeHitDiceSmallestLong": "Smallest Hit Dice Available",
+"SENTIUS.ConsumeMaterial": "Material",
+"SENTIUS.ConsumeCharges": "Item Uses",
+"SENTIUS.ConsumeResource": "Consume Resource?",
+"SENTIUS.ConsumeRecharge": "Consume Recharge?",
+"SENTIUS.ConsumeScaling": "Resource Scaling",
+"SENTIUS.ConsumeScalingLabel": "Use Resources",
+"SENTIUS.ConsumeScalingTooltip": "If checked, consuming additional resources will increase the level the spell is cast at.",
+
+"SENTIUS.CONSUMABLE": {
+  "FIELDS": {
+    "damage": {
+      "label": "Ammunition Damage",
+      "replace": {
+        "label": "Replace Weapon Damage",
+        "hint": "Replace base weapon damage with this damage rather than augmenting it."
+      }
+    },
+    "magicalBonus": {
+      "label": "Magical Bonus"
+    },
+    "properties": {
+      "label": "Consumable Properties"
+    },
+    "uses": {
+      "autoDestroy": {
+        "label": "Destroy on Empty",
+        "hint": "Reduce the item's quantity by 1 whenever all of its limited uses are expended."
+      }
+    }
+  },
+  "Category": {
+    "Poison": "Poison"
+  },
+  "Type": {
+    "Ammunition": {
+      "Label": "Ammunition",
+      "Arrow": "Arrow",
+      "Bolt": "Bolt",
+      "BulletFirearm": "Bullet, Firearm",
+      "BulletSling": "Bullet, Sling",
+      "EnergyCell": "Energy Cell",
+      "Needle": "Needle"
+    },
+    "Food": {
+      "Label": "Food"
+    },
+    "Poison": {
+      "Label": "Poison",
+      "Contact": "Contact",
+      "Ingested": "Ingested",
+      "Inhaled": "Inhaled",
+      "Injury": "Injury"
+    },
+    "Potion": {
+      "Label": "Potion"
+    },
+    "Rod": {
+      "Label": "Rod"
+    },
+    "Scroll": {
+      "Label": "Scroll"
+    },
+    "Trinket": {
+      "Label": "Trinket"
+    },
+    "Wand": {
+      "Label": "Wand"
+    }
+  }
+},
+
+"SENTIUS.ConsumableUseWarnStart": "This consumable has",
+"SENTIUS.ConsumableUseWarnEnd": "of the current unit",
+"SENTIUS.ConsumableUnitWarn": "units remaining",
+"SENTIUS.ConsumableLastChargeWarn": "This is the last charge of this unit and consuming it will also reduce the item's quantity by 1",
+"SENTIUS.ConsumableWithoutCharges": "available units to use",
+
+"SENTIUS.CONSUMPTION": {
+  "FIELDS": {
+    "consumption": {
+      "label": "Consumption",
+      "scaling": {
+        "abbr": "Scaling",
+        "label": "Consumption Scaling",
+        "allowed": {
+          "label": "Allow Scaling",
+          "hint": "Can an activity not on a spell be activated at higher levels?"
+        },
+        "max": {
+          "label": "Max Scaling",
+          "hint": "Maximum number of scaling levels for this item, including the base level."
+        }
+      },
+      "spellSlot": {
+        "label": "Consume Spell Slot",
+        "hint": "Should using this activity consume a slot for this spell?"
+      },
+      "targets": {
+        "label": "Consumption Targets",
+        "hint": "Targets of possible consumption when this activity is activated.",
+        "FIELDS": {
+          "type": {
+            "label": "Consumption Type",
+            "hint": "Type of consumption target."
+          },
+          "target": {
+            "label": "Consumption Target",
+            "hint": "Specific target to be consumed."
+          },
+          "value": {
+            "label": "Consumption Amount",
+            "hint": "Enter a negative value to restore rather than consume."
+          },
+          "scaling": {
+            "label": "Consumption Scaling",
+            "mode": {
+              "label": "Scaling Mode",
+              "hint": "How consumption should be scaled."
+            },
+            "formula": {
+              "label": "Scaling Formula",
+              "hint": "Custom scaling of consumption amount per level."
+            }
+          }
+        }
+      }
+    }
+  },
+  "Action": {
+    "ConsumeResource": "Consume Resource",
+    "Create": "Create Consumption Target",
+    "Delete": "Delete Consumption Target",
+    "RefundResource": "Refund Resource"
+  },
+  "Scaling": {
+    "Amount": "Amount",
+    "Automatic": "Automatic",
+    "None": "No Scaling",
+    "SlotLevel": "Slot Level"
+  },
+  "Target": {
+    "ThisItem": "This Item"
+  },
+  "Type": {
+    "Action": {
+      "Prompt": "Consume {type}?",
+      "PromptHint": "Spend {cost} ({available} available)."
+    },
+    "ActivityUses": {
+      "Label": "Activity Uses",
+      "PromptDecrease": "Consume Activity Use?",
+      "PromptIncrease": "Restore Activity Use?",
+      "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of this activity ({available} {availableUse} available).",
+      "PromptHintIncrease": "Recover <strong>{cost}</strong> {use} of this activity.",
+      "Warning": "uses on {item}'s activity {activity}"
+    },
+    "Attribute": {
+      "Label": "Attribute",
+      "PromptDecrease": "Consume Attribute?",
+      "PromptIncrease": "Restore Attribute?",
+      "PromptHintDecrease": "Decrease <code>{attribute}</code> by <strong>{cost}</strong> (currently {current}).",
+      "PromptHintIncrease": "Increase <code>{attribute}</code> by <strong>{cost}</strong> (currently {current}).",
+      "Warning": "{attribute} amount"
+    },
+    "HitDice": {
+      "Label": "Hit Dice",
+      "PromptDecrease": "Consume Hit Die?",
+      "PromptIncrease": "Restore Hit Die?",
+      "PromptHintDecrease": "Spend <strong>{cost}</strong> {denomination} {die} ({available} remaining).",
+      "PromptHintIncrease": "Recover <strong>{cost}</strong> {denomination} {die}.",
+      "Warning": "{denomination} hit dice"
+    },
+    "HitDie": {
+      "one": "hit die",
+      "other": "hit dice"
+    },
+    "ItemUses": {
+      "Label": "Item Uses",
+      "PromptDecrease": "Consume Item Use?",
+      "PromptIncrease": "Restore Item Use?",
+      "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of {item} ({available} {availableUse} available).",
+      "PromptHintIncrease": "Recover <strong>{cost}</strong> {use} of {item}.",
+      "Warning": "uses on {name}"
+    },
+    "Material": {
+      "Label": "Material",
+      "PromptDecrease": "Consume Material?",
+      "PromptIncrease": "Restore Material?",
+      "PromptHintDecrease": "Reduce quantity of {item} by <strong>{cost}</strong> ({quantity} remaining).",
+      "PromptHintIncrease": "Increase quantity of {item} by <strong>{cost}</strong>.",
+      "Warning": "of {name}"
+    },
+    "SpellSlot": {
+      "one": "{level} slot",
+      "other": "{level} slots"
+    },
+    "SpellSlots": {
+      "Label": "Spell Slots",
+      "PromptDecrease": "Consume Spell Slot?",
+      "PromptIncrease": "Restore Spell Slot?",
+      "PromptHintDecrease": "Spend <strong>{cost}</strong> {slot} ({available} remaining).",
+      "PromptHintIncrease": "Recover <strong>{cost}</strong> {slot}.",
+      "Warning": "{level} slots"
+    },
+    "Use": {
+      "one": "use",
+      "other": "uses"
+    }
+  },
+  "Warning": {
+    "MissingAttribute": "Attribute {attribute} configured to be consumed by {activity} activity on {item} could not be found.",
+    "MissingHitDice": "Actor does not have a class with a {denomination} hit die.",
+    "MissingItem": "Item configured to be consumed by {activity} activity on {item} could not be found.",
+    "MissingSpellSlot": "No {level} slots available.",
+    "None": "No {type} available to spend, {cost} required.",
+    "NotEnough": "Not enough {type} available to spend, {cost} required and only {available} available.",
+    "WillDestroy": "Consuming {item} will spend its final use and it will be destroyed."
+  }
+},
+
+"SENTIUS.Consumed": "Consumed",
+"SENTIUS.Copy": "Copy Text",
+"SENTIUS.Copied": "Copied {value}",
+"SENTIUS.Cover": "Cover",
+"SENTIUS.CoverHalf": "Half",
+"SENTIUS.CoverThreeQuarters": "Three Quarters",
+"SENTIUS.CoverTotal": "Total",
+"SENTIUS.Cost": "Cost",
+"SENTIUS.CostGP": "Cost (GP)",
+"SENTIUS.CreatureAberration": "Aberration",
+"SENTIUS.CreatureAberrationPl": "Aberrations",
+"SENTIUS.CreatureBeast": "Beast",
+"SENTIUS.CreatureBeastPl": "Beasts",
+"SENTIUS.CreatureCelestial": "Celestial",
+"SENTIUS.CreatureCelestialPl": "Celestials",
+"SENTIUS.CreatureConstruct": "Construct",
+"SENTIUS.CreatureConstructPl": "Constructs",
+"SENTIUS.CreatureDragon": "Dragon",
+"SENTIUS.CreatureDragonPl": "Dragons",
+"SENTIUS.CreatureElemental": "Elemental",
+"SENTIUS.CreatureElementalPl": "Elementals",
+"SENTIUS.CreatureFey": "Fey",
+"SENTIUS.CreatureFeyPl": "Fey",
+"SENTIUS.CreatureFiend": "Fiend",
+"SENTIUS.CreatureFiendPl": "Fiends",
+"SENTIUS.CreatureGiant": "Giant",
+"SENTIUS.CreatureGiantPl": "Giants",
+"SENTIUS.CreatureHumanoid": "Humanoid",
+"SENTIUS.CreatureHumanoidPl": "Humanoids",
+"SENTIUS.CreatureMonstrosity": "Monstrosity",
+"SENTIUS.CreatureMonstrosityPl": "Monstrosities",
+"SENTIUS.CreatureOoze": "Ooze",
+"SENTIUS.CreatureOozePl": "Oozes",
+"SENTIUS.CreaturePlant": "Plant",
+"SENTIUS.CreaturePlantPl": "Plants",
+"SENTIUS.CreatureType": "Creature Type",
+"SENTIUS.CreatureTypeTitle": "Configure Creature Type",
+"SENTIUS.CreatureSwarm": "Swarm",
+"SENTIUS.CreatureSwarmSize": "Swarm Size",
+"SENTIUS.CreatureSwarmPhrase": "Swarm of {size} {type}",
+"SENTIUS.CreatureTag": "{size} {type}, {alignment}",
+"SENTIUS.CreatureTypeConfig": "Configure Creature Type",
+"SENTIUS.CreatureTypeSelectorCustom": "Custom Type",
+"SENTIUS.CreatureTypeSelectorSubtype": "Subtype",
+"SENTIUS.CreatureUndead": "Undead",
+"SENTIUS.CreatureUndeadPl": "Undead",
+"SENTIUS.Crewed": "Crewed",
+"SENTIUS.Critical": "Critical",
+"SENTIUS.CriticalHit": "Critical Hit",
+"SENTIUS.PowerfulCritical": "Powerful Critical",
+"SENTIUS.CRLabel": "CR {cr}",
+"SENTIUS.Currency": "Currency",
+"SENTIUS.CurrencyAbbrCP": "cp",
+"SENTIUS.CurrencyAbbrEP": "ep",
+"SENTIUS.CurrencyAbbrGP": "gp",
+"SENTIUS.CurrencyAbbrPP": "pp",
+"SENTIUS.CurrencyAbbrSP": "sp",
+"SENTIUS.CurrencyCP": "Copper",
+"SENTIUS.CurrencyEP": "Electrum",
+"SENTIUS.CurrencyGP": "Gold",
+"SENTIUS.CurrencyPP": "Platinum",
+"SENTIUS.CurrencySP": "Silver",
+"SENTIUS.CurrencyManager": {
+  "Title": "Manage Currency",
+  "Convert": {
+    "Label": "Convert",
+    "Action": "Convert All Currency",
+    "Hint": "Convert all carried currency to the highest possible denomination to reduce the amount of coinage carried by the character. Be wary, this action cannot be undone."
+  },
+  "Error": {
+    "InsufficientFunds": "Failed to deduct {amount}{denomination} from {name}. Insufficient funds."
+  },
+  "Transfer": {
+    "Label": "Transfer",
+    "Action": "Transfer Selected",
+    "All": "All",
+    "Half": "Half"
+  }
+},
+"SENTIUS.Current": "Current",
+
+"SENTIUS.DAMAGE": {
+  "Title": "Damage",
+  "FIELDS": {
+    "damage": {
+      "label": "Damage",
+      "critical": {
+        "allow": {
+          "label": "Allow Critical",
+          "hint": "Should the creature be able to roll critical damage?"
+        },
+        "bonus": {
+          "label": "Extra Critical Damage",
+          "hint": "Extra damage applied to the first damage part when a critical is rolled."
+        }
+      },
+      "parts": {
+        "label": "Damage Parts",
+        "hint": "Individual damage parts to include with the roll.",
+        "FIELDS": {
+          "bonus": {
+            "label": "Damage Bonus",
+            "hint": "Bonus added to the damage roll."
+          },
+          "custom": {
+            "label": "Custom Damage Formula",
+            "enabled": {
+              "label": "Enable Custom Formula",
+              "hint": "Use a custom formula rather than the default dice."
+            },
+            "formula": {
+              "label": "Damage Formula",
+              "hint": "Custom damage formula."
+            }
+          },
+          "denomination": {
+            "label": "Die Denomination",
+            "hint": "Denomination of the dice to roll."
+          },
+          "number": {
+            "label": "Die Number",
+            "hint": "Number of dice to roll."
+          },
+          "scaling": {
+            "label": "Damage Scaling",
+            "abbr": "Scaling",
+            "mode": {
+              "label": "Scaling Mode",
+              "abbr": "Mode",
+              "hint": "Method by which the scaling increase is calculated."
+            },
+            "number": {
+              "label": "Dice Scaling",
+              "abbr": "Dice",
+              "hint": "Number of dice to increase for each scaling step. Will be applied to the first die found in the damage formula if more than one is present."
+            },
+            "formula": {
+              "label": "Scaling Formula",
+              "hint": "Arbitrary scaling formula that will be multiplied for each scaling step and added to the original formula."
+            }
+          },
+          "types": {
+            "label": "Damage Types",
+            "hint": "Type of damage inflicted or multiple for the user to select from."
+          }
+        }
+      }
+    }
+  },
+  "Part": {
+    "Action": {
+      "Create": "Create Damage Part",
+      "Delete": "Delete Damage Part"
+    }
+  },
+  "Scaling": {
+    "Half": "Every Other Level",
+    "None": "No Scaling",
+    "Whole": "Every Level"
+  }
+},
+
+"SENTIUS.DamImm": "Damage Immunities",
+"SENTIUS.DamMod": "Damage Modification",
+"SENTIUS.DamRes": "Damage Resistances",
+"SENTIUS.DamVuln": "Damage Vulnerabilities",
+"SENTIUS.Damage": "Damage",
+"SENTIUS.DamageAcid": "Acid",
+"SENTIUS.DamageAll": "All Damage",
+"SENTIUS.DamageApplication": {
+  "Change": {
+    "Modification": "{type} Modification",
+    "Immunity": "{type} Immunity",
+    "Resistance": "{type} Resistance",
+    "Vulnerability": "{type} Vulnerability"
+  },
+  "Downgrading": "Downgrading {source} to Resistance",
+  "Ignoring": "Ignoring {source}"
+},
+"SENTIUS.DamageBludgeoning": "Bludgeoning",
+"SENTIUS.DamageCold": "Cold",
+"SENTIUS.DamageFire": "Fire",
+"SENTIUS.DamageForce": "Force",
+"SENTIUS.DamageLightning": "Lightning",
+"SENTIUS.DamageModification": {
+  "Label": "Damage Modification",
+  "Hint": "Formulas for amounts that will be added to typed damage applied to this actor. Negative values will reduce the damage taken.",
+  "BypassHint": "These weapon properties will bypass damage modification for physical damage."
+},
+"SENTIUS.DamageNecrotic": "Necrotic",
+"SENTIUS.DamagePiercing": "Piercing",
+"SENTIUS.DamagePhysical": "Non-Magical Physical",
+"SENTIUS.DamagePhysicalBypass": "Physical Bypasses",
+"SENTIUS.DamagePhysicalBypassHint": "These weapon properties will bypass damage resistance for physical damage.",
+"SENTIUS.DamagePhysicalBypasses": "{damageTypes} from attacks that are not {bypassTypes}",
+"SENTIUS.DamagePhysicalBypassesShort": "Bypassed by {type} Sources",
+"SENTIUS.DamagePoison": "Poison",
+"SENTIUS.DamagePsychic": "Psychic",
+"SENTIUS.DamageRadiant": "Radiant",
+"SENTIUS.DamageRoll": "Damage Roll",
+"SENTIUS.DamageSlashing": "Slashing",
+"SENTIUS.DamageThreshold": "Damage Threshold",
+"SENTIUS.DamageThunder": "Thunder",
+"SENTIUS.DamageType": "Damage Type",
+"SENTIUS.DamageTypes": "Damage Types",
+"SENTIUS.Dawn": "Dawn",
+"SENTIUS.Day": "Day",
+"SENTIUS.DeathSave": "Death Saves",
+"SENTIUS.DeathSaveCriticalSuccess": "{name} critically succeeded on a death saving throw and has regained 1 Hit Point!",
+"SENTIUS.DeathSaveHide": "Hide Death Saves",
+"SENTIUS.DeathSaveShow": "Show Death Saves",
+"SENTIUS.DeathSaveSuccess": "{name} has survived with 3 death save successes and is now stable!",
+"SENTIUS.DeathSaveSuccessLabel": "Death Save Success",
+"SENTIUS.DeathSaveSuccessLabelN.one": "1st death save success",
+"SENTIUS.DeathSaveSuccessLabelN.two": "2nd death save success",
+"SENTIUS.DeathSaveSuccessLabelN.few": "3rd death save success",
+"SENTIUS.DeathSaveSuccesses": "Successes",
+"SENTIUS.DeathSaveFailure": "{name} has died with 3 death save failures!",
+"SENTIUS.DeathSaveFailureLabel": "Death Save Failure",
+"SENTIUS.DeathSaveFailureLabelN.one": "1st death save failure",
+"SENTIUS.DeathSaveFailureLabelN.two": "2nd death save failure",
+"SENTIUS.DeathSaveFailureLabelN.few": "3rd death save failure",
+"SENTIUS.DeathSaveFailures": "Failures",
+"SENTIUS.DeathSaveRoll": "Roll a Death Saving Throw",
+"SENTIUS.DeathSavingThrow": "Death Saving Throw",
+"SENTIUS.DeathSaveUnnecessary": "You do not need to roll death saves because you have a positive number of hit points or have already reached 3 successes or failures.",
+"SENTIUS.Default": "Default",
+"SENTIUS.DefaultSpecific": "Default ({default})",
+"SENTIUS.DefaultAbilityCheck": "Default Ability Check",
+"SENTIUS.Denomination": "Denomination",
+"SENTIUS.Description": "Description",
+"SENTIUS.DescriptionChat": "Chat Description",
+"SENTIUS.DescriptionEdit": "Edit {description}",
+"SENTIUS.DescriptionSummary": "Summary Description",
+"SENTIUS.DescriptionUnidentified": "Unidentified Description",
+"SENTIUS.Details": "Details",
+"SENTIUS.DetailsEdit": "Edit Details",
+"SENTIUS.Die": "Die",
+"SENTIUS.Dimensions": "Dimensions",
+"SENTIUS.Disadvantage": "Disadvantage",
+"SENTIUS.Discord": "Discord",
+"SENTIUS.Disclaimer": "Disclaimer",
+"SENTIUS.DistAny": "Any",
+"SENTIUS.DistFt": "Feet",
+"SENTIUS.DistFtAbbr": "ft",
+"SENTIUS.DistKm": "Kilometers",
+"SENTIUS.DistKmAbbr": "km",
+"SENTIUS.DistM": "Meters",
+"SENTIUS.DistMAbbr": "m",
+"SENTIUS.DistMi": "Miles",
+"SENTIUS.DistMiAbbr": "mi",
+"SENTIUS.DistSelf": "Self",
+"SENTIUS.DistTouch": "Touch",
+"SENTIUS.DocumentUseWarn": "You lack permission to use an item on this document.",
+"SENTIUS.DocumentViewWarn": "You lack permission to view this document.",
+
+"SENTIUS.DURATION": {
+  "FIELDS": {
+    "duration": {
+      "label": "Duration",
+      "concentration": {
+        "label": "Concentration",
+        "hint": "Creature must maintain concentration while active."
+      },
+      "override": {
+        "label": "Override Duration",
+        "hint": "Use these duration values instead of the item's when using this activity."
+      },
+      "special": {
+        "label": "Special Duration",
+        "hint": "Description of any special duration details."
+      },
+      "units": {
+        "label": "Duration Units",
+        "hint": "Units used to measure duration."
+      },
+      "value": {
+        "label": "Duration Value",
+        "hint": "Value of the duration in the specified units, if applicable."
+      }
+    }
+  }
+},
+
+"SENTIUS.Duration": "Duration",
+"SENTIUS.DurationPermanent": "Permanent",
+"SENTIUS.DurationTime": "Time",
+"SENTIUS.DurationType": "Duration Type",
+"SENTIUS.DurationUnits": "Duration Units",
+"SENTIUS.DurationValue": "Duration Value",
+"SENTIUS.Dusk": "Dusk",
+"SENTIUS.Effect": "Effect",
+"SENTIUS.Effects": "Effects",
+"SENTIUS.EFFECT": {
+  "Action": {
+    "Create": "Create Effect",
+    "Delete": "Delete Effect",
+    "Dissociate": "Dissociate Effect"
+  },
+  "Empty": "No associated effects. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing effect from the drop-down.",
+  "Label": "Available Effects"
+},
+"SENTIUS.EffectsApplyTokens": "Apply to selected tokens",
+"SENTIUS.EffectApplyWarningConcentration": "Applying an effect that is being concentrated on by another character requires GM permissions.",
+"SENTIUS.EffectApplyWarningOwnership": "Effects cannot be applied to tokens you are not the owner of.",
+"SENTIUS.EffectsSearch": "Search effects",
+
+"SENTIUS.ENCHANT": {
+  "Title": "Enchant",
+  "FIELDS": {
+    "effects": {
+      "FIELDS": {
+        "level": {
+          "label": "Level Limit",
+          "hint": "Range of levels required to use this enchantment.",
+          "max": {
+            "label": "Maximum Level"
+          },
+          "min": {
+            "label": "Minimum Level"
+          }
+        },
+        "riders": {
+          "label": "Attached",
+          "activity": {
+            "label": "Additional Activities",
+            "hint": "These additional activities will be added to the enchanted item when this enchantment is applied, and removed when the enchantment is removed."
+          },
+          "effect": {
+            "label": "Additional Effects",
+            "hint": "These additional effects will be added to the enchanted item when this enchantment is applied, and removed when the enchantment is removed."
+          },
+          "item": {
+            "label": "Additional Items",
+            "hint": "These additional items will be added to the creature when one of its items is enchanted, and will be removed if the enchantment is ever removed."
+          }
+        }
+      }
+    },
+    "enchant": {
+      "label": "Enchantment Configuration",
+      "identifier": {
+        "label": "Class Identifier",
+        "hint": "Identifier used to determine whether the character level or a specific class level should be used for enchantment level limits."
+      }
+    },
+    "restrictions": {
+      "label": "Restrictions",
+      "hint": "Restrictions on the type of item to which this enchantment can be applied.",
+      "allowMagical": {
+        "label": "Allow Magical",
+        "hint": "Allow items that are already magical to be enchanted."
+      },
+      "categories": {
+        "label": "Valid Categories",
+        "hint": "Specific item categories to which this enchantment can be applied."
+      },
+      "properties": {
+        "label": "Valid Properties",
+        "hint": "Specific item properties which must be present for this enchantment to be applied."
+      },
+      "type": {
+        "label": "Item Type",
+        "hint": "Type of item to which this enchantment can be applied.",
+        "Any": "Any Enchantable Type"
+      }
+    }
+  },
+  "SECTIONS": {
+    "Enchanting": "Enchanting",
+    "Enchantments": "Enchantments",
+    "Restrictions": "Restrictions"
+  },
+  "DropArea": "Place item here to enchant it…",
+  "Enchanted": "{current} &sol; {max} enchanted",
+  "Enchantment": {
+    "Action": {
+      "Create": "Create Enchantment",
+      "Delete": "Delete Enchantment"
+    },
+    "Empty": "No associated enchantments. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing enchantment from the drop-down."
+  },
+  "Warning": {
+    "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
+    "MissingProperty": "Item must have one of these properties to be enchanted: {validProperties}.",
+    "NoMagicalItems": "Items that are already magical cannot be enchanted.",
+    "NoSubtype": "Only {allowedType} items can be enchanted by this enchantment, but this item doesn't have a sub-type.",
+    "WrongType": "{incorrectType} items cannot be enchanted by this enchantment, only {allowedType} items are allowed."
+  }
+},
+
+"SENTIUS.ENCHANTMENT": {
+  "Action": {
+    "Apply": "Apply Enchantment",
+    "Disable": "Disable Enchantment",
+    "Edit": "Edit Enchantment",
+    "Enable": "Enable Enchantment",
+    "Remove": "Remove Enchantment"
+  },
+  "Category": {
+    "Active": "Active Enchantments",
+    "General": "Enchantments",
+    "Inactive": "Inactive Enchantments"
+  },
+  "FIELDS": {
+    "enchantment": {
+      "label": "Enchantment Configuration",
+      "items": {
+        "max": {
+          "label": "Item Limit",
+          "hint": "Formula for the maximum number of enchantments of this type that can be active at a time."
+        },
+        "period": {
+          "label": "Replacement Period",
+          "hint": "How frequently the enchantments of this type can be re-bound to different items."
+        }
+      }
+    }
+  },
+  "Items": {
+    "Entry": "{item} on <em>{actor}</em>"
+  },
+  "Label": "Enchantment",
+  "Warning": {
+    "NotOnActor": "Enchantments can only be added to items, not directly to actors.",
+    "Override": "This value is being modified by an Enchantment and cannot be edited. Disable the enchantment in the effects tab to edit it."
+  }
+},
+
+"SENTIUS.Environment": "Environment",
+
+"SENTIUS.EQUIPMENT": {
+  "Type": {
+    "Clothing": {
+      "Label": "Clothing"
+    },
+    "Ring": {
+      "Label": "Ring"
+    },
+    "Rod": {
+      "Label": "Rod"
+    },
+    "Trinket": {
+      "Label": "Trinket"
+    },
+    "Vehicle": {
+      "Label": "Vehicle Equipment"
+    },
+    "Wand": {
+      "Label": "Wand"
+    },
+    "Wondrous": {
+      "Label": "Wondrous Item"
+    }
+  }
+},
+
+"SENTIUS.EquipmentBonus": "Magical Bonus",
+"SENTIUS.EquipmentHeavy": "Heavy Armor",
+"SENTIUS.EquipmentLight": "Light Armor",
+"SENTIUS.EquipmentMedium": "Medium Armor",
+"SENTIUS.EquipmentNatural": "Natural Armor",
+"SENTIUS.EquipmentShield": "Shield",
+"SENTIUS.EquipmentShieldProficiency": "Shields",
+"SENTIUS.Equipped": "Equipped",
+"SENTIUS.Exhaustion": "Exhaustion",
+"SENTIUS.ExhaustionLevel": "Exhaustion Level {n}",
+"SENTIUS.ExperiencePoints": "Experience Points",
+"SENTIUS.ExperiencePointsAbbr": "XP",
+"SENTIUS.ExperiencePointsBoons": {
+  "one": "{number} Boon",
+  "other": "{number} Boons"
+},
+"SENTIUS.ExperiencePointsCurrent": "Current XP",
+"SENTIUS.ExperiencePointsFormat": "{value} XP",
+"SENTIUS.ExperiencePointsLabel": "Progress to next level",
+"SENTIUS.ExperiencePointsMax": "XP for Next Level",
+"SENTIUS.ExperiencePointsMin": "Minimum XP for This Level",
+"SENTIUS.ExperiencePointsValue": "XP Value",
+"SENTIUS.Expertise": "Expertise",
+
+"SENTIUS.FACILITY": {
+  "Action": {
+    "DeleteDefender": "Delete Defender",
+    "DeleteOccupant": "Delete Occupant",
+    "RemoveCraft": "Remove Craft"
+  },
+  "AvailableFacility": {
+    "basic": {
+      "build": "Build Facility",
+      "free": "Free Facility"
+    },
+    "special": {
+      "free": "Add Facility"
+    }
+  },
+  "Build": {
+    "Unbuilt": "Unbuilt"
+  },
+  "Costs": {
+    "Automatic": "Deduct Automatically",
+    "Days": "{days} days",
+    "Label": "Costs",
+    "Manual": "Mark as Paid",
+    "Paid": "paid",
+    "Unpaid": "unpaid"
+  },
+  "Craft": {
+    "BaseItem": {
+      "Label": "Purchase Base Item",
+      "Hint": "If checked, the base item will be purchased at full price instead of crafted."
+    },
+    "Hint": "The items that this facility is currently in the process of crafting or harvesting, if any."
+  },
+  "Description": "Description",
+  "FIELDS": {
+    "building": {
+      "built": {
+        "label": "Built",
+        "hint": "Basic facilities must be built first before they can be used."
+      }
+    },
+    "defenders": {
+      "max": {
+        "label": "Defenders"
+      }
+    },
+    "disabled": {
+      "hint": "Disabled facilities cannot be issued orders and are repaired at the beginning of the next turn.",
+      "label": "Disabled"
+    },
+    "enlargeable": {
+      "hint": "Certain special facilities may have their size categories increased for a cost.",
+      "label": "Can Be Enlarged"
+    },
+    "free": {
+      "hint": "Free facilities do not count towards your special facilities cap.",
+      "label": "Free Facility"
+    },
+    "hirelings": {
+      "max": {
+        "label": "Hirelings"
+      }
+    },
+    "level": {
+      "label": "Level Requirement"
+    },
+    "order": {
+      "label": "Order"
+    },
+    "progress": {
+      "max": {
+        "label": "Total"
+      },
+      "order": {
+        "label": "Executing"
+      },
+      "value": {
+        "label": "Current"
+      }
+    },
+    "size": {
+      "label": "Size"
+    },
+    "trade": {
+      "creatures": {
+        "max": {
+          "label": "Creature Capacity"
+        }
+      },
+      "profit": {
+        "label": "Profit Factor"
+      },
+      "stock": {
+        "stocked": {
+          "hint": "Appropriate for facilities that do not store a variable value of goods, but are instead considered either stocked or empty.",
+          "label": "Stocked"
+        },
+        "value": {
+          "label": "Value"
+        },
+        "max": {
+          "label": "Max"
+        }
+      }
+    },
+    "type": {
+      "subtype": {
+        "label": "Type"
+      },
+      "value": {
+        "label": "Category"
+      }
+    }
+  },
+  "Goods": "Goods",
+  "NoDefenders": "Bastion is undefended.",
+  "Occupants": "Occupants",
+  "Order": {
+    "Execute": "Execute Order",
+    "Issue": "Issue Order: {order}"
+  },
+  "Orders": {
+    "Label": "Orders",
+    "build": {
+      "inf": "Build",
+      "present": "Building"
+    },
+    "change": {
+      "inf": "Change",
+      "present": "Changing"
+    },
+    "craft": {
+      "inf": "Craft",
+      "present": "Crafting"
+    },
+    "empower": {
+      "inf": "Empower",
+      "present": "Empowering"
+    },
+    "enlarge": {
+      "inf": "Enlarge",
+      "present": "Enlarging"
+    },
+    "harvest": {
+      "inf": "Harvest",
+      "present": "Harvesting"
+    },
+    "maintain": {
+      "inf": "Maintain",
+      "present": "Maintaining"
+    },
+    "recruit": {
+      "inf": "Recruit",
+      "present": "Recruiting"
+    },
+    "repair": {
+      "inf": "Repair",
+      "present": "Repairing"
+    },
+    "research": {
+      "inf": "Research",
+      "present": "Researching"
+    },
+    "trade": {
+      "inf": "Trade",
+      "present": "Trading"
+    }
+  },
+  "Progress": "Progress",
+  "Properties": "Properties",
+  "Sizes": {
+    "cramped": "Cramped",
+    "roomy": "Roomy",
+    "vast": "Vast"
+  },
+  "Squares": "{squares} squares",
+  "Trade": {
+    "Buy": {
+      "Supplement": "Buy"
+    },
+    "Creatures": {
+      "Buy": "Drop animals that you wish to purchase into the slots above, and update the cost appropriately below."
+    },
+    "Price": {
+      "Label": "Base Price",
+      "Hint": "Select which stock to sell, and input the base price above."
+    },
+    "Sell": {
+      "Label": "Sell Stock",
+      "Supplement": "Sell"
+    },
+    "Stock": {
+      "Buy": "Buying",
+      "Sell": "Selling"
+    },
+    "Stocked": {
+      "Label": "Fully Stock",
+      "Hint": "Input the required cost to fully stock this facility below."
+    }
+  },
+  "Types": {
+    "Basic": {
+      "Label": {
+        "one": "Basic Facility",
+        "other": "Basic Facilities"
+      },
+      "Bedroom": "Bedroom",
+      "DiningRoom": "Dining Room",
+      "Parlor": "Parlor",
+      "Courtyard": "Courtyard",
+      "Kitchen": "Kitchen",
+      "Storage": "Storage"
+    },
+    "Special": {
+      "Label": {
+        "one": "Special Facility",
+        "other": "Special Facilities"
+      },
+      "ArcaneStudy": "Arcane Study",
+      "Armory": "Armory",
+      "Barrack": "Barrack",
+      "Garden": "Garden",
+      "Library": "Library",
+      "Sanctuary": "Sanctuary",
+      "Smithy": "Smithy",
+      "Storehouse": "Storehouse",
+      "Workshop": "Workshop",
+      "GamingHall": "Gaming Hall",
+      "Greenhouse": "Greenhouse",
+      "Laboratory": "Laboratory",
+      "Sacristy": "Sacristy",
+      "Scriptorium": "Scriptorium",
+      "Stable": "Stable",
+      "TeleportationCircle": "Teleportation Circle",
+      "Theater": "Theater",
+      "TrainingArea": "Training Area",
+      "TrophyRoom": "Trophy Room",
+      "Archive": "Archive",
+      "MeditationChamber": "Meditation Chamber",
+      "Menagerie": "Menagerie",
+      "Observatory": "Observatory",
+      "Pub": "Pub",
+      "Reliquary": "Reliquary",
+      "Demiplane": "Demiplane",
+      "Guildhall": "Guildhall",
+      "Sanctum": "Sanctum",
+      "WarRoom": "War Room"
+    }
+  },
+  "Use": {
+    "Description": "Issued the <strong>{order}</strong> order to their {link} {facilityType}."
+  }
+},
+
+"SENTIUS.Favorite": "Favorite",
+"SENTIUS.FavoriteDrop": "Drop Favorite",
+"SENTIUS.FavoriteRemove": "Remove Favorite",
+"SENTIUS.Favorites": "Favorites",
+"SENTIUS.FeatureActionRecharge": "Action Recharge",
+"SENTIUS.Feature": {
+  "Background": "Background Feature",
+  "Class": {
+    "Label": "Class Feature",
+    "ArcaneShot": "Arcane Shot",
+    "ArtificerInfusion": "Artificer Infusion",
+    "ChannelDivinity": "Channel Divinity",
+    "DefensiveTactic": "Defensive Tactic",
+    "EldritchInvocation": "Eldritch Invocation",
+    "ElementalDiscipline": "Elemental Discipline",
+    "FightingStyle": "Fighting Style",
+    "HuntersPrey": "Hunter's Prey",
+    "Ki": "Ki Ability",
+    "Maneuver": "Maneuver",
+    "Metamagic": "Metamagic Option",
+    "Multiattack": "Multiattack",
+    "PactBoon": "Pact Boon",
+    "PsionicPower": "Psionic Power",
+    "Rune": "Rune",
+    "SuperiorHuntersDefense": "Superior Hunter's Defense"
+  },
+  "Feat": {
+    "Label": "Feat",
+    "EpicBoon": "Epic Boon Feat",
+    "FightingStyle": "Fighting Style Feat",
+    "General": "General Feat",
+    "Origin": "Origin Feat"
+  },
+  "Monster": "Monster Feature",
+  "Species": "Species Feature",
+  "SpeciesLegacy": "Race Feature",
+  "SupernaturalGift": {
+    "Label": "Supernatural Gift",
+    "Blessing": "Blessing",
+    "Charm": "Charm",
+    "EpicBoon": "Epic Boon"
+  }
+},
+"SENTIUS.Focus": {
+  "Label": "Spellcasting Focus",
+  "Arcane": "Arcane Focus",
+  "Druidic": "Druidic Focus",
+  "Holy": "Holy Focus"
+},
+"SENTIUS.Loot.Art": "Art Object",
+"SENTIUS.Loot.Gear": "Adventuring Gear",
+"SENTIUS.Loot.Gem": "Gemstone",
+"SENTIUS.Loot.Junk": "Junk",
+"SENTIUS.Loot.Material": "Material",
+"SENTIUS.Loot.Resource": "Resource",
+"SENTIUS.Loot.Treasure": "Treasure",
+"SENTIUS.Flaws": "Flaws",
+"SENTIUS.FormulaCannotContainDiceError": "{name} formula cannot contain dice expressions.",
+
+"SENTIUS.FORWARD": {
+  "Title": "Forward",
+  "FIELDS": {
+    "activity": {
+      "label": "Triggered Activity"
+    }
+  },
+  "Warning": {
+    "NoActivity": "Linked activity must be configured before Forward activity can be used."
+  }
+},
+
+"SENTIUS.EffectCreate": "Create Effect",
+"SENTIUS.EffectToggle": "Toggle Effect",
+"SENTIUS.EffectEdit": "Edit Effect",
+"SENTIUS.EffectEnable": "Enable Effect",
+"SENTIUS.EffectDelete": "Delete Effect",
+"SENTIUS.EffectDisable": "Disable Effect",
+"SENTIUS.EffectTemporary": "Temporary Effects",
+"SENTIUS.EffectPassive": "Passive Effects",
+"SENTIUS.EffectInactive": "Inactive Effects",
+"SENTIUS.EffectNew": "New Effect",
+"SENTIUS.EffectType": {
+  "Inactive": "Inactive",
+  "Passive": "Passive",
+  "Temporary": "Temporary",
+  "Unavailable": "Unavailable"
+},
+"SENTIUS.EffectUnavailable": "Unavailable Effects",
+"SENTIUS.EffectUnavailableInfo": "Source item must be equipped or attuned to activate these",
+"SENTIUS.Encumbrance": "Encumbrance",
+"SENTIUS.ItemRarityCommon": "common",
+"SENTIUS.ItemRarityMundane": "mundane",
+"SENTIUS.ItemRarityUncommon": "uncommon",
+"SENTIUS.ItemRarityRare": "rare",
+"SENTIUS.ItemRarityVeryRare": "very rare",
+"SENTIUS.ItemRarityLegendary": "legendary",
+"SENTIUS.ItemRarityArtifact": "artifact",
+"SENTIUS.Eyes": "Eyes",
+"SENTIUS.Faith": "Faith",
+"SENTIUS.FeatureActive": "Active Abilities",
+"SENTIUS.FeatureAdd": "Create Feature",
+"SENTIUS.FeatureAttack": "Feature Attack",
+"SENTIUS.FeaturePassive": "Passive Abilities",
+"SENTIUS.FeatureRechargeOn": "Recharge On",
+"SENTIUS.FeatureRechargeResult": "1d6 Result",
+"SENTIUS.FeatureSearch": "Search features",
+"SENTIUS.FeatureUsage": "Feature Usage",
+"SENTIUS.Features": "Features",
+"SENTIUS.FeaturesBackground": "Background Features",
+"SENTIUS.FeaturesClass": "{class} Features",
+"SENTIUS.FeaturesOther": "Other Features",
+"SENTIUS.Feats": "Feats",
+"SENTIUS.FeetAbbr": "ft.",
+"SENTIUS.Filter": "Filter",
+"SENTIUS.FilterClear": "Clear Filters",
+"SENTIUS.FilterGroupCategory": "Group by Category",
+"SENTIUS.FilterGroupOrigin": "Group by Origin",
+"SENTIUS.FilterGroupAction": "Group by Action",
+"SENTIUS.FilterNoSpells": "No spells found for this set of filters.",
+"SENTIUS.NoSpellLevels": "This character has no spellcaster levels, but you may add spells manually.",
+
+"SENTIUS.FLAGS": {
+  "EnhancedDualWielding": {
+    "Name": "Enhanced Dual Wielding",
+    "Hint": "Allow bonus action extra attacks using any melee weapon without the Two-Handed property."
+  }
+},
+
+"SENTIUS.FlagsInstructions": "Configure character features and traits which fine-tune behaviors of the Sentius system.",
+"SENTIUS.FlagsSave": "Update Special Traits",
+"SENTIUS.FlagsTitle": "Configure Special Traits",
+"SENTIUS.FlagsDiamondSoul": "Diamond Soul",
+"SENTIUS.FlagsDiamondSoulHint": "Gain proficiency to all saving throws.",
+"SENTIUS.FlagsPowerfulBuild": "Powerful Build",
+"SENTIUS.FlagsPowerfulBuildHint": "Provides increased carrying capacity.",
+"SENTIUS.FlagsElvenAccuracy": "Elven Accuracy",
+"SENTIUS.FlagsElvenAccuracyHint": "Roll an extra d20 with advantage to Dex, Int, Wis, or Cha.",
+"SENTIUS.FlagsHalflingLucky": "Halfling Lucky",
+"SENTIUS.FlagsHalflingLuckyHint": "Reroll ones when rolling d20 checks.",
+"SENTIUS.FlagsInitiativeAdv": "Advantage on Initiative",
+"SENTIUS.FlagsInitiativeAdvHint": "Provided by feats or magical items.",
+"SENTIUS.FlagsAlert": "Alert Feat",
+"SENTIUS.FlagsAlertHint": "Proficient in Initiative rolls.",
+"SENTIUS.FlagsAlertHintLegacy": "Provides +5 to Initiative.",
+"SENTIUS.FlagsJOAT": "Jack of All Trades",
+"SENTIUS.FlagsJOATHint": "Half-Proficiency to Ability Checks in which you are not already Proficient.",
+"SENTIUS.FlagsObservant": "Observant Feat",
+"SENTIUS.FlagsObservantHint": "Provides a +5 to passive Perception and Investigation.",
+"SENTIUS.FlagsTavernBrawler": "Tavern Brawler Feat",
+"SENTIUS.FlagsTavernBrawlerHint": "Proficient with improvised weapons.",
+"SENTIUS.FlagsReliableTalent": "Reliable Talent",
+"SENTIUS.FlagsReliableTalentHint": "Rogues Reliable Talent Feature.",
+"SENTIUS.FlagsRemarkableAthlete": "Remarkable Athlete",
+"SENTIUS.FlagsRemarkableAthleteHint": "Half-Proficiency (rounded-up) to physical Ability Checks and Initiative.",
+"SENTIUS.FlagsWeaponCritThreshold": "Weapon Critical Hit Threshold",
+"SENTIUS.FlagsWeaponCritThresholdHint": "An expanded critical hit threshold for weapon attacks.",
+"SENTIUS.FlagsSpellCritThreshold": "Spell Critical Hit Threshold",
+"SENTIUS.FlagsSpellCritThresholdHint": "An expanded critical hit threshold for spell attacks.",
+"SENTIUS.FlagsMeleeCriticalDice": "Melee Critical Damage Dice",
+"SENTIUS.FlagsMeleeCriticalDiceHint": "A number of additional damage dice added to melee weapon critical hits.",
+"SENTIUS.Flat": "Flat",
+"SENTIUS.Formula": "Formula",
+"SENTIUS.FormulaMalformedError": "Problem preparing the {property} formula within {name}.",
+"SENTIUS.FormulaMissingReferenceWarn": "The {property} formula within {name} has references to missing data: {references}",
+"SENTIUS.Gear": "Gear",
+"SENTIUS.Gender": "Gender",
+"SENTIUS.GlobalBonus": "Global Bonus",
+"SENTIUS.GrantedAbilities": "Granted Abilities",
+"SENTIUS.GroupInventory": "Inventory",
+"SENTIUS.GroupHP": "Aggregate Hit Points",
+"SENTIUS.GroupSummary": "A group of {members}",
+"SENTIUS.GroupSummaryEmpty": "Empty group",
+"SENTIUS.GroupControls": "Controls",
+"SENTIUS.Group": {
+  "Challenge": "Challenge",
+  "Member": {
+    "one": "Member",
+    "other": "Members"
+  },
+  "PlaceMembers": "Place Members",
+  "Primary": {
+    "Remove": "Remove as Primary Party",
+    "Set": "Set as Primary Party"
+  },
+  "Type": "Group Type",
+  "TypeEncounter": "Encounter",
+  "TypeGeneric": "Group",
+  "TypeParty": "Party",
+  "Vehicle": {
+    "one": "Vehicle",
+    "other": "Vehicles"
+  }
+},
+"SENTIUS.Hair": "Hair",
+"SENTIUS.HalfProficient": "Half Proficient",
+
+"SENTIUS.HEAL": {
+  "Title": "Heal",
+  "FIELDS": {
+    "healing": {
+      "label": "Healing",
+      "bonus": {
+        "label": "Healing Bonus",
+        "hint": "Bonus added to the healing roll."
+      },
+      "custom": {
+        "label": "Custom Healing Formula",
+        "enabled": {
+          "label": "Enable Custom Formula",
+          "hint": "Should the custom formula be used rather than the default dice."
+        },
+        "formula": {
+          "label": "Healing Formula",
+          "hint": "Custom healing formula."
+        }
+      },
+      "denomination": {
+        "label": "Die Denomination",
+        "hint": "Denomination of the dice to roll."
+      },
+      "number": {
+        "label": "Die Number",
+        "hint": "Number of dice to roll."
+      },
+      "scaling": {
+        "label": "Healing Scaling",
+        "mode": {
+          "label": "Scaling Mode",
+          "hint": "Method by which the scaling increase is calculated."
+        },
+        "number": {
+          "label": "Dice Scaling",
+          "hint": "Number of dice to increase for each scaling step. Will be applied to the first die found in the healing formula if more than one is present."
+        },
+        "formula": {
+          "label": "Scaling Formula",
+          "hint": "Arbitrary scaling formula that will be multiplied for each scaling step and added to the original formula."
+        }
+      },
+      "types": {
+        "label": "Healing Types",
+        "hint": "Type of healing inflicted or multiple for the user to select from."
+      }
+    }
+  }
+},
+
+"SENTIUS.Healing": "Healing",
+"SENTIUS.HealingRoll": "Healing Roll",
+"SENTIUS.HealingTemp": "Healing (Temporary)",
+"SENTIUS.Height": "Height",
+"SENTIUS.HitPoints": "Hit Points",
+"SENTIUS.HitPointsBonusLevel": "Per Level Bonus",
+"SENTIUS.HitPointsBonusOverall": "Overall Bonus",
+"SENTIUS.HitPointsConfig": "Configure Hit Points",
+"SENTIUS.HitPointsCurrent": "Current Hit Points",
+"SENTIUS.HitPointsMax": "Maximum Hit Points",
+"SENTIUS.HitPointsMin": "Minimum Hit Points",
+"SENTIUS.HitPointsOverride": "Maximum Override",
+"SENTIUS.HitPointsOverrideHint": "Override automatically calculated hit points, ignoring any HP from classes, bonuses, and ability modifier.",
+"SENTIUS.HitPointsTemp": "Temporary Hit Points",
+"SENTIUS.HitPointsTempShort": "Temporary HP",
+"SENTIUS.HitPointsTempMax": "Temporary Maximum",
+"SENTIUS.HitPointsTempMaxHint": "Temporary change to the maximum HP.",
+"SENTIUS.HitPointsTempMaxShort": "Temp Max HP",
+"SENTIUS.HP": "HP",
+"SENTIUS.HealthConditions": "Health Conditions",
+"SENTIUS.HPFormula": "Health Formula",
+"SENTIUS.HPFormulaError": "The provided hit point formula could not be evaluated.",
+"SENTIUS.HPFormulaRollMessage": "Roll Hit Point Formula",
+
+"SENTIUS.HITDICE": {
+  "Action": {
+    "Decrease": "Decrease",
+    "Increase": "Increase"
+  },
+  "Config": "Adjust Hit Dice"
+},
+
+"SENTIUS.HitDie": "Hit Die",
+"SENTIUS.HitDice": "Hit Dice",
+"SENTIUS.HitDiceAutoSpend": {
+  "Label": "Auto Spend HD",
+  "Hint": "Automatically spend hit dice until they run out or health is full."
+},
+"SENTIUS.HitDiceConfig": "Adjust Hit Dice",
+"SENTIUS.HitDiceConfigHint": "Adjust remaining hit dice levels for each class.",
+"SENTIUS.HitDiceMax": "Maximum Hit Dice",
+"SENTIUS.HitDiceRemaining": "Remaining Hit Dice",
+"SENTIUS.HitDiceRoll": "Roll Hit Dice",
+"SENTIUS.HitDiceWarn": "{name} has no available {formula} Hit Dice remaining!",
+"SENTIUS.HitDiceNPCWarn": "{name} has no available Hit Dice remaining!",
+"SENTIUS.Ideals": "Ideals",
+"SENTIUS.Identified": "Identified",
+"SENTIUS.Identifier": "Identifier",
+"SENTIUS.IdentifierError": "An identifier can only contain letters (a-z), numbers (0-9), dashes (-), and underscores (_).",
+"SENTIUS.Identify": "Identify",
+"SENTIUS.Immunities": "Immunities",
+"SENTIUS.Initiative": "Initiative",
+"SENTIUS.InitiativeAbbr": "Init",
+"SENTIUS.InitiativeBonus": "Initiative Bonus",
+"SENTIUS.InitiativeRoll": "Initiative Roll",
+"SENTIUS.InitiativeConfig": "Configure Initiative",
+"SENTIUS.InitiativeConfigHint": "Configure initiative modifiers and bonuses which apply to this Actor.",
+"SENTIUS.Inspiration": "Inspiration",
+"SENTIUS.Inventory": "Inventory",
+"SENTIUS.InventorySearch": "Search inventory",
+"SENTIUS.Issues": "Issues",
+"SENTIUS.ItemActionType": "Action Type",
+"SENTIUS.ItemActivation": "Activation",
+"SENTIUS.ItemActivationCondition": "Activation Condition",
+"SENTIUS.ItemActivationCost": "Activation Cost",
+"SENTIUS.ItemActivationType": "Activation Type",
+"SENTIUS.ItemAmmoProperties": "Ammunition Properties",
+"SENTIUS.ItemAttackBonus": "Attack Roll Bonus",
+"SENTIUS.ItemAttackFlat": "Flat Bonus",
+"SENTIUS.ItemAttackFlatHint": "If checked, don't add proficiency, ability modifier, or any other bonuses to attack roll except what is included here.",
+"SENTIUS.ItemBackgroundDetails": "Background Details",
+"SENTIUS.ItemClassDetails": "Class Details",
+"SENTIUS.ItemConsumableActivation": "Consumable Activation",
+"SENTIUS.ItemConsumableUsage": "Consumable Usage",
+"SENTIUS.ItemConsumableDetails": "Consumable Details",
+"SENTIUS.ItemConsumableProperties": "Consumable Properties",
+"SENTIUS.ItemConsumableStatus": "Consumable Status",
+"SENTIUS.ItemConsumableSubtype": "{category} Type",
+"SENTIUS.ItemConsumableType": "Consumable Type",
+"SENTIUS.ItemContainerCapacity": "Capacity",
+"SENTIUS.ItemContainerCapacityItems": "Items",
+"SENTIUS.ItemContainerCapacityMax": "Max Capacity",
+"SENTIUS.ItemContainerCapacityType": "Capacity Type",
+"SENTIUS.ItemContainerCapacityWeight": "Weight",
+"SENTIUS.ItemContainerDetails": "Container Details",
+"SENTIUS.ItemContainerProperties": "Container Properties",
+"SENTIUS.ItemContainerStatus": "Container Status",
+"SENTIUS.ItemCreate": "Create Item",
+"SENTIUS.ItemCritThreshold": "Critical Hit Threshold",
+"SENTIUS.ItemCritExtraDamage": "Extra Critical Hit Damage",
+"SENTIUS.ItemDelete": "Delete Item",
+"SENTIUS.ItemEdit": "Edit Item",
+"SENTIUS.ItemEquipmentAction": "Equipment Action",
+"SENTIUS.ItemEquipmentBase": "Base Equipment",
+"SENTIUS.ItemEquipmentDetails": "Equipment Details",
+"SENTIUS.ItemEquipmentDexMod": "Max. Dexterity Modifier",
+"SENTIUS.ItemEquipmentDexModAbbr": "Max Dex",
+"SENTIUS.ItemEquipmentProperties": "Equipment Properties",
+"SENTIUS.ItemEquipmentStatus": "Equipment Status",
+"SENTIUS.ItemEquipmentStealthDisav": "Imposes Stealth Disadvantage",
+"SENTIUS.ItemEquipmentType": "Equipment Type",
+"SENTIUS.ItemEquipmentUsage": "Equipment Usage",
+"SENTIUS.ItemFacilityDetails": "Facility Details",
+"SENTIUS.ItemFeatureDetails": "Feature Details",
+"SENTIUS.ItemFeatureProperties": "Feature Properties",
+"SENTIUS.ItemFeatureSubtype": "{category} Type",
+"SENTIUS.ItemFeatureType": "Feature Type",
+"SENTIUS.ItemLootDetails": "Loot Details",
+"SENTIUS.ItemLootProperties": "Loot Properties",
+"SENTIUS.ItemLootSubtype": "{category} Type",
+"SENTIUS.ItemLootType": "Loot Type",
+"SENTIUS.ItemName": "Item Name",
+"SENTIUS.ItemNew": "New {type}",
+"SENTIUS.Item": {
+  "Category": {
+    "Label": "Category",
+    "Physical": "Physical"
+  },
+  "Property": {
+    "Adamantine": "Adamantine",
+    "Ammunition": "Ammunition",
+    "Concentration": "Concentration",
+    "Finesse": "Finesse",
+    "Firearm": "Firearm",
+    "Focus": "Focus",
+    "Heavy": "Heavy",
+    "Light": "Light",
+    "Loading": "Loading",
+    "Material": "Material",
+    "Magical": "Magical",
+    "Reach": "Reach",
+    "Reload": "Reload",
+    "Returning": "Returning",
+    "Ritual": "Ritual",
+    "Silvered": "Silvered",
+    "Somatic": "Somatic",
+    "Special": "Special",
+    "StealthDisadvantage": "Stealth Disadvantage",
+    "Thrown": "Thrown",
+    "Trait": "Passive Trait",
+    "TwoHanded": "Two-Handed",
+    "Versatile": "Versatile",
+    "Verbal": "Verbal",
+    "WeightlessContents": "Weightless Contents"
+  }
+},
+"SENTIUS.ItemRechargeCheck": "{name} recharge check - {result}",
+"SENTIUS.ItemRechargeFailure": "failure!",
+"SENTIUS.ItemRechargeSuccess": "success!",
+"SENTIUS.ItemRecoveryRoll": "{name} recovers {count} charges",
+"SENTIUS.ItemLossRoll": "{name} loses {count} charges",
+"SENTIUS.ItemRecoveryRollMax": "{name} recovers all charges",
+"SENTIUS.ItemRecoveryFormulaWarning": "Unable to recover uses for {name}. Invalid recovery formula '{formula}' ({uuid}).",
+"SENTIUS.ItemRequiredStr": "Required Strength",
+"SENTIUS.ItemSiegeProperties": "Siege Properties",
+"SENTIUS.ItemSpeciesDetails": "Species Details",
+"SENTIUS.ItemSubclassDetails": "Subclass Details",
+"SENTIUS.ItemToolBase": "Base Tool",
+"SENTIUS.ItemToolBonus": "Tool Bonus",
+"SENTIUS.ItemToolDetails": "Tool Details",
+"SENTIUS.ItemToolProficiency": "Tool Proficiency",
+"SENTIUS.ItemToolProperties": "Tool Properties",
+"SENTIUS.ItemToolStatus": "Tool Status",
+"SENTIUS.ItemToolType": "Tool Type",
+"SENTIUS.ItemToolUsage": "Tool Usage",
+"SENTIUS.ItemVehicleProperties": "Vehicle Properties",
+"SENTIUS.ItemView": "View Item",
+"SENTIUS.ItemWeaponAttack": "Weapon Attack",
+"SENTIUS.ItemWeaponBase": "Base Weapon",
+"SENTIUS.ItemWeaponDetails": "Weapon Details",
+"SENTIUS.ItemWeaponProperties": "Weapon Properties",
+"SENTIUS.ItemWeaponStatus": "Weapon Status",
+"SENTIUS.ItemWeaponType": "Weapon Type",
+"SENTIUS.ItemWeaponUsage": "Weapon Usage",
+"SENTIUS.JackOfAllTrades": "Jack of all Trades",
+"SENTIUS.LairAct": "Uses Lair Action",
+"SENTIUS.LairActionLabel": "Lair Action",
+"SENTIUS.LairActionInitiative": "Lair Action Initiative Count",
+"SENTIUS.Languages": "Languages",
+"SENTIUS.LanguagesAarakocra": "Aarakocra",
+"SENTIUS.LanguagesAbyssal": "Abyssal",
+"SENTIUS.LanguagesAquan": "Aquan",
+"SENTIUS.LanguagesAuran": "Auran",
+"SENTIUS.LanguagesCelestial": "Celestial",
+"SENTIUS.LanguagesCommon": "Common",
+"SENTIUS.LanguagesCommonSign": "Common Sign Language",
+"SENTIUS.LanguagesDeepSpeech": "Deep Speech",
+"SENTIUS.LanguagesDraconic": "Draconic",
+"SENTIUS.LanguagesDruidic": "Druidic",
+"SENTIUS.LanguagesDwarvish": "Dwarvish",
+"SENTIUS.LanguagesElvish": "Elvish",
+"SENTIUS.LanguagesExotic": "Rare Languages",
+"SENTIUS.LanguagesExoticLegacy": "Exotic Languages",
+"SENTIUS.LanguagesGiant": "Giant",
+"SENTIUS.LanguagesGith": "Gith",
+"SENTIUS.LanguagesGnoll": "Gnoll",
+"SENTIUS.LanguagesGnomish": "Gnomish",
+"SENTIUS.LanguagesGoblin": "Goblin",
+"SENTIUS.LanguagesHalfling": "Halfling",
+"SENTIUS.LanguagesIgnan": "Ignan",
+"SENTIUS.LanguagesInfernal": "Infernal",
+"SENTIUS.LanguagesOrc": "Orc",
+"SENTIUS.LanguagesPrimordial": "Primordial",
+"SENTIUS.LanguagesStandard": "Standard Languages",
+"SENTIUS.LanguagesSylvan": "Sylvan",
+"SENTIUS.LanguagesTerran": "Terran",
+"SENTIUS.LanguagesThievesCant": "Thieves' Cant",
+"SENTIUS.LanguagesUndercommon": "Undercommon",
+"SENTIUS.LegAct": "Legendary Actions",
+"SENTIUS.LegActN.one": "1st Legendary Action",
+"SENTIUS.LegActN.two": "2nd Legendary Action",
+"SENTIUS.LegActN.few": "3rd Legendary Action",
+"SENTIUS.LegActN.other": "{n}th Legendary Action",
+"SENTIUS.LegActMax": "Maximum Legendary Actions",
+"SENTIUS.LegActRemaining": "Remaining Legendary Actions",
+"SENTIUS.LegendaryActionLabel": "Legendary Action",
+"SENTIUS.LegRes": "Legendary Resistance",
+"SENTIUS.LegResN.one": "1st Legendary Resistance",
+"SENTIUS.LegResN.two": "2nd Legendary Resistance",
+"SENTIUS.LegResN.few": "3rd Legendary Resistance",
+"SENTIUS.LegResN.other": "{n}th Legendary Resistance",
+"SENTIUS.LegResMax": "Maximum Legendary Resistances",
+"SENTIUS.LegResRemaining": "Remaining Legendary Resistances",
+"SENTIUS.Level": "Level",
+"SENTIUS.LevelPl": "Levels",
+"SENTIUS.LevelActionDecrease": "Level Down",
+"SENTIUS.LevelActionIncrease": "Level Up",
+"SENTIUS.LevelCount": "{ordinal} Level",
+"SENTIUS.LevelLimit": {
+  "Label": "Level Limit",
+  "Max": "Maximum Level",
+  "Min": "Minimum Level"
+},
+"SENTIUS.LevelNumber": "Level {level}",
+"SENTIUS.LevelScaling": "Level Scaling",
+"SENTIUS.LimitedUses": "Limited Uses",
+"SENTIUS.LimitedUsesAvailable": "Remaining Uses",
+"SENTIUS.LimitedUsesMax": "Maximum Uses",
+"SENTIUS.LimitedUsesPer": "Use Recovery Mode",
+"SENTIUS.LimitedUsesPrompt": "Uses Prompt",
+"SENTIUS.LimitedUsesPromptTooltip": "If unchecked, the prompt to consume an available use will be suppressed.",
+"SENTIUS.Long": "Long",
+"SENTIUS.LongRest": "Long Rest",
+"SENTIUS.LongRestNormal": "Long Rest (8 hours)",
+"SENTIUS.LongRestGritty": "Long Rest (7 days)",
+"SENTIUS.LongRestEpic": "Long Rest (1 hour)",
+"SENTIUS.LongRestOvernight": "Long Rest (New Day)",
+"SENTIUS.LongRestHint": "Take a long rest? On a long rest you will recover hit points, hit dice, class resources, limited use item charges, and spell slots.",
+"SENTIUS.LongRestHintLegacy": "Take a long rest? On a long rest you will recover hit points, half your maximum hit dice, class resources, limited use item charges, and spell slots.",
+"SENTIUS.LongRestHintGroup": "Take a long rest? On a long rest group members will recover hit points, hit dice, class resources, limited use item charges, and spell slots.",
+"SENTIUS.LongRestHintGroupLegacy": "Take a long rest? On a long rest group members will recover hit points, half of their maximum hit dice, class resources, limited use item charges, and spell slots.",
+"SENTIUS.LongRestRecovery": "Recovers after Long Rest",
+"SENTIUS.LongRestResult": "{name} takes a long rest and recovers {health} Hit Points and {dice} Hit Dice.",
+"SENTIUS.LongRestResultHitDice": "{name} takes a long rest and recovers {dice} Hit Dice.",
+"SENTIUS.LongRestResultHitPoints": "{name} takes a long rest and recovers {health} Hit Points.",
+"SENTIUS.LongRestResultShort": "{name} takes a long rest.",
+"SENTIUS.MagicalBonus": "Magical Bonus",
+"SENTIUS.Materials": "Materials",
+"SENTIUS.Max": "Max",
+"SENTIUS.MaxCharacterLevelExceededWarn": "Character cannot be advanced past level {max}.",
+"SENTIUS.MaxClassLevelExceededWarn": "Class cannot be advanced past level {max}.",
+"SENTIUS.MaxClassLevelMinimumWarn": "Class must have at least one level.",
+"SENTIUS.Maximum": "Maximum",
+"SENTIUS.Minimum": "Minimum",
+"SENTIUS.Modifier": "Modifier",
+"SENTIUS.ModuleArtConfigH": "Configure which module-provided art should be used.",
+"SENTIUS.ModuleArtConfigL": "Configure Art",
+"SENTIUS.ModuleArtConfigN": "Module-provided Art",
+"SENTIUS.ModuleArtConfigPortraits": "Portraits",
+"SENTIUS.ModuleArtConfigTokens": "Tokens",
+"SENTIUS.ModuleArtPriorityDecrease": "Decrease Priority",
+"SENTIUS.ModuleArtPriorityHint": "Use the arrows to adjust the priority of the art sources. When a single Actor has art provided from multiple sources, the one with the highest priority will be used.",
+"SENTIUS.ModuleArtPriorityIncrease": "Increase Priority",
+"SENTIUS.Multiple": "Multiple",
+"SENTIUS.Multiplier": "Multiplier",
+"SENTIUS.MythicActionLabel": "Mythic Action",
+"SENTIUS.Name": "Character Name",
+"SENTIUS.NameUnidentified": "Unidentified Name",
+"SENTIUS.NoCharges": "No Charges",
+"SENTIUS.None": "None",
+"SENTIUS.NoneActionLabel": "None",
+"SENTIUS.Normal": "Normal",
+"SENTIUS.NotProficient": "Not Proficient",
+"SENTIUS.Notes": "Notes",
+
+"SENTIUS.NPC": {
+  "Label": "NPC",
+  "SECTIONS": {
+    "Actions": "Actions",
+    "BonusActions": "Bonus Actions",
+    "LegendaryActions": "Legendary Actions",
+    "Reactions": "Reactions",
+    "Traits": "Traits"
+  }
+},
+
+"SENTIUS.NUMBER": {
+  "1": "one",
+  "2": "two",
+  "3": "three",
+  "4": "four",
+  "5": "five",
+  "6": "six",
+  "7": "seven",
+  "8": "eight",
+  "9": "nine"
+},
+
+"SENTIUS.Number": "Number",
+"SENTIUS.OtherFormula": "Other Formula",
+"SENTIUS.PactMagic": "Pact Magic",
+"SENTIUS.Passive": "Passive",
+"SENTIUS.PassivePerception": "Passive Perception",
+"SENTIUS.Period": "Period",
+"SENTIUS.PersonalityTraits": "Personality Traits",
+"SENTIUS.Polymorph": "Polymorph",
+"SENTIUS.PolymorphAcceptSettings": "Custom Settings",
+"SENTIUS.PolymorphAddTemp": "Add the target's HP as temporary HP",
+"SENTIUS.PolymorphCustomTransformation": "Custom Transformation",
+"SENTIUS.PolymorphEffectTransformation": "Effect Transformation",
+"SENTIUS.PolymorphKeepAE": "Keep all effects (overrides other effect retention options).",
+"SENTIUS.PolymorphKeepBackgroundAE": "Keep effects that originate from your background?",
+"SENTIUS.PolymorphKeepBio": "Keep biography",
+"SENTIUS.PolymorphKeepClass": "Keep proficiency bonus (leaves class items in sheet)",
+"SENTIUS.PolymorphKeepClassAE": "Keep effects that originate from your class or subclass?",
+"SENTIUS.PolymorphKeepEquipmentAE": "Keep effects that originate from your equipment?",
+"SENTIUS.PolymorphKeepFeats": "Keep features",
+"SENTIUS.PolymorphKeepFeatureAE": "Keep effects that originate from your features?",
+"SENTIUS.PolymorphKeepHP": "Keep HP & HD",
+"SENTIUS.PolymorphKeepItems": "Keep equipment",
+"SENTIUS.PolymorphKeepMental": "Keep mental ability scores (Int, Wis, Cha)",
+"SENTIUS.PolymorphKeepOriginAE": "Keep effects that originate from this actor (i.e. effects not attached to features, items, spells)",
+"SENTIUS.PolymorphKeepOtherOriginAE": "Keep effects that originate from a different actor?",
+"SENTIUS.PolymorphKeepPhysical": "Keep physical ability scores (Str, Dex, Con)",
+"SENTIUS.PolymorphKeepSaves": "Keep saving throw proficiencies",
+"SENTIUS.PolymorphKeepSelf": "Keep self (just change image and size i.e. for spells like Disguise Self)",
+"SENTIUS.PolymorphKeepSkills": "Keep skill proficiencies",
+"SENTIUS.PolymorphKeepSpellAE": "Keep effects that originate from your spells?",
+"SENTIUS.PolymorphKeepSpells": "Keep spells",
+"SENTIUS.PolymorphKeepType": "Keep creature type",
+"SENTIUS.PolymorphKeepVision": "Keep vision (character and token)",
+"SENTIUS.PolymorphMergeSaves": "Merge saving throw proficiencies (take the highest)",
+"SENTIUS.PolymorphMergeSkills": "Merge skill proficiencies (take the highest)",
+"SENTIUS.PolymorphPromptTitle": "Transforming Actor",
+"SENTIUS.PolymorphRestoreTransformation": "Restore Transformation",
+"SENTIUS.PolymorphRevertNoOriginalActorWarn": "No original actor was found with reference '{reference}'",
+"SENTIUS.PolymorphRevertWarn": "You do not have permission to revert this Actor's polymorphed state.",
+"SENTIUS.PolymorphSelf": "Appearance Only",
+"SENTIUS.PolymorphTmpClass": "Temporary Class",
+"SENTIUS.PolymorphTokens": "Transform all linked tokens?",
+"SENTIUS.PolymorphWarn": "You are not allowed to polymorph this actor!",
+"SENTIUS.PolymorphWildShape": "Wild Shape",
+"SENTIUS.Portrait": "Portrait",
+"SENTIUS.Prepared": "Prepared",
+"SENTIUS.Prerequisites": {
+  "Header": "Feature Prerequisites",
+  "FIELDS": {
+    "prerequisites": {
+      "level": {
+        "label": "Required Level",
+        "hint": "Character or class level required to select this feature when levelling up."
+      }
+    }
+  }
+},
+"SENTIUS.Price": "Price",
+"SENTIUS.Proficiency": "Proficiency",
+"SENTIUS.ProficiencyBonus": "Proficiency Bonus",
+"SENTIUS.ProficiencyBonusAbbr": "PB",
+"SENTIUS.ProficiencyConfigurationHint": "Configure proficiency and bonuses.",
+"SENTIUS.ProficiencyConfigureTitle": "Configure {label}",
+"SENTIUS.ProficiencyLevel": "Proficiency Level",
+"SENTIUS.ProficiencyOther": "Other",
+"SENTIUS.Proficient": "Proficient",
+"SENTIUS.Properties": "Properties",
+"SENTIUS.PropertyBase": "Base",
+"SENTIUS.PropertyTotal": "Total",
+"SENTIUS.Public": "Public",
+"SENTIUS.Quantity": "Quantity",
+"SENTIUS.QuantityAbbr": "Qty",
+"SENTIUS.QuantityFormula": "Quantity Formula",
+"SENTIUS.QuantityRoll": "Roll Quantities",
+"SENTIUS.RacialTraits": "Racial Traits",
+
+"SENTIUS.RANGE": {
+  "FIELDS": {
+    "range": {
+      "label": "Range",
+      "long": {
+        "label": "Long Range",
+        "hint": "Far attack range of the weapon, if present on the weapon."
+      },
+      "override": {
+        "label": "Override Range",
+        "hint": "Use these range values instead of the item's when using this activity."
+      },
+      "reach": {
+        "label": "Reach"
+      },
+      "special": {
+        "label": "Special Range",
+        "hint": "Description of any special range details."
+      },
+      "units": {
+        "label": "Range Units",
+        "hint": "Units used to measure range."
+      },
+      "value": {
+        "label": "Range Value",
+        "hint": "Value of the range in the specified units, if applicable."
+      }
+    }
+  },
+  "Formatted": {
+    "Range": "range {range}",
+    "Reach": "reach {reach}"
+  }
+},
+
+"SENTIUS.Range": "Range",
+"SENTIUS.RangeDistance": "Distance",
+"SENTIUS.RangeLong": "Long Range",
+"SENTIUS.RangeNormal": "Normal Range",
+"SENTIUS.RangeUnits": "Range Type or Units",
+"SENTIUS.Rarity": "Rarity",
+"SENTIUS.Reaction": "Reaction",
+"SENTIUS.ReactionAbbr": "R",
+"SENTIUS.ReactionPl": "Reactions",
+"SENTIUS.Recharge": "Recharge",
+"SENTIUS.RechargeLong": "Recharge after a Long Rest",
+"SENTIUS.RechargeShort": "Recharge after a Short or Long Rest",
+"SENTIUS.Recovery": "Recovery",
+"SENTIUS.RecoveryFormula": "Recovery Formula",
+"SENTIUS.RequiredMaterials": "Required Materials",
+"SENTIUS.Requirements": "Requirements",
+"SENTIUS.Resistances": "Resistances",
+"SENTIUS.Resources": "Resources",
+"SENTIUS.ResourceLabel": "Label",
+"SENTIUS.ResourceMax": "Resource Maximum",
+"SENTIUS.ResourceValue": "Resource Value",
+"SENTIUS.ResourcePrimary": "Resource 1",
+"SENTIUS.ResourceSecondary": "Resource 2",
+"SENTIUS.ResourceTertiary": "Resource 3",
+"SENTIUS.Rest": "Rest",
+"SENTIUS.RestL": "L. Rest",
+"SENTIUS.RestS": "S. Rest",
+"SENTIUS.Ritual": "Ritual",
+"SENTIUS.RitualAbbr": "R",
+
+"SENTIUS.ROLL": {
+  "Range": {
+    "Label": "Roll Range",
+    "Maximum": "Maximum Roll",
+    "Minimum": "Minimum Roll"
+  },
+  "Section": "{label} Rolls"
+},
+
+"SENTIUS.Roll": "Roll",
+"SENTIUS.RollConfiguration": {
+  "Title": "Configure Roll",
+  "Configuration": "Configuration",
+  "Rolls": "Rolls"
+},
+"SENTIUS.RollExample": "e.g. 1d4",
+"SENTIUS.RollMode": "Roll Mode",
+"SENTIUS.RollSituationalBonus": "Situational Bonus?",
+"SENTIUS.Rule": {
+  "Tooltip": "Tooltip",
+  "Type": {
+    "Label": "Rule Type",
+    "Condition": "Condition",
+    "Rule": "Rule"
+  }
+},
+"SENTIUS.Movement": "Movement",
+"SENTIUS.MovementConfig": "Configure Movement Speed",
+"SENTIUS.MovementConfigHint": "Configure movement speed and special movement attributes.",
+"SENTIUS.MovementWalk": "Walk",
+"SENTIUS.MovementBurrow": "Burrow",
+"SENTIUS.MovementClimb": "Climb",
+"SENTIUS.MovementHover": "Hover",
+"SENTIUS.MovementFly": "Fly",
+"SENTIUS.MovementSwim": "Swim",
+"SENTIUS.MovementLand": "Land",
+"SENTIUS.MovementWater": "Water",
+"SENTIUS.MovementAir": "Air",
+"SENTIUS.MovementSpeeds": "Movement Speeds",
+"SENTIUS.MovementUnits": "Units",
+"SENTIUS.NewDay": "Is New Day?",
+"SENTIUS.NewDayHint": "Recover limited use abilities which recharge \"per day\"?",
+
+"SENTIUS.SAVE": {
+  "Title": {
+    "one": "Save",
+    "other": "Saves"
+  },
+  "FIELDS": {
+    "damage": {
+      "label": "Save Damage",
+      "onSave": {
+        "label": "Damage on Save",
+        "hint": "How much damage should be applied on a successful save?",
+        "Full": "Full Damage",
+        "Half": "Half Damage",
+        "None": "No Damage"
+      },
+      "parts": {
+        "label": "Damage Parts",
+        "hint": "Individual damage parts to include with the roll."
+      }
+    },
+    "effects": {
+      "onSave": {
+        "label": "Always Apply",
+        "hint": "This effect will always be applied, even if the target succeeds on its saving throw."
+      }
+    },
+    "save": {
+      "label": "Save Details",
+      "ability": {
+        "label": "Challenge Abilities",
+        "hint": "Abilities that may be rolled to attempt to save."
+      },
+      "dc": {
+        "label": "Difficulty Class",
+        "calculation": {
+          "label": "DC Calculation",
+          "hint": "Method or ability used to calculate the difficulty class."
+        },
+        "formula": {
+          "label": "DC Formula",
+          "hint": "Custom formula or flat value for defining the save DC."
+        },
+        "CustomFormula": "Custom Formula",
+        "DefaultFormula": "8 + @mod + @prof"
+      }
+    }
+  },
+  "OnSave": "On Save"
+},
+
+"SENTIUS.SaveBonus": "Saving Throw Bonus",
+"SENTIUS.SaveGlobalBonusHint": "This bonus applies to all saving throws made by this actor.",
+"SENTIUS.Scroll": {
+  "CreateFrom": "Create Scroll from {spell}",
+  "CreateScroll": "Create Scroll",
+  "Details": "Scroll Details",
+  "Explanation": {
+    "Label": "Explanation",
+    "Hint": "Amount of the rules on using spell scrolls to include in the created scroll.",
+    "Complete": "Complete",
+    "Reference": "Reference"
+  },
+  "RequiresConcentration": "Requires Concentration",
+  "SaveDC": "Save DC",
+  "Values": "Spell Values"
+},
+"SENTIUS.Senses": "Senses",
+"SENTIUS.SensesConfig": "Configure Senses",
+"SENTIUS.SensesConfigHint": "Configure any special sensory perception abilities that this actor possesses.",
+"SENTIUS.SenseDarkvision": "Darkvision",
+"SENTIUS.SenseBlindsight": "Blindsight",
+"SENTIUS.SenseTremorsense": "Tremorsense",
+"SENTIUS.SenseTruesight": "Truesight",
+"SENTIUS.SenseUnits": "Units",
+"SENTIUS.SenseSpecial": "Special Senses",
+"SENTIUS.Shape": "Shape",
+"SENTIUS.SheetClassCharacter": "Default 5e Character Sheet",
+"SENTIUS.SheetClassCharacterLegacy": "Legacy 5e Character Sheet",
+"SENTIUS.SheetClassClassSummary": "Default 5e Class Summary Sheet",
+"SENTIUS.SheetClassContainer": "Default 5e Container Sheet",
+"SENTIUS.SheetClassContainerLegacy": "Legacy 5e Container Sheet",
+"SENTIUS.SheetClassGroup": "Default 5e Group Sheet",
+"SENTIUS.SheetClassItem": "Default 5e Item Sheet",
+"SENTIUS.SheetClassItemLegacy": "Legacy 5e Item Sheet",
+"SENTIUS.SheetClassJournalEntry": "Default 5e Journal Entry Sheet",
+"SENTIUS.SheetClassMapLocation": "Default 5e Map Location Sheet",
+"SENTIUS.SheetClassNPC": "Default 5e NPC Sheet",
+"SENTIUS.SheetClassNPCLegacy": "Legacy 5e NPC Sheet",
+"SENTIUS.SheetClassRule": "Default 5e Rule Sheet",
+"SENTIUS.SheetClassSpellList": "Default 5e Spell List Sheet",
+"SENTIUS.SheetClassToken": "Default 5e Token Sheet",
+"SENTIUS.SheetClassVehicle": "Default 5e Vehicle Sheet",
+"SENTIUS.SheetModeEdit": "Edit",
+"SENTIUS.SheetModePlay": "Play",
+"SENTIUS.SavingThrow": "Saving Throw",
+"SENTIUS.SavingThrowDC": "DC {dc} {ability} Saving Throw",
+"SENTIUS.SavingThrowRoll": "Roll {ability} Saving Throw",
+"SENTIUS.SavingThrowShort": "Save",
+"SENTIUS.SaveDC": "DC {dc} {ability}",
+"SENTIUS.SavePromptTitle": "{ability} Saving Throw",
+"SENTIUS.ScalingFormula": "Scaling Formula",
+"SENTIUS.ScalingMode": "Scaling Mode",
+"SENTIUS.ScalingValue": "Scaling Value",
+"SENTIUS.School": "School",
+"SENTIUS.SchoolAbj": "Abjuration",
+"SENTIUS.SchoolCon": "Conjuration",
+"SENTIUS.SchoolDiv": "Divination",
+"SENTIUS.SchoolEnc": "Enchantment",
+"SENTIUS.SchoolEvo": "Evocation",
+"SENTIUS.SchoolIll": "Illusion",
+"SENTIUS.SchoolNec": "Necromancy",
+"SENTIUS.SchoolTrs": "Transmutation",
+"SENTIUS.ShortRest": "Short Rest",
+"SENTIUS.ShortRestNormal": "Short Rest (1 hour)",
+"SENTIUS.ShortRestGritty": "Short Rest (8 hours)",
+"SENTIUS.ShortRestEpic": "Short Rest (5 minutes)",
+"SENTIUS.ShortRestOvernight": "Short Rest (New Day)",
+"SENTIUS.ShortRestHint": "Take a short rest? On a short rest you may spend remaining Hit Dice and recover item uses.",
+"SENTIUS.ShortRestHintGroup": "Take a short rest? On a short rest group members can spend Hit Dice and will recover item uses.",
+"SENTIUS.ShortRestNoHD": "No Hit Dice remaining",
+"SENTIUS.ShortRestRecovery": "Recovers after Short Rest",
+"SENTIUS.ShortRestResult": "{name} takes a short rest spending {dice} Hit Dice to recover {health} Hit Points.",
+"SENTIUS.ShortRestResultShort": "{name} takes a short rest.",
+"SENTIUS.ShortRestSelect": "Select Dice to Roll",
+"SENTIUS.Size": "Size",
+"SENTIUS.SizeGargantuan": "Gargantuan",
+"SENTIUS.SizeGargantuanAbbr": "Gt",
+"SENTIUS.SizeHuge": "Huge",
+"SENTIUS.SizeHugeAbbr": "Hg",
+"SENTIUS.SizeLarge": "Large",
+"SENTIUS.SizeLargeAbbr": "Lg",
+"SENTIUS.SizeMedium": "Medium",
+"SENTIUS.SizeMediumAbbr": "Md",
+"SENTIUS.SizeSmall": "Small",
+"SENTIUS.SizeSmallAbbr": "Sm",
+"SENTIUS.SizeTiny": "Tiny",
+"SENTIUS.SizeTinyAbbr": "Tn",
+
+"SENTIUS.SKILL": {
+  "SECTIONS": {
+    "Details": "{label} Details",
+    "Bonuses": {
+      "Label": "{label} Bonuses",
+      "Hint": "These bonuses apply to passive scores & checks made with {label}."
+    },
+    "Global": {
+      "Label": "Global Bonuses",
+      "Hint": "These bonuses apply to checks made with any skill."
+    }
+  }
+},
+
+"SENTIUS.Skill": "Skill",
+"SENTIUS.Skills": "Skills",
+"SENTIUS.SkillAcr": "Acrobatics",
+"SENTIUS.SkillAni": "Animal Handling",
+"SENTIUS.SkillArc": "Arcana",
+"SENTIUS.SkillAth": "Athletics",
+"SENTIUS.SkillDec": "Deception",
+"SENTIUS.SkillHis": "History",
+"SENTIUS.SkillIns": "Insight",
+"SENTIUS.SkillInv": "Investigation",
+"SENTIUS.SkillItm": "Intimidation",
+"SENTIUS.SkillMed": "Medicine",
+"SENTIUS.SkillNat": "Nature",
+"SENTIUS.SkillPer": "Persuasion",
+"SENTIUS.SkillPrc": "Perception",
+"SENTIUS.SkillPrf": "Performance",
+"SENTIUS.SkillRel": "Religion",
+"SENTIUS.SkillSlt": "Sleight of Hand",
+"SENTIUS.SkillSte": "Stealth",
+"SENTIUS.SkillSur": "Survival",
+"SENTIUS.SkillPromptTitle": "{skill} Skill Check",
+"SENTIUS.SkillConfigureTitle": "Configure {skill}",
+"SENTIUS.SkillConfigure": "Configure Skill",
+"SENTIUS.SkillsConfig": "Configure Skills",
+"SENTIUS.SkillBonuses": "Skill Bonuses",
+"SENTIUS.SkillBonusCheck": "Check Bonus",
+"SENTIUS.SkillBonusPassive": "Passive Bonus",
+"SENTIUS.SkillConfigurationHint": "Configure skill proficiency and bonuses.",
+"SENTIUS.SkillGlobalBonusCheckHint": "This bonus applies to all skill checks made by this actor.",
+"SENTIUS.SkillModifierHint": "{skill} Modifier",
+"SENTIUS.SkillPassiveHint": "Passive {skill}",
+"SENTIUS.SkillPassiveSpecificHint": "Passive {ability} ({skill})",
+"SENTIUS.SkillPassiveScore": "Passive {skill} Score",
+"SENTIUS.SkillPassives": "Skill Passives",
+"SENTIUS.Skin": "Skin",
+"SENTIUS.Skip": "Skip",
+
+"SENTIUS.SOURCE": {
+  "FIELDS": {
+    "source": {
+      "label": "Source",
+      "book": {
+        "label": "Book"
+      },
+      "custom": {
+        "label": "Custom Label"
+      },
+      "license": {
+        "label": "License"
+      },
+      "page": {
+        "label": "Page/Section"
+      },
+      "revision": {
+        "label": "Revision"
+      },
+      "rules": {
+        "label": "Rules Version"
+      },
+      "uuid": {
+        "label": "Original Source"
+      }
+    }
+  },
+  "Action": {
+    "Configure": "Configure Source"
+  },
+  "Display": {
+    "Full": "{book} {page}",
+    "Page": "pg. {page}"
+  }
+},
+
+"SENTIUS.Special": "Special",
+"SENTIUS.SpecialHint": "Special values separated by semi-colons.",
+"SENTIUS.SpecialTraits": "Special Traits",
+"SENTIUS.Species": {
+  "Label": "Species",
+  "Add": "Add Species",
+  "Features": "Species Features",
+  "Name": "Species Name"
+},
+"SENTIUS.Speed": "Speed",
+"SENTIUS.SpeedConditions": "Speed Conditions",
+"SENTIUS.SpeedSpecial": "Special Movement",
+"SENTIUS.SpellAbility": "Spellcasting Ability",
+"SENTIUS.SpellAbilitySet": "Set as Primary Spellcasting Ability",
+"SENTIUS.SpellAdd": "Add Spell",
+"SENTIUS.SpellCantrip": "Cantrip",
+"SENTIUS.SpellCastConsume": "Consume Spell Slot?",
+"SENTIUS.SpellCastNoSlots": "You have no available {level} spell slots with which to cast {name}",
+"SENTIUS.SpellCastNoSlotsLeft": "You have no available spell slots with which to cast {name}!",
+"SENTIUS.SpellCastTime": "Casting Time",
+"SENTIUS.SpellCastUpcast": "Cast at Level",
+"SENTIUS.SpellcasterLevel": "Spellcaster Level",
+"SENTIUS.SpellCastingHeader": "Spell Casting",
+"SENTIUS.Spellcasting": "Spellcasting",
+"SENTIUS.SpellcastingClass": "{class} Spellcasting",
+"SENTIUS.SpellComponent": "Spell Component",
+"SENTIUS.SpellComponents": "Spell Components",
+"SENTIUS.SpellCreate": "Create Spell",
+"SENTIUS.SpellDC": "Spell DC",
+"SENTIUS.SpellDetails": "Spell Details",
+"SENTIUS.SpellEffects": "Spell Effects",
+"SENTIUS.SpellHeader": {
+  "Formula": "Formula",
+  "Range": "Range",
+  "Roll": "Roll",
+  "School": "School",
+  "Target": "Target",
+  "Time": "Time"
+},
+"SENTIUS.SpellLevel": "Spell Level",
+"SENTIUS.SpellLevels": "Spell Levels",
+"SENTIUS.SpellLevel0": "Cantrip",
+"SENTIUS.SpellLevel1": "1st Level",
+"SENTIUS.SpellLevel2": "2nd Level",
+"SENTIUS.SpellLevel3": "3rd Level",
+"SENTIUS.SpellLevel4": "4th Level",
+"SENTIUS.SpellLevel5": "5th Level",
+"SENTIUS.SpellLevel6": "6th Level",
+"SENTIUS.SpellLevel7": "7th Level",
+"SENTIUS.SpellLevel8": "8th Level",
+"SENTIUS.SpellLevel9": "9th Level",
+"SENTIUS.SpellLevelSlot": "{level} ({n} Slots)",
+"SENTIUS.SpellLevelPact": "Pact Slot [Level {level}] ({n} Slots)",
+"SENTIUS.SpellMaterials": "Spellcasting Materials",
+"SENTIUS.SpellMaterialsConsumed": "Consume Materials",
+"SENTIUS.SpellMaterialsCost": "Material Cost",
+"SENTIUS.SpellMaterialsDescription": "Material Description",
+"SENTIUS.SpellMaterialsSupply": "Material Supply",
+"SENTIUS.SpellName": "Spell Name",
+"SENTIUS.SpellNone": "None",
+"SENTIUS.SpellPrepAtWill": "At-Will",
+"SENTIUS.SpellPrepInnate": "Innate Spellcasting",
+"SENTIUS.SpellPrepRitual": "Ritual Only",
+"SENTIUS.SpellPrepPrepared": "Prepared",
+"SENTIUS.SpellPrepAlways": "Always Prepared",
+"SENTIUS.SpellPreparation": {
+  "Label": "Spell Preparation",
+  "Formula": "Preparation Formula",
+  "Mode": "Spell Preparation Mode"
+},
+"SENTIUS.SpellSourceClass": "Source Class",
+"SENTIUS.SpellPrepared": "Prepared",
+"SENTIUS.SpellProgArt": "Artificer",
+"SENTIUS.SpellProgAvailable": "Available slots",
+"SENTIUS.SpellProgFull": "Full Caster",
+"SENTIUS.SpellProgHalf": "Half Caster",
+"SENTIUS.SpellProgLeveled": "Leveled Magic",
+"SENTIUS.SpellProgOverride": "Override slots",
+"SENTIUS.SpellProgPact": "Pact Magic",
+"SENTIUS.SpellProgThird": "Third Caster",
+"SENTIUS.SpellProgression": "Spell Progression",
+"SENTIUS.SpellsSearch": "Search spells",
+"SENTIUS.SpellSchool": "Spell School",
+"SENTIUS.SpellScroll": "Spell Scroll",
+"SENTIUS.SpellSlotExpended": "Expended Spell Slot",
+"SENTIUS.SpellSlotN.one": "{n}st spell slot",
+"SENTIUS.SpellSlotN.two": "{n}nd spell slot",
+"SENTIUS.SpellSlotN.few": "{n}rd spell slot",
+"SENTIUS.SpellSlotN.other": "{n}th spell slot",
+"SENTIUS.SpellSlotTemporary": "Temporary Spell Slot",
+"SENTIUS.SpellSlotsN.one": "{n}st Level Slots",
+"SENTIUS.SpellSlotsN.two": "{n}nd Level Slots",
+"SENTIUS.SpellSlotsN.few": "{n}rd Level Slots",
+"SENTIUS.SpellSlotsN.other": "{n}th Level Slots",
+"SENTIUS.SpellSlotsPact": "Pact Slots",
+"SENTIUS.SpellSlotsConfig": "Configure Spell Slots",
+"SENTIUS.SpellTag": "Spell Tag",
+"SENTIUS.SpellTarget": "Spell Target",
+"SENTIUS.SpellUnprepared": "Unprepared",
+"SENTIUS.SpellUsage": "Spell Usage",
+"SENTIUS.Spellbook": "Spellbook",
+"SENTIUS.Spent": "Spent",
+"SENTIUS.StartingEquipment": {
+  "Title": "Starting Equipment",
+  "Action": {
+    "AddEntry": "Add Entry",
+    "Configure": "Configure Starting Equipment",
+    "RemoveEntry": "Remove Entry"
+  },
+  "Choice": {
+    "Armor": "Choose Armor",
+    "Focus": "Choose Spellcasting Focus",
+    "Tool": "Choose Tool",
+    "Weapon": "Choose Weapon"
+  },
+  "DropHint": "Drop item here to link",
+  "IfProficient": "If Proficient",
+  "Operator": {
+    "AND": "All of…",
+    "OR": "One of…"
+  },
+  "RequireProficiency": "Require Proficiency",
+  "SpecificItem": "Specific Item",
+  "Warning": {
+    "Depth": "Only three levels of depth allowed in starting equipment.",
+    "ItemTypeInvalid": "{type} items cannot be added to starting equipment."
+  },
+  "Wealth": {
+    "Label": "Starting Wealth",
+    "Hint": "Formula in GP that can be used in place of starting equipment."
+  }
+},
+"SENTIUS.SubclassAdd": "Add Subclass",
+"SENTIUS.SubclassIdentifierHint": "This identifier should match the identifier on the parent class to ensure they are properly linked.",
+"SENTIUS.SubclassAssignmentError": "{class} already has a subclass. Remove the existing '{subclass}' subclass before adding a new one.",
+"SENTIUS.SubclassDuplicateError": "A subclass with the identifier {identifier} already exists on this actor.",
+"SENTIUS.SubclassMismatchWarn": "{name} subclass has no matching class with identifier '{class}'.",
+"SENTIUS.SubclassName": "Subclass Name",
+"SENTIUS.Subtype": "Subtype",
+
+"SENTIUS.SUMMON": {
+  "Title": "Summon",
+  "FIELDS": {
+    "bonuses": {
+      "ac": {
+        "label": "Bonus Armor Class",
+        "hint": "Bonus to the Armor Class set on the summoned creature added to what is specified in their statblock."
+      },
+      "attackDamage": {
+        "label": "Bonus Attack Damage",
+        "hint": "Additional damage done by the creature's attacks."
+      },
+      "hd": {
+        "label": "Bonus Hit Dice",
+        "hint": "Additional hit dice added to the creature on top of what is derived from the HP formula in their statblock. Can only be used when summoning NPC actors."
+      },
+      "healing": {
+        "label": "Bonus Healing",
+        "hint": "Additional healing provided by healing abilities."
+      },
+      "hp": {
+        "label": "Bonus Hit Points",
+        "hint": "Additional hit points added to the creature on top of what is specified in their statblock."
+      },
+      "saveDamage": {
+        "label": "Bonus Save Damage",
+        "hint": "Additional damage done by the creature's abilities that require saving throws."
+      }
+    },
+    "creatureSizes": {
+      "label": "Creature Sizes",
+      "hint": "Summoned creature and token will be changed to this size. If more than one size is selected, then the player will be able to choose from these sizes when summoning."
+    },
+    "creatureTypes": {
+      "label": "Creature Types",
+      "hint": "Summoned creature will be changed to this type. If more than one type is selected, then the player will be able to choose from these types when summoning."
+    },
+    "match": {
+      "ability": {
+        "label": "Match Ability",
+        "hint": "Specific ability to use when when matching attacks and save DCs."
+      },
+      "attacks": {
+        "label": "Match Attacks",
+        "hint": "Modify to hit values on the summoned creature's attacks to match that of the summoner."
+      },
+      "proficiency": {
+        "label": "Match Proficiency",
+        "hint": "Modify the summoned creature's proficiency to match that of the summoner."
+      },
+      "saves": {
+        "label": "Match Saves",
+        "hint": "Modify saving throw DCs on the summoned creature's abilities to match that of the summoner."
+      }
+    },
+    "profiles": {
+      "label": "Summons Profiles",
+      "FIELDS": {
+        "count": {
+          "label": "Count"
+        },
+        "cr": {
+          "label": "Challenge Rating",
+          "abbr": "CR",
+          "hint": "Maximum CR of the summoned creature."
+        },
+        "level": {
+          "label": "Level Limit",
+          "hint": "Range of levels required to use this profile.",
+          "max": {
+            "label": "Maximum Level"
+          },
+          "min": {
+            "label": "Minimum Level"
+          }
+        },
+        "name": {
+          "label": "Display Name",
+          "hint": "Name of the profile displayed in the usage dialog."
+        },
+        "types": {
+          "label": "Creature Types",
+          "hint": "List of creature types from which the summoned creature can be selected."
+        },
+        "uuid": {
+          "label": "Linked Creature"
+        }
+      }
+    },
+    "summon": {
+      "label": "Summoning Details",
+      "identifier": {
+        "label": "Class Identifier",
+        "hint": "Identifier used to determine whether the character level or a specific class level should be used for profile level limits."
+      },
+      "mode": {
+        "label": "Mode",
+        "hint": "Sets how the creatures that are to be summoned are specified.",
+        "CR": "By Challenge Rating & Type",
+        "Direct": "By Direct Link"
+      },
+      "prompt": {
+        "label": "Summon Prompt",
+        "hint": "Should the player be prompted to place the summons? Players will still be able to summon from the chat card if prompt is disabled."
+      }
+    }
+  },
+  "SECTIONS": {
+    "Changes": "Changes",
+    "Profiles": "Profiles",
+    "Summoning": "Summoning"
+  },
+  "Action": {
+    "Place": "Place Summons",
+    "Summon": "Summon",
+    "View": "View Summon"
+  },
+  "CreatureChanges": {
+    "Label": "Creature Changes",
+    "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+  },
+  "ItemChanges": {
+    "Label": "Item Changes",
+    "Hint": "Changes made to items on the summoned creature."
+  },
+  "Profile": {
+    "Label": "Summons Profile",
+    "Action": {
+      "Create": "Create Profile",
+      "Delete": "Delete Profile"
+    },
+    "ChallengeRatingLabel": "Challenge Rating of {cr} or lower",
+    "DropHint": "Drop creature here",
+    "Empty": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile.",
+    "EmptyDrop": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile or drop a creature to summon here."
+  },
+  "Warning": {
+    "CreateActor": "You must have 'Create New Actors' permission in order to summon directly from a compendium.",
+    "CRV11": "Summoning based on creature challenge rating only works in Foundry V12 or higher.",
+    "NoActor": "Actor cannot be found with UUID '{uuid}' to summon.",
+    "NoOwnership": "You must have ownership of '{actor}' in order to summon it.",
+    "NoProfile": "Cannot find summoning profile {profileId} on '{item}'.",
+    "Wildcard": "You must have 'Use File Browser' permissions to summon creatures with wildcard artwork."
+  }
+},
+
+"SENTIUS.Summoning": {
+  "Label": "Summoning"
+},
+"SENTIUS.Supply": "Supply",
+"SENTIUS.Suppressed": "Suppressed",
+
+"SENTIUS.TARGET": {
+  "Action": {
+    "PlaceTemplate": "Place Measured Template"
+  },
+  "Count": {
+    "Any": "Any",
+    "Every": "Every"
+  },
+  "FIELDS": {
+    "target": {
+      "label": "Targeting",
+      "affects": {
+        "label": "Affected Targets",
+        "choice": {
+          "label": "Choose Targets",
+          "hint": "When targeting an area, can the user choose who it affects?"
+        },
+        "count": {
+          "label": "Target Count",
+          "hint": "Number of individual targets that can be affected."
+        },
+        "special": {
+          "label": "Special Targeting",
+          "hint": "Description of any special targeting details."
+        },
+        "type": {
+          "label": "Target Type",
+          "hint": "Type of targets that can be affected (e.g. creatures, objects, spaces)."
+        }
+      },
+      "override": {
+        "label": "Override Target",
+        "hint": "Use these target values instead of the item's when using this activity."
+      },
+      "prompt": {
+        "label": "Measured Template Prompt",
+        "hint": "Should the player be prompted to place a measured template? Players will still be able to place templates from the chat card if prompt is disabled."
+      },
+      "template": {
+        "label": "Area of Effect",
+        "contiguous": {
+          "label": "Contiguous Areas",
+          "hint": "Must all created areas be connected to one another?"
+        },
+        "count": {
+          "label": "Area Count",
+          "hint": "Number of distinct areas that can be targeted."
+        },
+        "height": {
+          "label": "Area Height",
+          "hint": "Height of a cylinder affected if applicable."
+        },
+        "size": {
+          "label": "Area Size",
+          "hint": "Size of the area of effect on its primary axis."
+        },
+        "type": {
+          "label": "Area Type",
+          "hint": "Type of area of effect targeted."
+        },
+        "units": {
+          "label": "Area Units",
+          "hint": "Units used to measure the area of effect sizes."
+        },
+        "width": {
+          "label": "Area Width",
+          "hint": "Width of a line affected if applicable."
+        }
+      }
+    }
+  },
+  "Formatted": "{count} {type}",
+  "Type": {
+    "Ally": {
+      "Label": "Ally",
+      "Counted": {
+        "any": "any allies",
+        "every": "every ally",
+        "one": "{number} ally",
+        "other": "{number} allies"
+      }
+    },
+    "Any": {
+      "Label": "Any"
+    },
+    "Circle": {
+      "Label": "Circle",
+      "Counted": {
+        "one": "{number} circle",
+        "other": "{number} circles"
+      }
+    },
+    "Cone": {
+      "Label": "Cone",
+      "Counted": {
+        "one": "{number} cone",
+        "other": "{number} cones"
+      }
+    },
+    "Creature": {
+      "Label": "Creature",
+      "Counted": {
+        "any": "any creatures",
+        "every": "every creature",
+        "one": "{number} creature",
+        "other": "{number} creatures"
+      }
+    },
+    "CreatureOrObject": {
+      "Label": "Creature or Object",
+      "Counted": {
+        "any": "any creatures or objects",
+        "every": "every creature or object",
+        "one": "{number} creature or object",
+        "other": "{number} creatures or objects"
+      }
+    },
+    "Cube": {
+      "Label": "Cube",
+      "Counted": {
+        "one": "{number} cube",
+        "other": "{number} cubes"
+      }
+    },
+    "Cylinder": {
+      "Label": "Cylinder",
+      "Counted": {
+        "one": "{number} cylinder",
+        "other": "{number} cylinders"
+      }
+    },
+    "Emanation": {
+      "Label": "Emanation",
+      "Counted": {
+        "one": "{number} emanation",
+        "other": "{number} emanations"
+      }
+    },
+    "Enemy": {
+      "Label": "Enemy",
+      "Counted": {
+        "any": "any enemies",
+        "every": "every enemy",
+        "one": "{number} enemy",
+        "other": "{number} enemies"
+      }
+    },
+    "Line": {
+      "Label": "Line",
+      "Counted": {
+        "one": "{number} line",
+        "other": "{number} lines"
+      }
+    },
+    "Object": {
+      "Label": "Object",
+      "Counted": {
+        "any": "any objects",
+        "every": "every object",
+        "one": "{number} object",
+        "other": "{number} objects"
+      }
+    },
+    "Radius": {
+      "Label": "Radius",
+      "Counted": {
+        "one": "{number} radius",
+        "other": "{number} radii"
+      }
+    },
+    "Self": {
+      "Label": "Self"
+    },
+    "Sphere": {
+      "Label": "Sphere",
+      "Counted": {
+        "one": "{number} sphere",
+        "other": "{number} spheres"
+      }
+    },
+    "Space": {
+      "Label": "Space",
+      "Counted": {
+        "any": "any spaces",
+        "every": "every space",
+        "one": "{number} space",
+        "other": "{number} spaces"
+      }
+    },
+    "Square": {
+      "Label": "Square",
+      "Counted": {
+        "one": "{number} square",
+        "other": "{number} squares"
+      }
+    },
+    "Target": {
+      "Label": "Target",
+      "Counted": {
+        "any": "any targets",
+        "every": "every target",
+        "one": "{number} target",
+        "other": "{number} targets"
+      }
+    },
+    "Wall": {
+      "Label": "Wall",
+      "Counted": {
+        "one": "{number} wall",
+        "other": "{number} walls"
+      }
+    },
+    "WillingCreature": {
+      "Label": "Willing Creature",
+      "Counted": {
+        "any": "any willing creatures",
+        "every": "every willing creature",
+        "one": "{number} willing creature",
+        "other": "{number} willing creatures"
+      }
+    }
+  },
+  "Warning": {
+    "PlaceTemplate": "Failed to place measured template."
+  }
+},
+
+"SENTIUS.Target": "Target",
+"SENTIUS.TargetPl": "Targets",
+"SENTIUS.TargetType": "Target Type",
+"SENTIUS.TargetTypeArea": "Area",
+"SENTIUS.TargetTypeIndividual": "Individual",
+"SENTIUS.TargetUnits": "Area of Effect Units",
+"SENTIUS.TargetValue": "Target Length or Count",
+"SENTIUS.TargetWidth": "Line Width",
+"SENTIUS.TemplatePrompt": "Template Prompt",
+"SENTIUS.TemplatePromptTooltip": "If unchecked, the prompt for placing a Measured Template will be suppressed.",
+"SENTIUS.Temp": "Temp",
+"SENTIUS.Threshold": "Threshold",
+"SENTIUS.TimeDay": "Days",
+"SENTIUS.TimeDayAbbr": "d",
+"SENTIUS.TimeDisp": "Until Dispelled",
+"SENTIUS.TimeDispTrig": "Until Dispelled or Triggered",
+"SENTIUS.TimeHour": "Hours",
+"SENTIUS.TimeHourAbbr": "h",
+"SENTIUS.TimeInst": "Instantaneous",
+"SENTIUS.TimeMinute": "Minutes",
+"SENTIUS.TimeMinuteAbbr": "m",
+"SENTIUS.TimeMonth": "Months",
+"SENTIUS.TimePerm": "Permanent",
+"SENTIUS.TimeRound": "Rounds",
+"SENTIUS.TimeTurn": "Turns",
+"SENTIUS.TimeYear": "Years",
+"SENTIUS.TMP": "TMP",
+"SENTIUS.ToHit": "To Hit",
+"SENTIUS.Tokens": {
+  "NoneSelected": "No Tokens Selected",
+  "NoneTargeted": "No Tokens Targeted",
+  "Selected": "Selected",
+  "Targeted": "Targeted"
+},
+"SENTIUS.TokenRings": {
+  "BackgroundColor": "Background Color",
+  "Effects": {
+    "Label": "Effects",
+    "BackgroundWave": "Background Wave",
+    "RingGradient": "Ring Gradient",
+    "RingPulse": "Ring Pulse"
+  },
+  "Enabled": "Use Dynamic Ring",
+  "RingColor": "Ring Color",
+  "ScaleCorrection": "Scale Correction",
+  "Subject": {
+    "Label": "Subject Path",
+    "Hint": "Explicitly specify a path for the artwork placed over the dynamic token ring. If not provided, the subject image will be set to the normal token artwork."
+  },
+  "Title": "Dynamic Ring"
+},
+"SENTIUS.ToggleDescription": "Toggle Description",
+
+"SENTIUS.TOOL": {
+  "SECTIONS": {
+    "Details": "{label} Details",
+    "Bonuses": {
+      "Label": "{label} Bonuses",
+      "Hint": "These bonuses apply to checks made with {label}."
+    },
+    "Global": {
+      "Label": "Global Bonuses",
+      "Hint": "These bonuses apply to checks made with any tool."
+    }
+  }
+},
+
+"SENTIUS.ToolArtisans": "Artisan's Tools",
+"SENTIUS.ToolBonuses": "Tool Bonuses",
+"SENTIUS.ToolCheck": "Tool Check",
+"SENTIUS.ToolConfigure": "Configure Tool Proficiency",
+"SENTIUS.ToolDisguiseKit": "Disguise Kit",
+"SENTIUS.ToolForgeryKit": "Forgery Kit",
+"SENTIUS.ToolGamingSet": "Gaming Set",
+"SENTIUS.ToolHerbalismKit": "Herbalism Kit",
+"SENTIUS.ToolMusicalInstrument": "Musical Instrument",
+"SENTIUS.ToolNavigators": "Navigator's Tools",
+"SENTIUS.ToolPoisonersKit": "Poisoner's Kit",
+"SENTIUS.ToolPromptTitle": "{tool} Check",
+"SENTIUS.ToolThieves": "Thieves' Tools",
+"SENTIUS.ToolVehicle": "Vehicles",
+"SENTIUS.TraitAll": "All {category}",
+"SENTIUS.TraitArmorPlural.one": "Armor Training",
+"SENTIUS.TraitArmorPlural.other": "Armor Training",
+"SENTIUS.TraitArmorProf": "Armor Training",
+"SENTIUS.TraitArmorLegacyPlural.one": "Armor Proficiency",
+"SENTIUS.TraitArmorLegacyPlural.other": "Armor Proficiencies",
+"SENTIUS.TraitArmorLegacyProf": "Armor Proficiencies",
+"SENTIUS.TraitCIPlural.one": "Condition Immunity",
+"SENTIUS.TraitCIPlural.other": "Condition Immunities",
+"SENTIUS.TraitConfig": "Configure {trait}",
+"SENTIUS.TraitConfigChooseAnyCounted": "any {count} {type}",
+"SENTIUS.TraitConfigChooseAnyUncounted": "any {type}",
+"SENTIUS.TraitConfigChooseList": "{count} from {list}",
+"SENTIUS.TraitConfigChooseOther": "{count} other {type}",
+"SENTIUS.TraitConfigChooseWrapper": "Choose {choices}",
+"SENTIUS.TraitDIPlural.one": "Damage Immunity",
+"SENTIUS.TraitDIPlural.other": "Damage Immunities",
+"SENTIUS.TraitDMPlural.one": "Damage Modification",
+"SENTIUS.TraitDMPlural.other": "Damage Modifications",
+"SENTIUS.TraitDRPlural.one": "Damage Resistance",
+"SENTIUS.TraitDRPlural.other": "Damage Resistances",
+"SENTIUS.TraitDVPlural.one": "Damage Vulnerability",
+"SENTIUS.TraitDVPlural.other": "Damage Vulnerabilities",
+"SENTIUS.TraitGenericPlural.one": "Trait",
+"SENTIUS.TraitGenericPlural.other": "Traits",
+"SENTIUS.TraitLanguagesPlural.one": "Language",
+"SENTIUS.TraitLanguagesPlural.other": "Languages",
+"SENTIUS.TraitSave": "Update",
+"SENTIUS.TraitSavesPlural.one": "Saving Throw Proficiency",
+"SENTIUS.TraitSavesPlural.other": "Saving Throw Proficiencies",
+"SENTIUS.TraitSelectorSpecial": "Special (Split with Semi-Colon)",
+"SENTIUS.TraitSkillsPlural.one": "Skill Proficiency",
+"SENTIUS.TraitSkillsPlural.other": "Skill Proficiencies",
+"SENTIUS.TraitToolPlural.one": "Tool Proficiency",
+"SENTIUS.TraitToolPlural.other": "Tool Proficiencies",
+"SENTIUS.TraitToolProf": "Tool Proficiencies",
+"SENTIUS.TraitWeaponPlural.one": "Weapon Proficiency",
+"SENTIUS.TraitWeaponPlural.other": "Weapon Proficiencies",
+"SENTIUS.TraitWeaponProf": "Weapon Proficiencies",
+"SENTIUS.Traits": "Traits",
+"SENTIUS.TraitsChosen": "Chosen Traits",
+"SENTIUS.Trigger": "Trigger",
+"SENTIUS.Type": "Type",
+"SENTIUS.Uncrewed": "Uncrewed",
+"SENTIUS.Unequipped": "Not Equipped",
+"SENTIUS.Unidentified.DefaultName": "Unidentified {name}",
+"SENTIUS.Unidentified.Notice": "You must identify this item to learn its details.",
+"SENTIUS.Unidentified.Title": "Unidentified",
+"SENTIUS.Unidentified.Value": "???",
+
+"SENTIUS.UNITS": {
+  "DISTANCE": {
+    "Label": "Distance Units",
+    "Foot": {
+      "Label": "Feet",
+      "Abbreviation": "ft"
+    },
+    "Kilometer": {
+      "Label": "Kilometers",
+      "Abbreviation": "km"
+    },
+    "Meter": {
+      "Label": "Meters",
+      "Abbreviation": "m"
+    },
+    "Mile": {
+      "Label": "Miles",
+      "Abbreviation": "mi"
+    }
+  },
+  "WEIGHT": {
+    "Label": "Weight Units",
+    "Kilogram": {
+      "Label": "Kilogram",
+      "Abbreviation": "kg"
+    },
+    "Megagram": {
+      "Label": "Tonnes",
+      "Abbreviation": "t",
+      "Counted": {
+        "narrow": {
+          "one": "{number}t",
+          "other": "{number}t"
+        },
+        "short": {
+          "one": "{number} t",
+          "other": "{number} t"
+        },
+        "long": {
+          "one": "{number} tonne",
+          "other": "{number} tonnes"
+        }
+      }
+    },
+    "Pound": {
+      "Label": "Pounds",
+      "Abbreviation": "lb"
+    },
+    "Ton": {
+      "Label": "Tons",
+      "Abbreviation": "tn",
+      "Counted": {
+        "narrow": {
+          "one": "{number}tn",
+          "other": "{number}tn"
+        },
+        "short": {
+          "one": "{number} tn",
+          "other": "{number} tn"
+        },
+        "long": {
+          "one": "{number} ton",
+          "other": "{number} tons"
+        }
+      }
+    }
+  }
+},
+
+"SENTIUS.Unknown": "Unknown",
+"SENTIUS.Unlimited": "Unlimited",
+
+"SENTIUS.USAGE": {
+  "SECTION": {
+    "Consumption": "Consumption",
+    "Creation": "Creation",
+    "Scaling": "Scaling"
+  }
+},
+
+"SENTIUS.Usage": "Usage",
+"SENTIUS.Use": "Use",
+"SENTIUS.UseItem": "Use {item}",
+"SENTIUS.Uses": "Uses",
+"SENTIUS.UsesAvailable": "Available Uses",
+"SENTIUS.UsesMax": "Maximum Uses",
+"SENTIUS.UsesPeriod": "Recovery Period",
+"SENTIUS.UsesPeriods": {
+  "AtWill": "At Will",
+  "Charges": "Charges",
+  "ChargesAbbreviation": "Charges",
+  "Dawn": "Dawn",
+  "DawnAbbreviation": "Dawn",
+  "Day": "Day",
+  "DayAbbreviation": "Day",
+  "Dusk": "Dusk",
+  "DuskAbbreviation": "Dusk",
+  "Lr": "Long Rest",
+  "LrAbbreviation": "LR",
+  "Never": "Never",
+  "Sr": "Short Rest",
+  "SrAbbreviation": "SR"
+},
+
+"SENTIUS.USES": {
+  "FIELDS": {
+    "uses": {
+      "label": "Uses",
+      "max": {
+        "label": "Maximum Uses",
+        "hint": "Formula for the maximum number of uses."
+      },
+      "recovery": {
+        "label": "Use Recovery",
+        "hint": "Recovery profiles for this activity's uses.",
+        "FIELDS": {
+          "period": {
+            "label": "Recovery Period",
+            "hint": "Time when this recovery will occur."
+          },
+          "type": {
+            "label": "Recovery Type",
+            "hint": "How uses are recovered."
+          },
+          "formula": {
+            "label": "Recovery Formula",
+            "hint": "Formula used to determine how many uses are recovered."
+          }
+        }
+      },
+      "spent": {
+        "label": "Spent Uses",
+        "hint": "Number of uses that have been spent."
+      }
+    }
+  },
+  "Recovery": {
+    "Action": {
+      "Create": "Create Recovery Profile",
+      "Delete": "Delete Recovery Profile"
+    },
+    "Recharge": {
+      "Label": "Recharge",
+      "Range": "Recharge {range}"
+    },
+    "Type": {
+      "Formula": "Custom Formula",
+      "LoseAll": "Lose All Uses",
+      "RecoverAll": "Recover All Uses"
+    }
+  }
+},
+
+"SENTIUS.UTILITY": {
+  "Title": "Use",
+  "FIELDS": {
+    "roll": {
+      "label": "Roll",
+      "formula": {
+        "label": "Roll Formula",
+        "hint": "Formula for an arbitrary roll."
+      },
+      "name": {
+        "label": "Roll Label",
+        "hint": "Display name for the rolling button."
+      },
+      "prompt": {
+        "label": "Roll Prompt",
+        "hint": "Should the roll configuration dialog be displayed when rolling?"
+      },
+      "visible": {
+        "label": "Visible to All",
+        "hint": "Should the rolling button be visible to all players?"
+      }
+    }
+  }
+},
+
+"SENTIUS.Value": "Value",
+"SENTIUS.Vehicle": "Vehicle",
+"SENTIUS.VehicleActions": "Actions",
+"SENTIUS.VehicleActionsHint": "Actions taken with full crew complement",
+"SENTIUS.VehicleActionMax": "Maximum Actions",
+"SENTIUS.VehicleActionStations": "Action Stations",
+"SENTIUS.VehicleActionThresholds": "Action Thresholds",
+"SENTIUS.VehicleActionThresholdsFull": "Full Crew Complement",
+"SENTIUS.VehicleActionThresholdsMid": "Partial Crew Complement",
+"SENTIUS.VehicleActionThresholdsMin": "Minimum Crew Complement",
+"SENTIUS.VehicleCargo": "Cargo",
+"SENTIUS.VehicleCargoCapacity": "Cargo Capacity",
+"SENTIUS.VehicleCargoCrew": "Cargo & Crew",
+"SENTIUS.VehicleCreatureCapacity": "Creature Capacity",
+"SENTIUS.VehicleCrew": "Crew",
+"SENTIUS.VehicleCrewPassengers": "Crew & Passengers",
+"SENTIUS.VehicleCrewed": "Crewed",
+"SENTIUS.VehicleCrewAction": "Crew Action",
+"SENTIUS.VehicleEquipment": "Vehicle Equipment",
+"SENTIUS.VehicleMishap": "Mishap",
+"SENTIUS.VehicleMishapThreshold": "Mishap Threshold",
+"SENTIUS.VehiclePassengers": "Passengers",
+"SENTIUS.VehiclePassengerName": "Passenger Name or Type",
+"SENTIUS.VehiclePassengerQuantity": "Passenger Quantity",
+"SENTIUS.VehicleType": "Vehicle Type",
+"SENTIUS.VehicleTypeAir": "Air Vehicle",
+"SENTIUS.VehicleTypeLand": "Land Vehicle",
+"SENTIUS.VehicleTypeSpace": "Space Vehicle",
+"SENTIUS.VehicleTypeWater": "Water Vehicle",
+"SENTIUS.VehicleUncrewed": "Uncrewed",
+"SENTIUS.Versatile": "Versatile",
+"SENTIUS.VersatileDamage": "Versatile Damage",
+"SENTIUS.VsDC": "vs DC.",
+"SENTIUS.Vulnerabilities": "Vulnerabilities",
+"SENTIUS.WarnBadACFormula": "The provided AC formula \"{formula}\" could not be evaluated.",
+"SENTIUS.WarnCantAddMultipleAdvancements": "It is not currently possible to add multiple items with advancements to an actor at the same time. Please add them individually.",
+"SENTIUS.WarnMultipleArmor": "More than one suit of armor equipped, AC calculation may be incorrect.",
+"SENTIUS.WarnMultipleShields": "More than one shield equipped, AC calculation may be incorrect.",
+
+"SENTIUS.WEAPON": {
+  "FIELDS": {
+    "ammunition": {
+      "type": {
+        "label": "Ammunition Type"
+      }
+    },
+    "damage": {
+      "hint": "Intrinsic damage dice from the weapon. Ability modifier and additional damage parts will be provided automatically when attacking."
+    },
+    "mastery": {
+      "label": "Mastery",
+      "hint": "Special weapon ability unlocked for characters who have Weapon Mastery or a related feature."
+    }
+  },
+  "Mastery": {
+    "Label": "Weapon Mastery",
+    "Flavor": "Mastery",
+    "Cleave": "Cleave",
+    "Graze": "Graze",
+    "Nick": "Nick",
+    "Push": "Push",
+    "Sap": "Sap",
+    "Slow": "Slow",
+    "Topple": "Topple",
+    "Vex": "Vex"
+  }
+},
+
+"SENTIUS.WeaponCategory": "{category} Weapon",
+"SENTIUS.WeaponImprov": "Improvised",
+"SENTIUS.WeaponMartialM": "Martial Melee",
+"SENTIUS.WeaponMartialProficiency": "Martial",
+"SENTIUS.WeaponMartialR": "Martial Ranged",
+"SENTIUS.WeaponNatural": "Natural",
+"SENTIUS.WeaponSiege": "Siege Weapon",
+"SENTIUS.WeaponSimpleM": "Simple Melee",
+"SENTIUS.WeaponSimpleProficiency": "Simple",
+"SENTIUS.WeaponSimpleR": "Simple Ranged",
+"SENTIUS.Weight": "Weight",
+"SENTIUS.WhisperedTo": "Whispered to",
+"SENTIUS.Wiki": "Wiki",
+"SENTIUS.available": "available",
+"SENTIUS.description": "A system for playing the fifth edition of the worlds most popular roleplaying game in the Foundry Virtual Tabletop environment.",
+"SENTIUS.of": "of",
+"SENTIUS.per": "per",
+"SENTIUS.spell": "spell",
+
+"EDITOR.SENTIUS.Inline": {
+  "ApplyStatus": "Apply Status to Selected Tokens",
+  "AttackExtended": "<em>{type}</em>: {parts}",
+  "AttackLong": "{formula} to hit",
+  "AttackShort": "{formula}",
+  "AwardEach": "{award} each",
+  "CheckShort": "{check}",
+  "CheckLong": "{check} check",
+  "DamageExtended": "<em>Hit:</em> {damage} damage",
+  "DamageDouble": "{first} plus {second}",
+  "DamageShort": "{formula} {type}",
+  "DamageLong": "{average} ({formula}) {type}",
+  "DC": "DC {dc} {check}",
+  "DCPassiveShort": "DC {dc} passive {check}",
+  "DCPassiveLong": "passive {check} score of {dc} or higher",
+  "NoActorWarning": "No selected or assigned actor could be found to execute this roll.",
+  "PassiveShort": "passive {check}",
+  "PassiveLong": "passive {check} score",
+  "RequestRoll": "Request Roll",
+  "RollRequest": "Roll Request",
+  "SaveShort": "{save}",
+  "SaveLong": "{save} saving throw",
+  "SpecificCheck": "{ability} ({type})",
+  "Warning": {
+    "NoActivityOnItem": "{item} on {actor} does not have an Activity with name {activity}.",
+    "NoActor": "No selected or assigned actor could be found to execute this roll.",
+    "NoItemOnActor": "{actor} does not have an Item with name {item}."
+  }
+},
+
+"EFFECT.SENTIUS": {
+  "StatusBleeding": "Bleeding",
+  "StatusBloodied": "Bloodied",
+  "StatusBurning": "Burning",
+  "StatusBurrowing": "Burrowing",
+  "StatusConcentrating": "Concentrating",
+  "StatusCursed": "Cursed",
+  "StatusDead": "Dead",
+  "StatusDehydration": "Dehydration",
+  "StatusDodging": "Dodging",
+  "StatusEncumbered": "Encumbered",
+  "StatusEthereal": "Ethereal",
+  "StatusExceedingCarryingCapacity": "Exceeding Carrying Capacity",
+  "StatusFalling": "Falling",
+  "StatusFlying": "Flying",
+  "StatusHalfCover": "Half Cover",
+  "StatusHeavilyEncumbered": "Heavily Encumbered",
+  "StatusHiding": "Hiding",
+  "StatusHovering": "Hovering",
+  "StatusMalnutrition": "Malnutrition",
+  "StatusMarked": "Marked",
+  "StatusSilenced": "Silenced",
+  "StatusSleeping": "Sleeping",
+  "StatusStable": "Stable",
+  "StatusSuffocation": "Suffocation",
+  "StatusSurprised": "Surprised",
+  "StatusThreeQuartersCover": "Three-Quarters Cover",
+  "StatusTotalCover": "Total Cover",
+  "StatusTransformed": "Transformed"
+},
+
+"TYPES.JournalEntryPage.class": "Class Summary",
+"TYPES.JournalEntryPage.map": "Map Location",
+"TYPES.JournalEntryPage.rule": "Rule",
+"TYPES.JournalEntryPage.spells": "Spell List",
+"TYPES.JournalEntryPage.subclass": "Subclass Summary",
+"JOURNALENTRYPAGE.SENTIUS": {
+  "Class": {
+    "FIELDS": {
+      "description": {
+        "additionalEquipment": {
+          "label": "Additional Equipment Description",
+          "hint": "Additional descriptive text displayed beneath the starting equipment section."
+        },
+        "additionalHitPoints": {
+          "label": "Additional Hit Points Description",
+          "hint": "Additional descriptive text displayed beneath the auto-generated hit points section."
+        },
+        "additionalTraits": {
+          "label": "Additional Proficiencies Description",
+          "hint": "Additional descriptive text displayed beneath list of proficiencies granted by this class."
+        },
+        "subclass": {
+          "label": "Subclass Introduction",
+          "hint": "Introduction that will be displayed before this class's subclasses."
+        },
+        "value": {
+          "label": "Introduction",
+          "hint": "Primary description of the class that will appear first."
+        }
+      },
+      "item": {
+        "label": "Selected Class"
+      },
+      "style": {
+        "label": "Style",
+        "hint": "Force the page style to use modern or legacy formatting, rather than what is specified by the class."
+      },
+      "subclassHeader": {
+        "label": "Subclass Header"
+      },
+      "subclassItems": {
+        "label": "Subclasses"
+      }
+    },
+    "EquipmentHeader": "Equipment",
+    "EquipmentDescription": "You start with the following equipment, in addition to the equipment granted by your background:",
+    "Features": {
+      "DescriptionLegacy": "As a {lowercaseName}, you gain the following class features, which are summarized in the {name} table.",
+      "DescriptionModern": "As a {name}, you gain the following class features when you reach the specified {name} levels. These features are listed in the {name} Features table.",
+      "Header": "Class Features",
+      "Name": "Level {level}: {name}"
+    },
+    "HitPoints": {
+      "Header": "Hit Points",
+      "HitDiceLegacy": "<strong>Hit Dice:</strong> {dice} per {class} level",
+      "HitDiceModern": "{dice} per {class} level",
+      "Level1": "<strong>Hit Points at 1st Level:</strong> {max} + your Constitution modifier",
+      "LevelX": "<strong>Hit Points at Higher Levels:</strong> {dice} (or {average}) + your Constitution modifier per {class} level after 1st"
+    },
+    "ItemHint": "Drop a class here",
+    "NoValidClass": "No valid class selected, press the edit button to add a class.",
+    "OptionalFeaturesCaption": "Optional Class Features",
+    "OptionalFeaturesDescription": "The following section contains options {class} features. These features are not granted automatically, and you can choose one, some, or all of them at your DM's discretion.",
+    "SpellSlotLevel": "Slot Level",
+    "SpellSlots": "Spell Slots",
+    "SpellSlotsPerSpellLevel": "—Spell Slots per Spell Level—",
+    "Style": {
+      "Inferred": "Inferred from Source",
+      "Legacy": "Legacy",
+      "Modern": "Modern"
+    },
+    "SubclassHint": "Drop subclasses here",
+    "TableCaption": "The {class}",
+    "TableOptionalCaption": "Optional {class} Features",
+    "Traits": {
+      "Caption": "Core {class} Traits",
+      "Header": "Proficiencies"
+    }
+  },
+  "EditDescription": "Edit",
+  "TableTOC": "Table: {caption}",
+  "SpellList": {
+    "DropHint": "Drop spells or folders of spells here to add to the list",
+    "Grouping": {
+      "Label": "Grouping Mode",
+      "Hint": "Controls how the spells will be grouped by default in the spell list.",
+      "Alphabetical": "By First Letter",
+      "Level": "By Level",
+      "None": "No Grouping",
+      "School": "By School"
+    },
+    "IdentifierHint": "Identifier should match that defined on the associated document, if applicable. For example, when creating a spell list for the Wizard class, the identifier should be 'wizard'.",
+    "Type": {
+      "Label": "Spell List Type",
+      "Other": "Uncategorized"
+    },
+    "UnlinkedSpells": {
+      "Label": "Unlinked Spells",
+      "Add": "Add Unlinked Spell",
+      "Configuration": "Spell Configuration",
+      "Edit": "Edit Unlinked Spell"
+    }
+  },
+  "Subclass": {
+    "FIELDS": {
+      "description": {
+        "value": {
+          "label": "Introduction",
+          "hint": "Description of the subclass that will appear before any listed features."
+        }
+      },
+      "item": {
+        "label": "Selected Subclass"
+      },
+      "style": {
+        "label": "Style",
+        "hint": "Force the page style to use modern or legacy formatting, rather than what is specified by the subclass."
+      }
+    },
+    "ItemHint": "Drop a subclass here",
+    "NoValidSubclass": "No valid subclass selected, press the edit button to add a subclass."
+  }
+},
+
+"KEYBINDINGS.SENTIUS.SkipDialogNormal": "Skip Dialog",
+"KEYBINDINGS.SENTIUS.SkipDialogAdvantage": "Skip Dialog (roll with Advantage/Critical)",
+"KEYBINDINGS.SENTIUS.SkipDialogDisadvantage": "Skip Dialog (roll with Disadvantage)",
+
+"MACRO.5eMissingTargetWarn": "Your controlled actor '{actor}' does not have an {type} with name '{name}'.",
+"MACRO.5eMultipleTargetsWarn": "Your controlled actor '{actor}' has more than one {type} with name '{name}'. The first match will be chosen.",
+"MACRO.5eNoActorSelected": "No selected or assigned actor could be found to target with macro.",
+"MACRO.5eUnownedWarn": "You can only create macro buttons for owned Items",
+
+"MIGRATION.5eBegin": "Applying D&D 5e System Migration for version {version}. Please be patient and do not close your game or shut down your server.",
+"MIGRATION.5eComplete": "D&D 5e System Migration to version {version} completed!",
+"MIGRATION.5eVersionTooOldWarning": "Your D&D 5e system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.",
+
+"SETTINGS.5eAllowPolymorphingL": "Allow players to polymorph their own actors.",
+"SETTINGS.5eAllowPolymorphingN": "Allow Polymorphing",
+"SETTINGS.5eAutoCollapseCardL": "Automatically collapse Item Card descriptions in the Chat Log",
+"SETTINGS.5eAutoCollapseCardN": "Collapse Item Cards in Chat",
+"SETTINGS.5eAutoSpellTemplateL": "When a spell is cast, defaults to begin the process to create the corresponding Measured Template if any (requires TRUSTED or higher player role)",
+"SETTINGS.5eAutoSpellTemplateN": "Always place Spell Template",
+"SETTINGS.5eCriticalMaxDiceN": "Critical Damage Maximize Dice",
+"SETTINGS.5eCriticalMaxDiceL": "Make critical hits more deadly by maximizing the values of base damage dice.",
+"SETTINGS.5eCriticalModifiersN": "Critical Damage Multiply Modifiers",
+"SETTINGS.5eCriticalModifiersL": "Make critical hits more deadly by multiplying non-dice modifiers in addition to rolled dice.",
+"SETTINGS.5eCurWtL": "Carried currency affects character encumbrance following the rules on PHB pg. 143.",
+"SETTINGS.5eCurWtN": "Apply Currency Weight",
+"SETTINGS.5eDiagEuclidean": "Euclidean (7.07 ft. Diagonal)",
+"SETTINGS.5eDiagL": "Configure which diagonal movement rule should be used for games within this system.",
+"SETTINGS.5eDiagN": "Diagonal Movement Rule",
+"SETTINGS.5eDiagPHB": "PHB: Equidistant (5/5/5)",
+"SETTINGS.5eDiagDMG": "DMG: Alternating (5/10/5)",
+"SETTINGS.5eEncumbrance": {
+  "Hint": "Enable automatic tracking of encumbrance and the application of status effects for characters carrying too much.",
+  "Name": "Encumbrance Tracking",
+  "None": "None",
+  "Normal": "Normal (max carrying capacity)",
+  "Variant": "Variant (encumbered & heavily encumbered)"
+},
+"SETTINGS.5eFeatsL": "Allow players to choose a feat rather than taking an ability score improvement during class advancement.",
+"SETTINGS.5eFeatsN": "Allow Feats",
+"SETTINGS.5eHonorL": "Enable the use of the optional Honor ability score. Requires the world to be reloaded.",
+"SETTINGS.5eHonorN": "Honor Ability Score",
+"SETTINGS.5eInitTBL": "Append the raw Dexterity ability score to break ties in Initiative.",
+"SETTINGS.5eInitTBN": "Initiative Dexterity Tiebreaker",
+"SETTINGS.5eNoAdvancementsN": "Disable level-up automation",
+"SETTINGS.5eNoAdvancementsL": "Do not prompt for level-up or character creation choices.",
+"SETTINGS.5eNoConcentrationN": "Disable concentration tracking",
+"SETTINGS.5eNoConcentrationL": "Disable the system's automated tracking of concentration.",
+"SETTINGS.5eProfBonus": "PHB: Bonus (+2, +3, +4, +5, +6)",
+"SETTINGS.5eProfDice": "DMG: Dice (1d4, 1d6, 1d8, 1d10, 1d12)",
+"SETTINGS.5eProfL": "Configure proficiency modifier to use a fixed bonus or a dice roll. Reloading the world is required for this change to take effect.",
+"SETTINGS.5eProfN": "Proficiency Variant",
+"SETTINGS.5eReset": "Reset",
+"SETTINGS.5eRestL": "Configure which rest variant should be used for games within this system.",
+"SETTINGS.5eRestN": "Rest Variant",
+"SETTINGS.5eRestPHB": "Player's Handbook (LR: 8 hours, SR: 1 hour)",
+"SETTINGS.5eRestGritty": "Gritty Realism (LR: 7 days, SR: 8 hours)",
+"SETTINGS.5eRestEpic": "Epic Heroism (LR: 1 hour, SR: 1 min)",
+"SETTINGS.5eGridAlignedSquareTemplatesL": "When square templates are created as the result of casting a spell or using an item, they will be locked to the grid alignment and unable to be rotated.",
+"SETTINGS.5eGridAlignedSquareTemplatesN": "Grid-Aligned Square Templates",
+"SETTINGS.5eSanityL": "Enable the use of the optional Sanity ability score. Requires the world to be reloaded.",
+"SETTINGS.5eSanityN": "Sanity Ability Score",
+"SETTINGS.5eUndoChanges": "Undo Changes",
+"SETTINGS.5eTokenRings": {
+  "Name": "Disable Dynamic Token Rings",
+  "Hint": "Disabling the token ring animations can improve performance."
+},
+"SETTINGS.SENTIUS": {
+  "ALLOWSUMMONING": {
+    "Name": "Allow Summoning",
+    "Hint": "Allow players to use summoning abilities to summon actors. Players must also have the Create Token core permission for this to work."
+  },
+  "BLOODIED": {
+    "Name": "Bloodied Status",
+    "Hint": "Configure whether the bloodied status is tracked automatically and its visibility.",
+    "All": "Display for Allies & Enemies",
+    "Player": "Only Display for Allies",
+    "None": "Never Display"
+  },
+  "COLLAPSETRAYS": {
+    "Name": "Collapse Trays in Chat",
+    "Hint": "Automatically collapse damage, hit, and effect trays that appear in chat cards.",
+    "Always": "Collapse All",
+    "Older": "Collapse Older Trays",
+    "Never": "Expand All"
+  },
+  "DEFAULTSKILLS": {
+    "Name": "Default Skills",
+    "Hint": "The default skills that appear on NPC sheets regardless of level of proficiency."
+  },
+  "INITIATIVESCORE": {
+    "Name": "Initiative Score",
+    "Hint": "Use a creature's initiative score (10 + bonus) rather than rolling for initiative.",
+    "All": "Use Score for Everyone",
+    "None": "Always Roll for Initiative",
+    "NPCs": "Use Score for GM NPCs"
+  },
+  "LEVELING": {
+    "Name": "Leveling Mode",
+    "Hint": "Determine how the players gain new levels.",
+    "NoXP": "Level Advancement without XP",
+    "XP": "Experience Points",
+    "XPBoons": "Experience Points with Epic Boons"
+  },
+  "METRIC": {
+    "LengthUnits": {
+      "Name": "Use Metric Length Units",
+      "Hint": "Defaults to using meters instead of feet for movement and senses."
+    },
+    "WeightUnits": {
+      "Name": "Use Metric Weight Units",
+      "Hint": "Replaces all reference to lbs with kgs and updates the encumbrance calculations to use metric weight units."
+    }
+  },
+  "THEME": {
+    "Name": "Theme",
+    "Hint": "Theme that will apply to the UI and all sheets by default. Automatic will be determined by your browser or operating system settings."
+  },
+  "RULESVERSION": {
+    "Name": "Rules Version",
+    "Hint": "Change handling of various rules between the 2024 and 2014 rule sets.",
+    "Legacy": "Legacy Rules (2014)",
+    "Modern": "Modern Rules (2024)"
+  },
+  "VISIBILITY": {
+    "Hint": "Various configuration options that affect player visibility of certain information that the DM may wish to keep secret.",
+    "Label": "Configure Visibility",
+    "Name": "Visibility",
+    "ATTACK": {
+      "Name": "Attack Result Visibility",
+      "Hint": "Control visibility of attack roll results in chat cards for players.",
+      "All": "Show results & target ACs",
+      "HideAC": "Show only results",
+      "None": "Hide all"
+    },
+    "CHALLENGE": {
+      "All": "Show all",
+      "Hint": "Control what roll DCs are visible to the players and whether successes/failures are highlighted.",
+      "Name": "Challenge Visibility",
+      "None": "Hide all",
+      "Player": "Show only from other players"
+    },
+    "ITEMDESCRIPTIONS": {
+      "Hint": "Hide the descriptions of NPC items from players when posted to chat by the DM. Will only hide the descriptions for items without a Chat Description set.",
+      "Name": "Conceal NPC Descriptions"
+    }
+  }
+},
+
+"SHEETS.SENTIUS": {
+  "THEME": {
+    "Label": "Theme",
+    "Automatic": "Automatic",
+    "Dark": "Dark Mode",
+    "Light": "Light Mode"
+  }
+},
+
+"SOURCE.BOOK.SRD": "System Reference Document 5.1",
+"SIDEBAR.SortModePriority": "Sort by priority"
+}

@@ -1,0 +1,11 @@
+<fieldset>
+    <legend>{{ localize "SENTIUS.ItemSubclassDetails" }}</legend>
+
+    {{!-- Identifier --}}
+    {{ formField fields.identifier value=source.identifier placeholder=item.identifier hint="SENTIUS.IdentifierError"
+                 localize=true }}
+
+    {{!-- Class Identifier --}}
+    {{ formField fields.classIdentifier value=source.classIdentifier hint="SENTIUS.SubclassIdentifierHint"
+                 localize=true }}
+</fieldset>

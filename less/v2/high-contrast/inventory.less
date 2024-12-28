@@ -1,0 +1,51 @@
+.sentius-flag-high-contrast .sentius2,
+.sentius2.sentius-flag-high-contrast {
+  .inventory-element {
+    .encumbrance .meter { border-block-end: var(--sentius-border-dark); }
+    .middle .attunement { border: var(--sentius-border-dark); }
+  }
+  section.currency, .currency-style {
+    input, button { border: var(--sentius-border-dark); }
+  }
+}
+
+/* ---------------------------------- */
+/*  Light Mode                        */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast:is(.sentius-theme-light, .theme-light) .sentius2,
+.sentius2.sentius-flag-high-contrast.sentius-theme-light {
+  .inventory-element {
+    .encumbrance .meter { border-color: var(--sentius-color-dark); }
+    .middle .attunement {
+      border-color: var(--sentius-color-dark);
+      .fa-sun, .separator { color: var(--sentius-color-dark); }
+    }
+  }
+  .items-section {
+    :is(.items-header, .item) .item-name .tags { opacity: .5; }
+    .item-school { --icon-fill: var(--sentius-color-black); }
+    .item-roll .ability { color: var(--color-text-dark-4); }
+  }
+}
+
+/* ---------------------------------- */
+/*  Dark Mode                         */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast:is(.sentius-theme-dark, .theme-dark) .sentius2,
+.sentius2.sentius-flag-high-contrast.sentius-theme-dark {
+  .inventory-element {
+    .middle .attunement {
+      .fa-sun, .separator { color: var(--sentius-color-light); }
+    }
+  }
+  .items-section {
+    :is(.items-header, .item) .item-name .tags { opacity: 1; }
+    .item-school { --icon-fill: var(--sentius-color-blue-white); }
+    .item-roll .ability { color: var(--color-text-light-4); }
+    .item .item-controls .item-control:not(.active) {
+      color: var(--color-text-light-6);
+    }
+  }
+}

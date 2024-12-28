@@ -1,0 +1,32 @@
+/* TODO: Add .sentius2-journal when dark mode journal sheets are implemented */
+.theme-dark .sentius2:not(.chat-card, .sentius-tooltip),
+.sentius2.sentius-theme-dark {
+  --sentius-color-table-row-odd: var(--sentius-color-iron-gray);
+  --sentius-color-table-row-even: color-mix(in oklab, var(--sentius-color-table-row-odd), black 10%);
+
+  .editor-content {
+    h3 { border: none; }
+
+    table {
+      --row-color: var(--sentius-color-iron-gray);
+      border-color: var(--sentius-color-blue-gray-1);
+
+      thead {
+        border-color: var(--sentius-color-blue-gray-1);
+        background: linear-gradient(to right, #491d25, #311b1f);
+      }
+    }
+  }
+
+  .roll-link > i.fa-dice-d20, a.inline-roll > i.fa-dice-d20 { filter: invert(1); }
+
+  .fvtt:is(.quest, .advice) { background: var(--sentius-color-blue-gray-4); }
+
+  aside.notable {
+    border-color: #212121;
+    border-width: 2px 1px;
+    background: var(--sentius-color-blue-gray-4);
+
+    &::before, &::after { filter: grayscale(1); }
+  }
+}

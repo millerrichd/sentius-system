@@ -1,0 +1,32 @@
+:is(.sentius-theme-dark, .theme-dark) .sentius2,
+.sentius2.sentius-theme-dark {
+  .items-section {
+    border: none;
+
+    .item {
+      .item-name .tags {
+        --icon-fill: var(--color-text-light-6);
+        opacity: unset;
+      }
+
+      .item-controls .item-control {
+        color: var(--sentius-color-blue-gray-3);
+        &.interface-only { color: var(--color-text-light-6); }
+        &.active { color: var(--sentius-color-gold); }
+      }
+
+      .item-summary { background: transparent; }
+    }
+
+    .item-controls .info-control { color: var(--sentius-color-gold); }
+
+    .activities .activity-row {
+      border-color: var(--sentius-color-blue-gray-4);
+      &:last-child { border-color: var(--sentius-color-blue-gray-4); }
+      .activity-image { --icon-fill: var(--sentius-color-gold); }
+      &::before { color: var(--sentius-color-blue-gray-3); }
+    }
+  }
+
+  .editable .items-section .item-controls .item-control { color: var(--color-text-light-6); }
+}

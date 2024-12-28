@@ -1,0 +1,16 @@
+<section>
+    {{#each choices}}
+    <fieldset class="traits card">
+        <legend>{{ label }}</legend>
+        {{> "sentius.traits-list" choices=children keyPath=(concat @root.keyPath ".value.") topLevel=true
+            field=@root.checkbox input=@root.inputs.createCheckboxInput }}
+    </fieldset>
+    {{/each}}
+    {{#if fields.custom}}
+    <fieldset class="card">
+        <legend>{{ localize "SENTIUS.Special" }}</legend>
+        {{ formInput fields.custom value=data.custom }}
+        <p class="hint">{{ localize "SENTIUS.SpecialHint" }}</p>
+    </fieldset>
+    {{/if}}
+</section>

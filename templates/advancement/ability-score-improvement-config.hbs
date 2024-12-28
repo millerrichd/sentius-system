@@ -1,0 +1,21 @@
+<form autocomplete="off" data-id="{{ _id }}" data-type="{{ type }}">
+    {{> "sentius.advancement-controls" }}
+    <div class="form-group">
+        <label>{{ localize "SENTIUS.ADVANCEMENT.AbilityScoreImprovement.FIELDS.cap.label" }}</label>
+        <div class="form-fields">
+            <input type="number" name="configuration.cap" value="{{ configuration.cap }}" min="1" step="1"
+                         placeholder="{{ localize 'None' }}">
+        </div>
+        <p class="hint">{{ localize "SENTIUS.ADVANCEMENT.AbilityScoreImprovement.FIELDS.cap.hint" }}</p>
+    </div>
+
+    <ul class="ability-scores">
+        {{> "sentius.advancement-ability-score-control" points canAdjust=true }}
+        <li class="hint">
+            {{ localize "SENTIUS.ADVANCEMENT.AbilityScoreImprovement.FIELDS.points.hint" }}
+        </li>
+        {{#each abilities}}
+        {{> "sentius.advancement-ability-score-control" this canAdjust=true canLock=true }}
+        {{/each}}
+    </ul>
+</form>

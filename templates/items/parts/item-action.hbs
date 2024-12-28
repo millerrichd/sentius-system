@@ -1,0 +1,194 @@
+{{!-- Action Type --}}
+<div class="form-group select">
+    <label>{{ localize "SENTIUS.ItemActionType" }}</label>
+    <select name="system.actionType">
+        {{ selectOptions config.itemActionTypes selected=system.actionType blank="" }}
+    </select>
+</div>
+{{#if system.actionType}}
+
+{{!-- Ability Modifier --}}
+<div class="form-group select">
+    <label>{{ localize "SENTIUS.AbilityModifier" }}</label>
+    <select name="system.ability">
+        {{#select system.ability}}
+        <option value="">{{ localize "SENTIUS.Default" }}</option>
+        <option value="none">{{ localize "SENTIUS.None" }}</option>
+        <optgroup label="{{ localize 'SENTIUS.Ability' }}">
+            {{#each config.abilities as |ability a|}}
+            <option value="{{a}}">{{ability.label}}</option>
+            {{/each}}
+        </optgroup>
+        {{/select}}
+    </select>
+</div>
+
+{{#if system.hasAttack}}
+{{!-- Attack Roll Bonus --}}
+<div class="form-group">
+    <label>{{ localize "SENTIUS.ItemAttackBonus" }}</label>
+    <div class="form-fields">
+        <input type="text" name="system.attack.bonus" value="{{system.attack.bonus}}" data-formula-editor>
+        <label class="checkbox" data-tooltip="SENTIUS.ItemAttackFlatHint">
+          <input type="checkbox" name="system.attack.flat" {{checked system.attack.flat}}>
+          {{localize "SENTIUS.ItemAttackFlat"}}
+        </label>
+    </div>
+</div>
+
+{{!-- Critical Hit Threshold --}}
+<div class="form-group">
+    <label>{{ localize "SENTIUS.ItemCritThreshold" }}</label>
+    <div class="form-fields">
+        {{numberInput system.critical.threshold name="system.critical.threshold" placeholder="20" max=20 min=1 step=1}}
+    </div>
+</div>
+
+{{!-- Critical Hit Damage --}}
+<div class="form-group">
+    <label>{{ localize "SENTIUS.ItemCritExtraDamage" }}</label>
+    <div class="form-fields">
+        <input type="text" name="system.critical.damage" value="{{system.critical.damage}}">
+    </div>
+</div>
+{{/if}}
+
+{{!-- Damage Formula --}}
+<h4 class="damage-header">
+    {{#unless isHealing}}{{ localize "SENTIUS.Damage" }}{{ else }}{{ localize "SENTIUS.Healing" }}{{/unless}}
+    {{ localize "SENTIUS.Formula" }}
+    <a class="damage-control add-damage"><i class="fas fa-plus"></i></a>
+</h4>
+<ol class="damage-parts form-group">
+    {{#each system.damage.parts as |part i| }}
+    <li class="damage-part flexrow" data-damage-part="{{i}}">
+        <input type="text" name="system.damage.parts.{{i}}.0" value="{{lookup this "0"}}" data-formula-editor/>
+        <select name="system.damage.parts.{{i}}.1">
+            {{#select (lookup this "1")}}
+                <option value="">{{ localize "SENTIUS.None" }}</option>
+                <optgroup label="{{localize 'SENTIUS.Damage'}}">
+                    {{selectOptions @root.config.damageTypes labelAttr="label"}}
+                </optgroup>
+                <optgroup label="{{localize 'SENTIUS.Healing'}}">
+                    {{selectOptions @root.config.healingTypes labelAttr="label"}}
+                </optgroup>
+            {{/select}}
+        </select>
+        <a class="damage-control delete-damage"><i class="fas fa-minus"></i></a>
+    </li>
+    {{/each}}
+</ol>
+
+{{!-- Versatile Damage --}}
+{{#if system.damage.parts.length }}
+<div class="form-group">
+    <label>{{ localize "SENTIUS.VersatileDamage" }}</label>
+    <div class="form-fields">
+        <input type="text" name="system.damage.versatile" value="{{system.damage.versatile}}"
+               placeholder="{{ localize 'SENTIUS.Formula' }}" data-formula-editor>
+    </div>
+</div>
+{{/if}}
+
+{{!-- Other Formula --}}
+<div class="form-group">
+    <label>{{ localize "SENTIUS.OtherFormula" }}</label>
+    <div class="form-fields">
+        <input type="text" name="system.formula" value="{{system.formula}}"
+               placeholder="{{ localize 'SENTIUS.Formula' }}" data-formula-editor>
+    </div>
+</div>
+
+{{!-- Saving Throw --}}
+<div class="form-group input-select">
+    <label>{{ localize "SENTIUS.ActionSave" }}</label>
+    <div class="form-fields">
+        <select name="system.save.ability">
+            {{selectOptions config.abilities selected=system.save.ability labelAttr="label" blank=""}}
+        </select>
+        <span>{{ localize "SENTIUS.VsDC" }}</span>
+        <input type="number" step="any" name="system.save.dc"
+            value="{{#if system.save.dc}}{{system.save.dc}}{{/if}}"
+            placeholder="{{ localize 'SENTIUS.AbbreviationDC' }}" {{#unless isFlatDC}}disabled{{/unless}}>
+        <select name="system.save.scaling">
+            {{#select system.save.scaling}}
+                <option value="spell">{{ localize "SENTIUS.Spellcasting" }}</option>
+                {{selectOptions config.abilities labelAttr="label"}}
+                <option value="flat">{{ localize "SENTIUS.Flat" }}</option>
+            {{/select}}
+        </select>
+    </div>
+</div>
+
+{{!-- Enchantment --}}
+{{#if system.isEnchantment}}
+<div class="form-group enchantment">
+    <label>{{ localize "SENTIUS.ENCHANTMENT.Label" }}</label>
+    {{#if appliedEnchantments.length}}
+    <ul class="separated-list sentius2">
+        {{#each appliedEnchantments}}
+        <li class="item" data-enchantment-uuid="{{ enchantment.uuid }}">
+            <div class="details flexrow">
+                <img class="gold-icon" src="{{ item.img }}" alt="{{ name }}">
+                <span class="name">
+                    {{#if actor}}
+                    {{{ localize "SENTIUS.ENCHANTMENT.Items.Entry" item=name actor=actor.name }}}
+                    {{else}}
+                    {{ name }}
+                    {{/if}}
+                </span>
+                <div class="list-controls flexrow">
+                    {{#if item.isOwner}}
+                    <button type="button" class="unbutton" data-action="view" data-uuid="{{ item.uuid }}"
+                            data-tooltip="SENTIUS.ItemView" aria-label="{{ localize 'SENTIUS.ItemView' }}">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="enchantment-button unbutton" data-action="removeEnchantment"
+                            data-tooltip="SENTIUS.ENCHANTMENT.Action.Remove"
+                            aria-label="{{ localize 'SENTIUS.ENCHANTMENT.Action.Remove' }}">
+                        <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                    </button>
+                    {{/if}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
+{{/if}}
+
+{{!-- Summoning --}}
+{{#if (eq system.actionType "summ")}}
+<div class="form-group summoning">
+    <label>{{ localize "SENTIUS.Summoning.Label" }}</label>
+    {{#with system.summonedCreatures as |summonedCreatures|}}
+    {{#if summonedCreatures.length}}
+    <ul class="separated-list sentius2">
+        {{#each summonedCreatures}}
+        <li class="item" data-summon-uuid="{{ uuid }}">
+            <div class="details flexrow">
+                <img class="gold-icon" src="{{ img }}" alt="{{ name }}">
+                <span class="name">{{ name }}</span>
+                <div class="list-controls flexrow">
+                    <button type="button" class="unbutton" data-action="view" data-uuid="{{ uuid }}"
+                            data-tooltip="SENTIUS.Summoning.Action.View"
+                            aria-label="{{ localize 'SENTIUS.Summoning.Action.View' }}">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+    {{/with}}
+</div>
+{{/if}}
+
+{{!-- Chat Message Flavor --}}
+<div class="form-group stacked">
+    <label>{{ localize "SENTIUS.ChatFlavor" }}</label>
+    <input type="text" name="system.chatFlavor" value="{{system.chatFlavor}}"/>
+</div>
+{{/if}}

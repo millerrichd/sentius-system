@@ -1,0 +1,49 @@
+<fieldset>
+    <legend>
+        {{#if (eq item.type "weapon")}}{{ localize "SENTIUS.ItemSiegeProperties" }}
+        {{else if (eq item.type "equipment")}}{{ localize "SENTIUS.ItemVehicleProperties" }}{{/if}}
+    </legend>
+
+    {{!-- Armor Class --}}
+    {{ formField fields.armor.fields.value value=source.armor.value localize=true }}
+
+    {{!-- Hit Points --}}
+    <div class="form-group split-group">
+        <label>{{ localize "SENTIUS.HitPoints" }}</label>
+        <div class="form-fields">
+
+            {{!-- Current --}}
+            {{ formField fields.hp.fields.value value=source.hp.value label="SENTIUS.Current" placeholder="0"
+                         localize=true classes="label-top" }}
+
+            {{!-- Max --}}
+            {{ formField fields.hp.fields.max value=source.hp.max label="SENTIUS.Max" placeholder="0" localize=true
+                         classes="label-top" }}
+
+            {{!-- Threshold --}}
+            {{ formField fields.hp.fields.dt value=source.hp.dt label="SENTIUS.Threshold" placeholder="—" localize=true
+                         classes="label-top" }}
+        </div>
+
+        {{!-- Conditions --}}
+        {{ formInput fields.hp.fields.conditions value=source.hp.conditions input=inputs.createTextInput
+                     placeholder=(localize "SENTIUS.HealthConditions") localize=true classes="full-width" }}
+    </div>
+
+    {{!-- Speed --}}
+    {{#if (eq item.type "equipment")}}
+    <div class="form-group split-group">
+        <label>{{ localize "SENTIUS.Speed" }}</label>
+        <div class="form-fields">
+
+            {{!-- Value --}}
+            {{ formField fields.speed.fields.value value=source.speed.value placeholder="0" label="SENTIUS.Value"
+                         localize=true classes="label-top" }}
+        </div>
+
+        {{!-- Conditions --}}
+        {{ formInput fields.speed.fields.conditions value=source.speed.conditions input=inputs.createTextInput
+                     placeholder=(localize "SENTIUS.SpeedConditions") localize=true classes="full-width" }}
+    </div>
+    {{/if}}
+</fieldset>

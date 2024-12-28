@@ -1,0 +1,67 @@
+<fieldset>
+    <legend>{{ localize "SENTIUS.Usage" }}</legend>
+
+    {{!-- Uses --}}
+    <div class="form-group split-group">
+        <label>{{ localize "SENTIUS.LimitedUses" }}</label>
+        <div class="form-fields">
+
+            {{!-- Spent --}}
+            {{ formField fields.uses.fields.spent value=data.uses.spent label="SENTIUS.Spent" localize=true hint=false
+                         classes="label-top" }}
+
+            {{!-- Max --}}
+            {{ formField fields.uses.fields.max value=data.uses.max label="SENTIUS.Max" localize=true hint=false
+                         classes="label-top" }}
+        </div>
+    </div>
+
+    {{!-- Auto-Destroy --}}
+    {{#if fields.uses.fields.autoDestroy}}
+    {{ formField fields.uses.fields.autoDestroy value=data.uses.autoDestroy localize=true
+                 input=inputs.createCheckboxInput }}
+    {{/if}}
+</fieldset>
+
+{{#if hasLimitedUses}}
+<fieldset>
+    <legend>
+        <span>{{ localize "SENTIUS.Recovery" }}</span>
+        <button type="button" class="unbutton control-button" data-action="addRecovery"
+                data-tooltip="SENTIUS.USES.Recovery.Action.Create"
+                aria-label="{{ localize "SENTIUS.USES.Recovery.Action.Create" }}">
+            <i class="fas fa-plus" inert></i>
+        </button>
+    </legend>
+    {{#each usesRecovery}}
+    <div class="form-group split-group full-width card" data-index="{{ @index }}">
+        <div class="form-fields">
+
+            {{!-- Period --}}
+            {{ formField fields.period name=(concat prefix "period") value=source.period options=@root.recoveryPeriods
+                         label="SENTIUS.Period" localize=true hint=false classes="label-top" }}
+
+            {{!-- Type --}}
+            {{#unless (eq source.period "recharge")}}
+            {{ formField fields.type name=(concat prefix "type") value=source.type options=@root.recoveryTypes
+                         label="SENTIUS.Recovery" localize=true hint=false classes="label-top" }}
+            {{/unless}}
+
+            {{!-- Formula --}}
+            {{#if (or (eq source.type "formula") formulaOptions)}}
+            {{ formField fields.formula name=(concat prefix "formula") value=source.formula options=formulaOptions
+                         label="SENTIUS.Formula" localize=true hint=false classes="label-top" }}
+            {{/if}}
+
+            <button type="button" class="unbutton control-button" data-action="deleteRecovery"
+                    data-tooltip="SENTIUS.USES.Recovery.Action.Delete"
+                    aria-label="{{ localize "SENTIUS.USES.Recovery.Action.Delete" }}">
+                <i class="fas fa-minus" inert></i>
+            </button>
+        </div>
+    </div>
+    {{else}}
+    <div class="empty">{{ localize "SENTIUS.UsesPeriods.Never" }}</div>
+    {{/each}}
+</fieldset>
+{{/if}}

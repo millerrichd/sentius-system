@@ -1,0 +1,61 @@
+.sentius-flag-high-contrast .sentius2.sheet.actor.character,
+.sentius2.sheet.actor.character.sentius-flag-high-contrast {
+  .sidebar {
+    .card {
+      .stats .lozenges .lozenge .value {
+        text-shadow: 0 0 2px var(--sentius-color-dark);
+        filter: drop-shadow(0 0 2px var(--sentius-color-dark));
+      }
+      .meter.sectioned > .tmp > input::placeholder { color: var(--color-text-light-6); }
+    }
+    .favorites > ul .drop { opacity: .5; }
+  }
+
+  .skills, .tools {
+    > ul > li { border-bottom: var(--sentius-border-dark); }
+    .ability, .passive { color: var(--color-text-dark-primary); }
+  }
+  .saves {
+    > ul > li {
+      --border-style: var(--sentius-border-dark);
+      &:nth-child(odd) { border-inline-end: var(--border-style); }
+    }
+  }
+
+  .pill-lg {
+    &.empty:hover { opacity: 1; }
+    &.texture::before { --gradient-end: color-mix(in oklab, var(--sentius-background-card), transparent 40%); }
+  }
+
+  .ability-scores .ability-score {
+    &::before { background: transparent url("ui/ability-score-tab-hc.svg") no-repeat top center / contain; }
+    .label { color: var(--sentius-color-dark); }
+    .score { color: var(--color-text-light-1); }
+  }
+}
+
+/* ---------------------------------- */
+/*  Light Mode                        */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast:is(.sentius-theme-light, .theme-dark) .sentius2.sheet.actor.character,
+.sentius2.sheet.actor.character.sentius-flag-high-contrast.sentius-theme-light {
+  .sheet-header { background: var(--sentius-color-maroon); }
+  .sidebar .favorites > h3 { color: var(--sentius-color-dark); }
+  .tab.features .classes .class .level > span { color: var(--sentius-color-dark); }
+}
+
+/* ---------------------------------- */
+/*  Dark Mode                         */
+/* ---------------------------------- */
+
+.sentius-flag-high-contrast:is(.sentius-theme-dark, .theme-dark) .sentius2.sheet.actor.character,
+.sentius2.sheet.actor.character.sentius-flag-high-contrast.sentius-theme-dark {
+  .sheet-header { background: none; }
+  .sidebar .favorites > h3 { color: var(--sentius-color-light); }
+  .tab.features .classes .class .level > span { color: var(--sentius-color-light); }
+  .ability-scores .ability-score {
+    &::before { filter: invert(100%); }
+    .label { color: var(--color-text-light-1); }
+  }
+}

@@ -1,0 +1,83 @@
+{{#if data.title.show}}
+<header>
+    <h{{ title.level1 }}>{{ data.name }}</h{{ title.level1 }}>
+</header>
+{{/if}}
+
+{{#if linked.document}}
+
+<section class="journal-page-content">
+    {{#if modernStyle}}{{> "sentius.journal-modern-traits" }}{{/if}}
+
+    {{{ enriched.value }}}
+
+    <h{{ title.level2 }}>{{ localize "JOURNALENTRYPAGE.SENTIUS.Class.Features.Header" }}</h{{ title.level2 }}>
+
+    {{#if modernStyle}}
+    <p>
+        {{ localize "JOURNALENTRYPAGE.SENTIUS.Class.Features.DescriptionModern" name=linked.name
+           lowercaseName=linked.lowercaseName }}
+    </p>
+    {{else}}
+    {{#if (and primaryAbility (not modernStyle))}}
+    <strong>{{ localize "SENTIUS.CLASS.FIELDS.primaryAbility.value.label" }}:</strong> {{ primaryAbility }}
+    {{/if}}
+
+    <p>
+        {{ localize "JOURNALENTRYPAGE.SENTIUS.Class.Features.DescriptionLegacy" name=linked.name
+           lowercaseName=linked.lowercaseName }}
+    </p>
+
+    {{> "sentius.journal-legacy-traits" }}
+    {{/if}}
+
+    {{> "sentius.journal-table" table=table level=title.level3
+        caption=(localize "JOURNALENTRYPAGE.SENTIUS.Class.TableCaption" class=linked.name) }}
+
+    {{#each features}}
+    <h{{ @root.title.level4 }}>{{ this.name }}</h{{ @root.title.level4 }}>
+    {{{ this.description }}}
+    {{/each}}
+
+    {{#if optionalTable}}
+    <h{{ title.level2 }}>{{ localize "JOURNALENTRYPAGE.SENTIUS.Class.OptionalFeaturesCaption" }}</h{{ title.level2 }}>
+    <p>{{ localize "JOURNALENTRYPAGE.SENTIUS.Class.OptionalFeaturesDescription" class=linked.lowercaseName }}</p>
+
+    {{> "sentius.journal-table" table=optionalTable level=title.level3
+        caption=(localize "JOURNALENTRYPAGE.SENTIUS.Class.TableOptionalCaption" class=linked.name) }}
+
+    {{#each optionalFeatures}}
+    <h{{ @root.title.level4 }}>{{ this.name }}</h{{ @root.title.level4 }}>
+    {{{ this.description }}}
+    {{/each}}
+    {{/if}}
+
+    {{#if (or enriched.subclass subclasses)}}
+    <h{{title.level2}}>
+        {{#if system.subclassHeader}}{{ system.subclassHeader }}
+        {{else}}{{ localize "JOURNALENTRYPAGE.SENTIUS.Class.FIELDS.subclassItems.label" }}{{/if}}
+    </h{{title.level2}}>
+    {{{ enriched.subclass }}}
+
+    {{#each subclasses}}
+    <h{{ @root.title.level3 }}>{{ this.name }}</h{{ @root.title.level3 }}>
+    {{{this.description}}}
+
+    {{#if this.table}}
+    {{> "sentius.journal-table" table=this.table level=title.level4
+        caption=(localize "JOURNALENTRYPAGE.SENTIUS.Class.TableCaption" class=this.name) }}
+    {{/if}}
+
+    {{#each this.features}}
+    <h{{ @root.title.level4 }}>{{ this.name }}</h{{ @root.title.level4 }}>
+    {{{ this.description }}}
+    {{/each}}
+    {{/each}}
+    {{/if}}
+</section>
+
+{{else}}
+<section>
+    {{ localize "JOURNALENTRYPAGE.SENTIUS.Class.NoValidClass" }}
+</section>
+{{/if}}

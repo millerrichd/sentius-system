@@ -1,0 +1,11 @@
+<section>
+    {{~#if hasConcentration}}
+    <fieldset>
+        <legend>{{ localize "SENTIUS.Concentration" }}</legend>
+        {{#each fields}}
+            {{ formField field name=name value=value options=options input=input }}
+        {{/each}}
+    </fieldset>
+    {{> "sentius.activity-usage-notes" }}
+    {{/if~}}
+</section>

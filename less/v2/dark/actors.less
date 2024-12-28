@@ -1,0 +1,20 @@
+:is(.sentius-theme-dark, .theme-dark) .sentius2.sheet.actor,
+.sentius2.sheet.actor.sentius-theme-dark {
+  .ability-score {
+    .label { font-weight: bold; }
+    .mod { --sentius-color-black: var(--sentius-color-blue-white); }
+  }
+
+  .textbox textarea { color: var(--sentius-color-blue-white); }
+
+  .effects-element .conditions-list .condition.content-link {
+    background: unset;
+    border-color: var(--sentius-color-blue-gray-3);
+    &:hover { background: var(--sentius-color-blue-gray-3); }
+  }
+
+  dialog.warnings:is(#tooltip, .locked-tooltip) {
+    background: var(--sentius-color-dark-gray) url("../../ui/denim075.png");
+    li { border-color: var(--sentius-color-blue-gray-3); }
+  }
+}

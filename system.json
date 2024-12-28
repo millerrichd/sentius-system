@@ -1,0 +1,120 @@
+{
+  "id": "sentius",
+  "title": "Sentius RPG System",
+  "description": "The Sentius RPG System brought to Foundry VTT",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "12.331",
+    "verified": "12.331"
+  },
+  "url": "https://github.com/millerrichd/sentius-system/",
+  "manifest": "https://raw.githubusercontent.com/millerrichd/sentius-system/master/system.json",
+  "download": "https://github.com/millerrichd/sentius-system/releases/download/release-0.0.1/sentius-system-release-0.0.1.zip",
+  "authors": [
+    {
+      "name": "Richard Miller",
+      "url": "https://sentius-rpg.com",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "sentius.mjs"
+  ],
+  "styles": [
+    "sentius.css"
+  ],
+  "documentTypes": {
+    "ActiveEffect": {
+      "enchantment": {}
+    },
+    "Actor": {
+      "character": {
+        "htmlFields": ["details.biography.value", "details.biography.public"]
+      },
+      "npc": {
+        "htmlFields": ["details.biography.value", "details.biography.public"]
+      },
+      "vehicle": {
+        "htmlFields": ["details.biography.value", "details.biography.public"]
+      }
+    },
+    "Item": {
+      "weapon": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "equipment": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "consumable": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "loot": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "ancestry": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "background": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "spell": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "miracle": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "psychic": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "hindrances": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "traits": {
+        "htmlFields": ["description.value", "description.chat"]
+      },
+      "container": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "backpack": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      }
+    },
+    "JournalEntryPage": {
+      "map": {},
+      "rule": {
+        "htmlFields": ["tooltip"]
+      },
+      "spells": {},
+      "miracles": {},
+      "psychics": {},
+      "subclass": {
+        "htmlFields": ["details.value"]
+      }
+    }
+  },
+  "packs": [
+    {}
+  ],
+  "packFolders": [
+    {}
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "media": [
+    {}
+  ],
+  "socket": true,
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "",
+  "background": "",
+  "flags": {}
+}

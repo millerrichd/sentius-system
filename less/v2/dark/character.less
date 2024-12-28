@@ -1,0 +1,55 @@
+:is(.sentius-theme-dark, .theme-dark) .sentius2.sheet.actor.character,
+.sentius2.sheet.actor.character.sentius-theme-dark {
+  &:not(.minimized) { background: none; }
+
+  .window-content::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 300px;
+    border-radius: 5px 5px 0 0;
+    opacity: .5;
+    background: url("ui/official/banner-character-dark.webp") no-repeat top center / cover;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
+
+  .sheet-header {
+    background: none;
+    position: relative;
+  }
+
+  .sheet-body {
+    background: none;
+
+    .skills, .tools, .saves {
+      .ability { color: var(--sentius-color-gold); }
+    }
+
+    .sidebar .favorites > ul .drop {
+      color: white;
+      border-color: white;
+    }
+
+    .pill-lg {
+      .name .title { color: var(--sentius-color-gold); }
+
+      &.texture {
+        border: 1px solid var(--sentius-color-blue-gray-1);
+        --background-color: var(--sentius-color-blue-gray-2);
+        background-blend-mode: soft-light;
+        &::before { opacity: unset; }
+      }
+    }
+
+    .pills-group.empty > h3 > a { color: var(--color-text-light-0); }
+
+    .facility .slot { border-color: var(--sentius-color-blue-gray-3); }
+    .facility .order-slot.empty::before { filter: unset; }
+  }
+
+  .ability-score {
+    &::before { background-image: url("ui/ability-score-tab-dark.svg"); }
+    .score > input { background: var(--sentius-color-black); }
+  }
+}

@@ -1,0 +1,204 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Item Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img">
+
+        <div class="header-details flexrow">
+            <h1 class="charname">
+                {{#if system.identified}}
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'SENTIUS.ItemName' }}">
+                {{else}}
+                <input name="system.unidentified.name" type="text" value="{{system.unidentified.name}}"
+                       placeholder="{{ localize 'SENTIUS.NameUnidentified' }}">
+                {{/if}}
+            </h1>
+
+            <div class="item-subtitle">
+                <h4 class="item-type">{{itemType}}</h4>
+                <label class="equipped">
+                    <input type="checkbox" name="system.equipped" {{checked system.equipped}}>
+                    {{#if system.equipped}}
+                        {{ localize "SENTIUS.Equipped" }}
+                        {{#if editable}}<i class="fa-solid fa-toggle-on"></i>{{/if}}
+                    {{else}}
+                        {{ localize "SENTIUS.Unequipped" }}
+                        {{#if editable}}<i class="fa-solid fa-toggle-off"></i>{{/if}}
+                    {{/if}}
+                </label>
+                <label class="identified">
+                    <input type="checkbox" name="system.identified" {{checked system.identified}}>
+                    {{#if system.identified}}
+                        {{ localize "SENTIUS.Identified" }}
+                        {{#if editable}}<i class="fa-solid fa-toggle-on"></i>{{/if}}
+                    {{else}}
+                        {{ localize "SENTIUS.Unidentified.Title" }}
+                        {{#if editable}}<i class="fa-solid fa-toggle-off"></i>{{/if}}
+                    {{/if}}
+                </label>
+            </div>
+
+            <ul class="summary flexrow">
+                <li>{{ system.type.label }}</li>
+                <li>
+                    {{#if concealDetails}}
+                    <span>{{ localize "SENTIUS.Unidentified.Title" }}</span>
+                    {{else}}
+                    <select name="system.rarity" {{~#if concealDetails}} inert{{/if}}>
+                        {{selectOptions config.itemRarity selected=system.rarity blank=""}}
+                    </select>
+                    {{/if}}
+                </li>
+                <li>
+                    {{> "sentius.item-source"}}
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item active" data-tab="description">{{ localize "SENTIUS.Description" }}</a>
+        <a class="item" data-tab="details">{{ localize "SENTIUS.Details" }}</a>
+        <a class="item" data-tab="effects">{{ localize "SENTIUS.Effects" }}</a>
+    </nav>
+
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        {{> "sentius.item-description"}}
+
+        {{!-- Details Tab --}}
+        <div class="tab details" data-group="primary" data-tab="details">
+            {{#sentius-concealSection concealDetails}}
+
+            <h3 class="form-header">{{ localize "SENTIUS.ItemEquipmentDetails" }}</h3>
+
+            {{!-- Equipment Type --}}
+            <div class="form-group">
+                <label>{{ localize "SENTIUS.ItemEquipmentType" }}</label>
+                <select name="system.type.value">
+                    <option value=""></option>
+                    <optgroup label="{{ localize "SENTIUS.Armor" }}">
+                        {{selectOptions config.armorTypes selected=system.type.value}}
+                    </optgroup>
+                    {{selectOptions config.miscEquipmentTypes selected=system.type.value}}
+                </select>
+            </div>
+
+            {{#if baseItems}}
+            <div class="form-group">
+                <label>{{ localize "SENTIUS.ItemEquipmentBase" }}</label>
+                <select name="system.type.baseItem">
+                    {{selectOptions baseItems selected=system.type.baseItem blank=""}}
+                </select>
+            </div>
+            {{/if}}
+
+            {{#unless system.isMountable}}
+            <div class="form-group input-select">
+                <label>{{localize "SENTIUS.Attunement"}}</label>
+                <div class="form-fields">
+                    <input type="checkbox" name="system.attuned" {{ checked system.attuned }}
+                           {{ disabled (not system.attunement) }}
+                           data-tooltip="SENTIUS.Attuned" aria-label="{{ localize 'SENTIUS.Attuned' }}">
+                    <select name="system.attunement">
+                        {{selectOptions config.attunementTypes selected=system.attunement
+                                        blank=(localize "SENTIUS.AttunementNone")}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{localize "SENTIUS.Proficiency"}}</label>
+                <select name="system.proficient" data-dtype="Number">
+                    {{selectOptions config.weaponAndArmorProficiencyLevels selected=system.proficient
+                                    blank=(localize "SENTIUS.Automatic")}}
+                </select>
+            </div>
+            {{/unless}}
+
+            {{!-- Equipment Properties --}}
+            <div class="form-group stacked equipment-properties">
+                <label>{{ localize "SENTIUS.ItemEquipmentProperties" }}</label>
+                {{#each properties}}
+                <label class="checkbox">
+                    <input type="checkbox" name="system.properties.{{ @key }}" {{ checked selected }}>
+                    {{ label }}
+                </label>
+                {{/each}}
+            </div>
+
+            {{!-- Armor Class --}}
+            {{#if (or system.isArmor system.isMountable)}}
+            <div class="form-group">
+                <label>{{ localize "SENTIUS.ArmorClass" }}</label>
+                <div class="form-fields">
+                    {{ numberInput source.armor.value name="system.armor.value" step="1" }}
+                </div>
+            </div>
+
+            {{#if properties.mgc.selected}}
+            <div class="form-group">
+                <label>{{ localize "SENTIUS.MagicalBonus" }}</label>
+                <div class="form-fields">
+                    {{ numberInput system.armor.magicalBonus name="system.armor.magicalBonus"
+                       min="0" step="1" placeholder="0" }}
+                </div>
+            </div>
+            {{/if}}
+            {{/if}}
+
+            {{#if hasDexModifier}}
+            {{!-- Dexterity Modifier --}}
+            <div class="form-group">
+                <label>{{ localize "SENTIUS.ItemEquipmentDexMod" }}</label>
+                <div class="form-fields">
+                    {{numberInput system.armor.dex name="system.armor.dex" placeholder=(localize "SENTIUS.Unlimited")}}
+                </div>
+            </div>
+            {{/if}}
+
+            {{#if system.isArmor}}
+            {{!-- Required Strength --}}
+            <div class="form-group">
+                <label>{{ localize "SENTIUS.ItemRequiredStr" }}</label>
+                <div class="form-fields">
+                    {{numberInput system.strength name="system.strength" placeholder=(localize "SENTIUS.None")}}
+                </div>
+            </div>
+            {{/if}}
+
+            {{#if system.isMountable}}
+            {{> "sentius.item-mountable"}}
+            <div class="form-group">
+                <label>{{localize 'SENTIUS.Speed'}}</label>
+                <div class="form-fields">
+                    {{numberInput system.speed.value name="system.speed.value" placeholder="0"}}
+                    <span class="sep">{{localize 'SENTIUS.FeetAbbr'}}</span>
+                    <input type="text" name="system.speed.conditions"
+                           value="{{system.speed.conditions}}">
+                </div>
+            </div>
+            {{/if}}
+
+            <h3 class="form-header">{{ localize "SENTIUS.ItemEquipmentUsage" }}</h3>
+
+            {{!-- Item Activation Template --}}
+            {{> "sentius.item-activation"}}
+
+            <h3 class="form-header">{{ localize "SENTIUS.ItemEquipmentAction" }}</h3>
+
+            {{!-- Item Action Template --}}
+            {{> "sentius.item-action"}}
+
+            {{/sentius-concealSection}}
+        </div>
+
+        {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+            {{> "sentius.active-effects"}}
+        </div>
+    </section>
+</form>

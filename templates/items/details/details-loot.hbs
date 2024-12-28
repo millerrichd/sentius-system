@@ -1,0 +1,18 @@
+<fieldset>
+    <legend>{{ localize "SENTIUS.ItemLootDetails" }}</legend>
+
+    {{!-- Loot Type --}}
+    {{ formField fields.type.fields.value label="SENTIUS.ItemLootType" value=source.type.value choices=config.lootTypes
+                 labelAttr="label" blank="" localize=true }}
+
+    {{!-- Loot Subtype --}}
+    {{#if itemSubtypes}}
+    {{ formField fields.type.fields.subtype value=source.type.subtype choices=itemSubtypes blank=""
+                 label=(localize "SENTIUS.ItemLootSubtype" category=(lookup (lookup config.lootTypes source.type.value) "label")) }}
+    {{/if}}
+
+    {{!-- Loot Properties --}}
+    {{ formField fields.properties options=properties.options label="SENTIUS.ItemLootProperties" localize=true
+                 input=inputs.createMultiCheckboxInput stacked=true classes="checkbox-grid" }}
+
+</fieldset>
