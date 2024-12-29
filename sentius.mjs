@@ -51,7 +51,15 @@ globalThis.sentius = {
 Hooks.once("init", function() {
   globalThis.sentius = game.sentius = Object.assign(game.system, globalThis.sentius);
   console.log(`Initializing the Sentius RPG System - Version ${sentius.version}\n${SENTIUS.ASCII}`);
-}
+  // Record Configuration Values
+  CONFIG.SENTIUS = SENTIUS;
+  CONFIG.Actor.documentClass = documents.ActorSentius;
+
+  // Register System Settings
+  registerSystemSettings();
+  registerSystemKeybindings();
+
+});
 // Hooks.once("init", function() {
 //   globalThis.sentius = game.sentius = Object.assign(game.system, globalThis.sentius);
 //   console.log(`Initializing the Sentius RPG System - Version ${sentius.version}\n${SENTIUS.ASCII}`);
